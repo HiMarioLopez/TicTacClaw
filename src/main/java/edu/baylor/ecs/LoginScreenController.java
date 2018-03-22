@@ -47,6 +47,11 @@ public class LoginScreenController implements Initializable{
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(homeScene);
+        window.setMinWidth(450);
+        window.setMinHeight(500);
+
+        window.setMaxWidth(650);
+        window.setMaxHeight(600);
         window.show();
     }
 }
