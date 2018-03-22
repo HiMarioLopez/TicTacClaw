@@ -4,34 +4,41 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.media.Media;
 import java.io.File;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import java.io.File;
 
-public class Main extends Application{
+public class Main extends Application {
 
     Stage window;
-    Scene loginScene,homeScene, profileScene;
-    Button homeButton, profileButton, exitButton, newAccountButton,loginButton;
-    //private String songFile = "/Wolves.m4a";
+    Scene loginScene, homeScene, profileScene;
+    Button homeButton, profileButton, exitButton, newAccountButton, loginButton;
+    private String songFile = "K:/IntelliJ/Projects/TicTacClaw/src/main/resources/Wolves.m4a";
 
     public static void main(String[] args) {
         launch(args);
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
 
-        //Media sound = new Media(new File(getSongFile()).toURI().toString());
-        //MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        Media sound = new Media(this.getClass().getResource("/Wolves.m4a").toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
         //mediaPlayer.play();
-        
+//        AudioClip note = new AudioClip(this.getClass().getResource("/Wolves.mp3").toString());
+//        note.play(100);
+       // System.out.println(note.isPlaying());
+
         window = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("/loginScreen.fxml"));
         window.setTitle("Tic-Tac-Claw");
-        loginScene = new Scene(root,450,500);
+        loginScene = new Scene(root, 450, 500);
         loginScene.getStylesheets().add("/login.css");
         window.setMinWidth(450);
         window.setMinHeight(500);
@@ -44,8 +51,37 @@ public class Main extends Application{
         window.setOnCloseRequest(e -> {
             //override the close request
             e.consume();
+            mediaPlayer.stop();
             closeProgram();
         });
+    }
+
+    private void closeProgram() {
+        boolean result = ExitBox.display("Alert Window", "Do you really want to leave?");
+        if (result) {
+            System.out.println("Saving files...");
+            window.close();
+        }
+    }
+
+    private void isAccountValid(TextField input, String message) {
+        try {
+            String user = message;
+        } catch (NumberFormatException e) {
+            System.out.println("error");
+        }
+    }
+
+    public String getSongFile() {
+        return songFile;
+    }
+
+    public void setSongFile(String songFile) {
+        this.songFile = songFile;
+    }
+}
+
+//REFERENCE CODE HERE
 /*
         Label homeLabel = new Label("This is the home screen");
         Label profileLabel = new Label("This is your profile");
@@ -132,31 +168,3 @@ public class Main extends Application{
 //        primaryStage.setScene(scene);
 //        primaryStage.show();
         */
-    }
-
-    private void closeProgram(){
-        boolean result = ExitBox.display("Alert Window","Do you really want to leave?");
-        if(result){
-            System.out.println("Saving files...");
-            window.close();
-        }
-    }
-
-    private void isAccountValid(TextField input, String message) {
-        try {
-            String user = message;
-        } catch (NumberFormatException e){
-            System.out.println("error");
-        }
-    }
-
-
-//    @Override
-//    public void handle(ActionEvent event) {
-//
-//        if(event.getSource()==playButton)
-//            System.out.println("You pressed play");
-//
-//    }
-}
-

@@ -22,4 +22,29 @@ import java.util.ResourceBundle;
 
 import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Node;
 public class homeScreenController {
+
+    @FXML
+    private Button coopButton,multiplayerButton,settingButton,exitButton;
+
+
+    public homeScreenController(){
+    }
+
+    public void coopAction(ActionEvent event){
+        System.out.println("User press Co-op");
+    }
+
+    public void multiplayerAction(ActionEvent event){
+        System.out.println("User press Multiplayer");
+    }
+
+    public void settingAction(ActionEvent event){
+        System.out.println("User press Settings");
+    }
+
+    public void exitAction(ActionEvent event){
+        System.out.println("User press Exit");
+    }
+
+
 }
