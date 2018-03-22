@@ -7,12 +7,15 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.media.Media;
+import java.io.File;
 
 public class Main extends Application{
 
     Stage window;
     Scene loginScene,homeScene, profileScene;
     Button homeButton, profileButton, exitButton, newAccountButton,loginButton;
+    private String songFile = "/Wolves.m4a";
 
     public static void main(String[] args) {
         launch(args);
@@ -21,11 +24,19 @@ public class Main extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception{
 
+        Media sound = new Media(new File(getSongFile()).toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
+        
         window = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("/loginScreen.fxml"));
         window.setTitle("Tic-Tac-Claw");
         loginScene = new Scene(root,450,500);
         loginScene.getStylesheets().add("/login.css");
+        window.setMinWidth(450);
+        window.setMinHeight(500);
+        window.setMaxHeight(600);
+        window.setMaxWidth(650);
         window.setScene(loginScene);
         window.show();
 
