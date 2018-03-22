@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class connectToServer {
     private static final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
-    private static final String DB_CONNECTION = "jdbc:derby:ex1connect;";
+    private static final String DB_CONNECTION = "jdbc:derby:TicTacClaw;";
     private static final String DB_USER = "";
     private static final String DB_PASSWORD = "";
 
@@ -22,16 +22,21 @@ public class connectToServer {
     private static void createDbUserTable() throws SQLException {
         Connection dbConnection = null;
         Statement statement = null;
-        String createTableSQL = "CREATE TABLE DBUSER(" + "USER_ID INTEGER NOT NULL, "
-                + "USERNAME VARCHAR(20) NOT NULL, " + "CREATED_BY VARCHAR(20) NOT NULL, "
-                + "CREATED_DATE DATE NOT NULL, " + "PRIMARY KEY (USER_ID) " + ")";
+        String createTableSQL = " CREATE TABLE Users(" +
+                "usr_ID INTEGER NOT NULL, " +
+                "usr_Name VARCHAR(50) NOT NULL, " +
+                "usr_Password VARCHAR(50) NOT NULL, " +
+                "usr_HighScore INTEGER, " +
+                "usr_ImageIndex INTEGER, " +
+                "PRIMARY KEY (usr_ID) " + ")";
         try {
             dbConnection = getDBConnection();
             statement = dbConnection.createStatement();
             System.out.println(createTableSQL);
-            // execute the SQL statement
+
+            // Execute the SQL statement
             statement.execute(createTableSQL);
-            System.out.println("Table \"dbuser\" is created!");
+            System.out.println("Table \"User\" is created!");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {

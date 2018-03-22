@@ -44,7 +44,7 @@ public class LoginScreenController implements Initializable{
     public void changeSceneHome(ActionEvent event) throws IOException{
         Parent homeSceneParent = FXMLLoader.load(getClass().getResource("/homeScreen.fxml"));
         homeScene = new Scene(homeSceneParent);
-        homeScene.getStylesheets().add("com/company/homeScreen.css");
+        homeScene.getStylesheets().add("/homeScreen.css");
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(homeScene);

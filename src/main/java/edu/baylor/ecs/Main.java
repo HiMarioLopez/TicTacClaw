@@ -15,7 +15,7 @@ public class Main extends Application{
     Stage window;
     Scene loginScene,homeScene, profileScene;
     Button homeButton, profileButton, exitButton, newAccountButton,loginButton;
-    private String songFile = "/Wolves.m4a";
+    //private String songFile = "/Wolves.m4a";
 
     public static void main(String[] args) {
         launch(args);
@@ -24,9 +24,9 @@ public class Main extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        Media sound = new Media(new File(getSongFile()).toURI().toString());
-        MediaPlayer mediaPlayer = new MediaPlayer(sound);
-        mediaPlayer.play();
+        //Media sound = new Media(new File(getSongFile()).toURI().toString());
+        //MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        //mediaPlayer.play();
         
         window = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("/loginScreen.fxml"));
