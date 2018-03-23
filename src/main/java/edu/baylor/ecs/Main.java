@@ -56,7 +56,7 @@ public class Main extends Application {
         });
     }
 
-    private void closeProgram() {
+    public void closeProgram() {
         boolean result = ExitBox.display("Alert Window", "Do you really want to leave?");
         if (result) {
             System.out.println("Saving files...");

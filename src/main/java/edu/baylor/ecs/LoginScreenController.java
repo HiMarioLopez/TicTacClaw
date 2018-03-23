@@ -15,17 +15,13 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class LoginScreenController implements Initializable{
+public class LoginScreenController extends UI implements Initializable{
 
     @FXML
     private Button loginButton, registerButton;
 
     @FXML
     private Hyperlink forgotPassword;
-
-    @FXML
-    private Scene homeScene;
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -37,12 +33,13 @@ public class LoginScreenController implements Initializable{
     //loginButton
     public void loginAction(ActionEvent event) throws IOException{
         System.out.println("User press Login button");
-        Parent homeSceneParent = FXMLLoader.load(getClass().getResource("/homeScreen.fxml"));
-        homeScene = new Scene(homeSceneParent);
-        homeScene.getStylesheets().add("/homeScreen.css");
 
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(homeScene);
+        Parent homeSceneParent = FXMLLoader.load(getClass().getResource("/homeScreen.fxml"));
+        homeScreen = new Scene(homeSceneParent);
+        homeScreen.getStylesheets().add("/homeScreen.css");
+
+        window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(homeScreen);
         window.setMinWidth(450);
         window.setMinHeight(500);
 
