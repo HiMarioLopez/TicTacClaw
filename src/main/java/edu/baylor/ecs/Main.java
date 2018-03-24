@@ -4,21 +4,17 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.media.Media;
-import java.io.File;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import java.io.File;
 
 public class Main extends Application {
 
-    Stage window;
-    Scene loginScene, homeScene, profileScene;
-    Button homeButton, profileButton, exitButton, newAccountButton, loginButton;
+
+    private MasterWindow master;
     private String songFile = "K:/IntelliJ/Projects/TicTacClaw/src/main/resources/Wolves.m4a";
 
     public static void main(String[] args) {
@@ -26,7 +22,7 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage window) throws Exception {
 
         Media sound = new Media(this.getClass().getResource("/Wolves.m4a").toString());
         MediaPlayer mediaPlayer = new MediaPlayer(sound);
@@ -34,21 +30,18 @@ public class Main extends Application {
 //        AudioClip note = new AudioClip(this.getClass().getResource("/Wolves.mp3").toString());
 //        note.play(100);
        // System.out.println(note.isPlaying());
+        //        //MasterWindow master = new MasterWindow(root, window,  loginScene);
 
-        window = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("/loginScreen.fxml"));
-        window.setTitle("Tic-Tac-Claw");
-        loginScene = new Scene(root, 450, 500);
-        loginScene.getStylesheets().add("/login.css");
-        window.setMinWidth(450);
-        window.setMinHeight(500);
-        window.setMaxHeight(600);
-        window.setMaxWidth(650);
-        window.setScene(loginScene);
-        window.show();
+
+
+        master = new MasterWindow(window);
+
+        //window.setScene(loginScene);
+        master.getWindow().setScene(master.getLoginScene());
+        master.getWindow().show();
 
         //exit request
-        window.setOnCloseRequest(e -> {
+        master.getWindow().setOnCloseRequest(e -> {
             //override the close request
             e.consume();
             mediaPlayer.stop();
@@ -60,7 +53,7 @@ public class Main extends Application {
         boolean result = ExitBox.display("Alert Window", "Do you really want to leave?");
         if (result) {
             System.out.println("Saving files...");
-            window.close();
+            master.getWindow().close();
         }
     }
 
@@ -82,6 +75,7 @@ public class Main extends Application {
 }
 
 //REFERENCE CODE HERE
+//loginScene = new Scene(root, 450, 500);
 /*
         Label homeLabel = new Label("This is the home screen");
         Label profileLabel = new Label("This is your profile");

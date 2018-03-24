@@ -22,7 +22,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class homeScreenController extends UI implements Initializable{
+public class homeScreenController extends MasterWindow implements Initializable{
 
     @FXML
     private Button coopButton,multiplayerButton,settingButton,exitButton;
@@ -51,24 +51,33 @@ public class homeScreenController extends UI implements Initializable{
 
     public void settingAction(ActionEvent event) throws IOException {
         System.out.println("User press Settings");
-        Parent homeSceneParent = FXMLLoader.load(getClass().getResource("/settingScreen.fxml"));
-        settingScreen = new Scene(homeSceneParent);
-        settingScreen.getStylesheets().add("/settingScreen.css");
 
+        //root = FXMLLoader.load(getClass().getResource("/settingScreen.fxml"));
+        //settingScreen = new Scene(root);
+        //settingScreen.getStylesheets().add("/settingScreen.css");
+
+        //window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        //window.setScene(settingScreen);
+
+        //window.show();
+
+
+        this.connectResources();
         window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(settingScreen);
-        window.setMinWidth(450);
-        window.setMinHeight(500);
+        window.setScene(getSettingScreen());
 
-        window.setMaxWidth(650);
-        window.setMaxHeight(600);
+        window.setMinWidth(650);
+        window.setMinHeight(650);
+        window.setMaxHeight(750);
+        window.setMaxWidth(750);
+
         window.show();
 
     }
 
     public void exitAction(ActionEvent event){
         System.out.println("User press Exit");
-        Stage window = (Stage)exitButton.getScene().getWindow();
+        window = (Stage)exitButton.getScene().getWindow();
         this.closeProgram(window);
     }
 

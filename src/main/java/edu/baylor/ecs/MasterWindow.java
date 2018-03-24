@@ -1,33 +1,33 @@
 package edu.baylor.ecs;
 
-package edu.baylor.ecs;
-
-import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.media.Media;
-import java.io.File;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import java.io.File;
+
+import java.io.IOException;
 
 public class MasterWindow {
-    private Stage window;
-    private Scene currentScene,loginScene,homeScreen,settingScreen;
-    private Parent root;
+    protected Stage window;
+    protected Scene currentScene,loginScene,homeScreen,settingScreen;
+    protected Parent root,loginSceneParent,homeSceneParent,settingSceneParent;
 
     public MasterWindow(){
     }
 
-    public MasterWindow(Parent otherRoot,Stage otherWindow, Scene otherScene){
-        root = otherRoot;
+    public MasterWindow(Stage otherWindow){
         window = otherWindow;
-        currentScene = otherScene;
+
+        try {
+            connectResources();
+        } catch (IOException e){e.printStackTrace();}
+
+        window.setTitle("Tic-Tac-Claw");
+        window.setMinWidth(450);
+        window.setMinHeight(500);
+        window.setMaxHeight(600);
+        window.setMaxWidth(650);
+
     }
 
     public void closeProgram(Stage window) {
@@ -37,6 +37,26 @@ public class MasterWindow {
             window.close();
         }
     }
+
+    protected void connectResources() throws IOException {
+        homeSceneParent = FXMLLoader.load(getClass().getResource("/homeScreen.fxml"));
+        homeScreen = new Scene(homeSceneParent);
+        homeScreen.getStylesheets().add("/homeScreen.css");
+
+        loginSceneParent = FXMLLoader.load(getClass().getResource("/loginScreen.fxml"));
+        loginScene = new Scene(loginSceneParent);
+        loginScene.getStylesheets().add("/login.css");
+
+        settingSceneParent = FXMLLoader.load(getClass().getResource("/settingScreen.fxml"));
+        settingScreen = new Scene(settingSceneParent);
+        settingScreen.getStylesheets().add("/settingScreen.css");
+
+    }
+
+
+
+
+
 
 
     public Scene getLoginScene() {
@@ -86,4 +106,5 @@ public class MasterWindow {
     public void setWindow(Stage window) {
         this.window = window;
     }
+
 }
