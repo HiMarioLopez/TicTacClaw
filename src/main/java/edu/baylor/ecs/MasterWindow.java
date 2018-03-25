@@ -4,6 +4,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.media.Media;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 import java.io.IOException;
 
@@ -11,8 +14,10 @@ public class MasterWindow {
     protected Stage window;
     protected Scene currentScene,loginScene,homeScreen,settingScreen;
     protected Parent root,loginSceneParent,homeSceneParent,settingSceneParent;
+    protected MediaBox mediaBox = new MediaBox();
 
     public MasterWindow(){
+        System.out.println("Ceated MasterWindow");
     }
 
     public MasterWindow(Stage otherWindow){
@@ -24,9 +29,14 @@ public class MasterWindow {
 
         window.setTitle("Tic-Tac-Claw");
         window.setMinWidth(450);
+        window.setMaxWidth(650);
+
         window.setMinHeight(500);
         window.setMaxHeight(600);
-        window.setMaxWidth(650);
+
+
+        window.setWidth(500);
+        window.setHeight(550);
 
     }
 
@@ -34,6 +44,7 @@ public class MasterWindow {
         boolean result = ExitBox.display("Alert Window", "Do you really want to leave?");
         if (result) {
             System.out.println("Saving files...");
+            //mediaBox.getMediaPlayer().stop();
             window.close();
         }
     }
@@ -52,11 +63,6 @@ public class MasterWindow {
         settingScreen.getStylesheets().add("/settingScreen.css");
 
     }
-
-
-
-
-
 
 
     public Scene getLoginScene() {

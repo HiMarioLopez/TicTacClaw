@@ -44,8 +44,9 @@ public class Main extends Application {
         master.getWindow().setOnCloseRequest(e -> {
             //override the close request
             e.consume();
-            mediaPlayer.stop();
-            closeProgram();
+            master.closeProgram(master.getWindow());
+            //mediaPlayer.stop();
+            //closeProgram();
         });
     }
 

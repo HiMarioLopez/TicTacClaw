@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class LoginScreenController extends MasterWindow implements Initializable{
+public class LoginScreenController extends MasterWindow{
 
     @FXML
     private Button loginButton, registerButton;
@@ -23,25 +23,20 @@ public class LoginScreenController extends MasterWindow implements Initializable
     @FXML
     private Hyperlink forgotPassword;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-    }
 
     public LoginScreenController(){
+        //System.out.println("Created LoginScreenController");
     }
 
     //loginButton
     public void loginAction(ActionEvent event) throws IOException{
         System.out.println("User press Login button");
 
-        //Parent homeSceneParent = FXMLLoader.load(getClass().getResource("/homeScreen.fxml"));
-        //homeSceneParent = FXMLLoader.load(getClass().getResource("/homeScreen.fxml"));
-        //homeScreen = new Scene(homeSceneParent);
-        //homeScreen.getStylesheets().add("/homeScreen.css");
-
         this.connectResources();
         window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(getHomeScreen());
+
+        //mediaBox.playMediaBox();
 
         window.show();
     }

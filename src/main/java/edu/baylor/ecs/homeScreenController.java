@@ -22,23 +22,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class homeScreenController extends MasterWindow implements Initializable{
+public class homeScreenController extends MasterWindow{
 
     @FXML
     private Button coopButton,multiplayerButton,settingButton,exitButton;
 
 
-    //private Scene homeScreen,settingScreen;
-    //private Stage window;
-
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-    }
 
     public homeScreenController(){
-        //homeScreen = exitButton.getScene();
-        //window = (Stage)homeScreen.getWindow();
     }
 
     public void coopAction(ActionEvent event){
@@ -61,18 +52,17 @@ public class homeScreenController extends MasterWindow implements Initializable{
 
         //window.show();
 
-
         this.connectResources();
         window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(getSettingScreen());
 
         window.setMinWidth(650);
         window.setMinHeight(650);
+
         window.setMaxHeight(750);
         window.setMaxWidth(750);
 
         window.show();
-
     }
 
     public void exitAction(ActionEvent event){
