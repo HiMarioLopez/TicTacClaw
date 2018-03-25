@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6836f358-ca4c-4ed9-91df-f146e2f48e35" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MediaBox.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/LoginScreenController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/LoginScreenController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Main.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MasterWindow.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MasterWindow.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/homeScreenController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/homeScreenController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/settingScreenController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/settingScreenController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/settingScreen.css" afterPath="$PROJECT_DIR$/src/main/resources/settingScreen.css" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,19 +19,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="320">
+              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
               <folding>
+                <element signature="e#0#5448#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#572#573#0" expanded="true" />
-                <element signature="e#600#601#0" expanded="true" />
-                <element signature="e#2070#2071#0" expanded="true" />
-                <element signature="e#2101#2102#0" expanded="true" />
-                <element signature="e#2149#2150#0" expanded="true" />
-                <element signature="e#2189#2190#0" expanded="true" />
+                <element signature="e#604#605#0" expanded="true" />
+                <element signature="e#632#633#0" expanded="true" />
+                <element signature="e#2102#2103#0" expanded="true" />
+                <element signature="e#2133#2134#0" expanded="true" />
+                <element signature="e#2181#2182#0" expanded="true" />
+                <element signature="e#2221#2222#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settingScreenController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settingScreenController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/settingScreenController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="980">
-              <caret line="68" column="68" lean-forward="false" selection-start-line="68" selection-start-column="68" selection-end-line="68" selection-end-column="68" />
+            <state relative-caret-position="631">
+              <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -171,13 +165,13 @@
         <option value="$PROJECT_DIR$/src/main/resources/setttingScreen.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/setttingScreen.css" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/UI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MediaBox.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/LoginScreenController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/settingScreen.css" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/homeScreenController.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MasterWindow.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/settingScreenController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Main.java" />
       </list>
     </option>
   </component>
@@ -446,12 +440,12 @@
       <workItem from="1521766825582" duration="4271000" />
       <workItem from="1521827715862" duration="6405000" />
       <workItem from="1521864246194" duration="601000" />
-      <workItem from="1521931036937" duration="8127000" />
+      <workItem from="1521931036937" duration="8408000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27821000" />
+    <option name="totallyTimeSpent" value="28102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -680,22 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#2070#2071#0" expanded="true" />
-            <element signature="e#2101#2102#0" expanded="true" />
-            <element signature="e#2149#2150#0" expanded="true" />
-            <element signature="e#2189#2190#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/settingScreen.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -815,9 +793,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/settingScreenController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="980">
-          <caret line="68" column="68" lean-forward="false" selection-start-line="68" selection-start-column="68" selection-end-line="68" selection-end-column="68" />
+        <state relative-caret-position="631">
+          <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#5448#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#2102#2103#0" expanded="true" />
+            <element signature="e#2133#2134#0" expanded="true" />
+            <element signature="e#2181#2182#0" expanded="true" />
+            <element signature="e#2221#2222#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
