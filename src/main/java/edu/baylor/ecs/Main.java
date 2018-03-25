@@ -1,7 +1,5 @@
 /*
     Name: Brandon Mork
-
-
  */
 package edu.baylor.ecs;
 
