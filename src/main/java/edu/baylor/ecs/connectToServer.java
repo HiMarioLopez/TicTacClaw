@@ -22,6 +22,10 @@ public class connectToServer {
     private static void createDbUserTable() throws SQLException {
         Connection dbConnection = null;
         Statement statement = null;
+
+        String createTableSQL = "DROP TABLE Users";
+
+        /*
         String createTableSQL = " CREATE TABLE Users(" +
                 "usr_ID INTEGER NOT NULL, " +
                 "usr_Name VARCHAR(50) NOT NULL, " +
@@ -29,6 +33,8 @@ public class connectToServer {
                 "usr_HighScore INTEGER, " +
                 "usr_ImageIndex INTEGER, " +
                 "PRIMARY KEY (usr_ID) " + ")";
+        */
+
         try {
             dbConnection = getDBConnection();
             statement = dbConnection.createStatement();

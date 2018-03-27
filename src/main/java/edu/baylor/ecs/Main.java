@@ -18,7 +18,7 @@ public class Main extends Application {
 
 
     private MasterWindow master;
-    private String songFile = "K:/IntelliJ/Projects/TicTacClaw/src/main/resources/Wolves.m4a";
+    private String songFile = "/Wolves.m4a";
 
     public static void main(String[] args) {
         launch(args);
