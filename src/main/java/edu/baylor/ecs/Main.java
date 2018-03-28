@@ -30,10 +30,10 @@ public class Main extends Application {
         Media sound = new Media(this.getClass().getResource("/Wolves.m4a").toString());
         MediaPlayer mediaPlayer = new MediaPlayer(sound);
         //mediaPlayer.play();
-//        AudioClip note = new AudioClip(this.getClass().getResource("/Wolves.mp3").toString());
-//        note.play(100);
-       // System.out.println(note.isPlaying());
-        //        //MasterWindow master = new MasterWindow(root, window,  loginScene);
+        //AudioClip note = new AudioClip(this.getClass().getResource("/Wolves.mp3").toString());
+        //note.play(100);
+        // System.out.println(note.isPlaying());
+        //MasterWindow master = new MasterWindow(root, window,  loginScene);
 
 
 
