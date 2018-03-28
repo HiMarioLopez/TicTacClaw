@@ -11,17 +11,13 @@ public class connectToServer {
     public static void main(String[] argv) {
         try {
 
-            try {
-                Class.forName("com.mysql.jdbc.Driver");
-            } catch (ClassNotFoundException e) {
-                throw new RuntimeException("Cannot find the driver in the classpath!", e);
-            }
-
             query();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
+
+    //private static void query
 
     private static void query() {
         try {
