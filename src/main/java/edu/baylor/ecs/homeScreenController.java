@@ -30,10 +30,17 @@ public class homeScreenController extends MasterWindow{
 
 
     public homeScreenController(){
+        System.out.println("Created home");
     }
 
-    public void coopAction(ActionEvent event){
+    public void coopAction(ActionEvent event) throws IOException {
         System.out.println("User press Co-op");
+
+        this.connectToSingle();
+        setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
+        getWindow().setScene(getCurrentScene());
+        //this.connectToSingle();
+        getWindow().show();
     }
 
     public void multiplayerAction(ActionEvent event){
@@ -43,32 +50,23 @@ public class homeScreenController extends MasterWindow{
     public void settingAction(ActionEvent event) throws IOException {
         System.out.println("User press Settings");
 
-        //root = FXMLLoader.load(getClass().getResource("/settingScreen.fxml"));
-        //settingScreen = new Scene(root);
-        //settingScreen.getStylesheets().add("/settingScreen.css");
+        this.connectToSetting();
+        setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
+        getWindow().setScene(getCurrentScene());
 
-        //window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        //window.setScene(settingScreen);
+        getWindow().setMinWidth(650);
+        getWindow().setMinHeight(650);
 
-        //window.show();
+        getWindow().setMaxHeight(750);
+        getWindow().setMaxWidth(750);
 
-        this.connectResources();
-        window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(getSettingScreen());
-
-        window.setMinWidth(650);
-        window.setMinHeight(650);
-
-        window.setMaxHeight(750);
-        window.setMaxWidth(750);
-
-        window.show();
+        getWindow().show();
     }
 
     public void exitAction(ActionEvent event){
         System.out.println("User press Exit");
-        window = (Stage)exitButton.getScene().getWindow();
-        this.closeProgram(window);
+        setWindow((Stage)exitButton.getScene().getWindow());
+        this.closeProgram(getWindow());
     }
 
 }

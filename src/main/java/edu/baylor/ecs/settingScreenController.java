@@ -37,11 +37,13 @@ public class settingScreenController extends MasterWindow implements Initializab
 
 
     public settingScreenController(){
+        System.out.println("Created settings");
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        resolutionBox.getItems().clear();
+        //resolutionBox.getItems().clear();
+        System.out.println("Called init");
         resolutionBox.getItems().addAll("1280 x 1024", "1600 x 1200" , "1680 x 1050" , "1920 x 1080");
 
         fullscreenBox.getItems().addAll("Windowed", "Windowed Fullscreen");
@@ -65,21 +67,21 @@ public class settingScreenController extends MasterWindow implements Initializab
 
     
     public void backAction(ActionEvent event) throws IOException {
-        this.connectResources();
-        window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(getHomeScreen());
+        this.connectToHome();
+        setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
+        getWindow().setScene(getCurrentScene());
 
-        window.setMinWidth(450);
-        window.setMaxWidth(650);
+        getWindow().setMinWidth(450);
+        getWindow().setMaxWidth(650);
 
-        window.setMinHeight(500);
-        window.setMaxHeight(600);
+        getWindow().setMinHeight(500);
+        getWindow().setMaxHeight(600);
 
 
-        window.setWidth(500);
-        window.setHeight(550);
+        getWindow().setWidth(500);
+        getWindow().setHeight(550);
 
-        window.show();
+        getWindow().show();
     }
 
 }

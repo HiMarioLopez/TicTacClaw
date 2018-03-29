@@ -18,7 +18,6 @@ public class Main extends Application {
 
 
     private MasterWindow master;
-    private String songFile = "K:/IntelliJ/Projects/TicTacClaw/src/main/resources/Wolves.m4a";
 
     public static void main(String[] args) {
         launch(args);
@@ -28,8 +27,8 @@ public class Main extends Application {
     public void start(Stage window) throws Exception {
 
         Media sound = new Media(this.getClass().getResource("/Wolves.m4a").toString());
-        MediaPlayer mediaPlayer = new MediaPlayer(sound);
-        //mediaPlayer.play();
+        MediaPlayer mediaPlayers = new MediaPlayer(sound);
+        //mediaPlayers.play();
 //        AudioClip note = new AudioClip(this.getClass().getResource("/Wolves.mp3").toString());
 //        note.play(100);
        // System.out.println(note.isPlaying());
@@ -38,9 +37,8 @@ public class Main extends Application {
 
 
         master = new MasterWindow(window);
-
-        //window.setScene(loginScene);
-        master.getWindow().setScene(master.getLoginScene());
+        master.connectToLogin();
+        master.getWindow().setScene(master.getCurrentScene());
         master.getWindow().show();
 
         //exit request
@@ -67,14 +65,6 @@ public class Main extends Application {
         } catch (NumberFormatException e) {
             System.out.println("error");
         }
-    }
-
-    public String getSongFile() {
-        return songFile;
-    }
-
-    public void setSongFile(String songFile) {
-        this.songFile = songFile;
     }
 }
 

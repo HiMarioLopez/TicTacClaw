@@ -16,8 +16,8 @@
    <center>
       <VBox maxWidth="200.0" minWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField id="usernameField" promptText="username" />
-            <PasswordField id="passwordField" promptText="password" />
+            <TextField id="usernameField" fx:id="username" promptText="username" />
+            <PasswordField id="passwordField" fx:id="password" promptText="password" />
             <Region minHeight="20.0" />
             <Button id="loginButton" fx:id="loginButton" alignment="CENTER" contentDisplay="CENTER" minWidth="90.0" mnemonicParsing="false" onAction="#loginAction" text="Login" textAlignment="CENTER" translateX="45.0">
                <padding>
