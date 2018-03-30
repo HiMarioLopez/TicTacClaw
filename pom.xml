@@ -27,7 +27,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>com.svt.optimoo.App</mainClass>
+                            <mainClass>edu.baylor.ecs.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
