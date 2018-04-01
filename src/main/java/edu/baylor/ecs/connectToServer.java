@@ -1,3 +1,10 @@
+/*
+ * Author: Mario Arturo Lopez
+ * File: connectToServer.java
+ *
+ *
+ */
+
 package edu.baylor.ecs;
 
 import java.sql.*;
@@ -10,21 +17,29 @@ public class connectToServer {
 
     public static void main(String[] argv) {
         try {
-            query();
+            query("select * from users");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
 
-    //private static void query
+    private static void login(String id) {
+        try {
+            query("select * from users");
 
-    private static void query() {
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private static ResultSet query(String query) {
+        ResultSet rs = null;
         try {
             Class.forName(DB_DRIVER);
             Connection dbConnection = DriverManager.getConnection(DB_CONNECTION,DB_USER, DB_PASSWORD);
 
             Statement statement = dbConnection.createStatement();
-            ResultSet rs = statement.executeQuery("select * from users");
+            rs = statement.executeQuery(query);
 
             while(rs.next()) {
                 System.out.println(
@@ -39,5 +54,7 @@ public class connectToServer {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
+        return rs;
     }
 }
