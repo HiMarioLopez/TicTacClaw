@@ -19,17 +19,13 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class singlePlayer extends MasterWindow implements Initializable{
-    private Tile[][] board = new Tile[9][9];
+    private tileBlock[][] board = new tileBlock[3][3];
     private List<Combo> combos = new ArrayList();
     private boolean valid = true;
     private boolean turnX = true;
 
     @FXML
     private Pane pane;
-
-//    public singlePlayer(){
-//        //this.start();
-//    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -40,15 +36,13 @@ public class singlePlayer extends MasterWindow implements Initializable{
         getWindow().setWidth(1000);
         pane.setPrefHeight(1000);
         pane.setPrefWidth(1000);
-        for(int y=0;y<9;y++){
-            for(int x=0;x<9;x++){
-                Tile tile = new Tile();
-                tile.setTranslateX(x*100);
-                tile.setTranslateY(y*100);
 
-                pane.getChildren().add(tile);
-
-                board[x][y] = tile;
+        int quad = 0;
+        for(int y=0;y<3;y++){
+            for(int x=0;x<3;x++){
+                tileBlock block = new tileBlock(quad);
+                board[x][y] = block;
+                quad++;
             }
         }
         //getWindow().setScene(getCurrentScene());
@@ -56,30 +50,12 @@ public class singlePlayer extends MasterWindow implements Initializable{
         //getWindow().setWidth(1000);
         getWindow().show();
     }
-/*
-    public void start(){
-        //pane.setPrefSize(1000,1000);
-
-        for(int y=0;y< board.length;y++){
-            for(int x=0;x<board.length;x++){
-                Tile tile = new Tile();
-                tile.setTranslateX(x*200);
-                tile.setTranslateY(y*200);
-
-                pane.getChildren().add(tile);
-
-                board[x][y] = tile;
-            }
-        }
-        singleplayerScreen = new Scene(pane);
-        //this.getWindow().setScene(singleplayerScreen);
-        //this.getWindow().setHeight(1000);
-        //this.getWindow().setWidth(1000);
-        this.getWindow().show();
-    }*/
 
     private class Tile extends StackPane{
         private Text text = new Text();
+        private int x;
+        private int y;
+        private boolean marked = false;
 
         public Tile(){
             Rectangle border = new Rectangle(100,100);
@@ -92,7 +68,7 @@ public class singlePlayer extends MasterWindow implements Initializable{
             getChildren().addAll(border,text);
 
             setOnMouseClicked(e -> {
-                if(!valid)
+                if(marked)
                     return;
                 if(e.getButton() == MouseButton.PRIMARY && turnX){
                     drawX();
@@ -108,15 +84,35 @@ public class singlePlayer extends MasterWindow implements Initializable{
         }
 
         private void drawX(){
+            System.out.println("You touched x:"+x+" y:"+y);
             text.setText("X");
+            marked = true;
         }
 
         private void drawO(){
+            System.out.println("You touched x:"+x+" y:"+y);
             text.setText("O");
+            marked = true;
         }
 
         public String getValue(){
             return text.getText();
+        }
+
+        public int getX() {
+            return x;
+        }
+
+        public void setX(int x) {
+            this.x = x;
+        }
+
+        public int getY() {
+            return y;
+        }
+
+        public void setY(int y) {
+            this.y = y;
         }
     }
 
@@ -134,6 +130,58 @@ public class singlePlayer extends MasterWindow implements Initializable{
 
             return (tiles[0].getValue().equals(tiles[1].getValue())
                  && tiles[0].getValue().equals(tiles[2].getValue()));
+        }
+    }
+
+    private class tileBlock{
+        private Tile[][] block = new Tile[3][3];
+        private int quadrant;
+
+
+        public tileBlock(int quad){
+            quadrant = quad;
+            for(int y=0;y<block.length;y++){
+                for(int x=0;x<block.length;x++){
+                    Tile tile = new Tile();
+
+                    int transX=0;
+                    if(quadrant%3==0) {
+                        transX = x*100;
+                    }
+                    else if(quadrant%3==1){
+                        transX = (x*100)+ 300;
+                    }
+                    else{
+                        transX = (x*100) + 600;
+                    }
+
+                    tile.setTranslateX(transX);
+                    tile.setTranslateY((y*100)+ ((quadrant/3)*300));
+
+                    tile.setX(x);
+                    tile.setY(y);
+                    System.out.println("I created a tile! x:"+x+" y:"+y+"\tMy Quad is "+quadrant);
+                    pane.getChildren().add(tile);
+                    block[x][y] = tile;
+                }
+            }
+
+        }
+
+        public Tile[][] getBlock() {
+            return block;
+        }
+
+        public void setBlock(Tile[][] block) {
+            this.block = block;
+        }
+
+        public int getQuadrant() {
+            return quadrant;
+        }
+
+        public void setQuadrant(int quadrant) {
+            this.quadrant = quadrant;
         }
     }
 
