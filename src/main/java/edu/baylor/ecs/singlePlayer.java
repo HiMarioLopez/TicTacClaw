@@ -18,84 +18,101 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class singlePlayer extends MasterWindow implements Initializable{
+public class singlePlayer extends MasterWindow implements Initializable {
     private tileBlock[][] board = new tileBlock[3][3];
-    private List<Combo> combos = new ArrayList();
+    private WinnerTile[][] winBoard = new WinnerTile[3][3];
     private boolean valid = true;
     private boolean turnX = true;
+    private int width = 800;
+    private int height = 800;
 
     @FXML
     private Pane pane;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        pane.setPrefSize(1000,1000);
-        getWindow().setMaxWidth(1000);
-        getWindow().setMaxHeight(1000);
-        getWindow().setHeight(1000);
-        getWindow().setWidth(1000);
-        pane.setPrefHeight(1000);
-        pane.setPrefWidth(1000);
+        pane.setPrefSize(width, height);
+        getWindow().setMaxWidth(width);
+        getWindow().setMaxHeight(height);
+        getWindow().setHeight(height);
+        getWindow().setWidth(width);
 
         int quad = 0;
-        for(int y=0;y<3;y++){
-            for(int x=0;x<3;x++){
+        for (int y = 0; y < 3; y++) {
+            for (int x = 0; x < 3; x++) {
                 tileBlock block = new tileBlock(quad);
                 board[x][y] = block;
                 quad++;
             }
         }
-        //getWindow().setScene(getCurrentScene());
-        //getWindow().setHeight(1000);
-        //getWindow().setWidth(1000);
         getWindow().show();
     }
 
-    private class Tile extends StackPane{
+    private class Tile extends StackPane {
         private Text text = new Text();
+        private int size = 75;
+        private int spacing = 15;
         private int x;
         private int y;
         private boolean marked = false;
+        private int quadrant;
 
-        public Tile(){
-            Rectangle border = new Rectangle(100,100);
+        public Tile() {
+            Rectangle border = new Rectangle(size, size);
             border.setFill(null);
             border.setStroke(Color.BLACK);
 
-            text.setFont(Font.font(72));
+            text.setFont(Font.font(65));
             setAlignment(Pos.CENTER);
 
-            getChildren().addAll(border,text);
+            getChildren().addAll(border, text);
 
             setOnMouseClicked(e -> {
-                if(marked)
+                if (marked)
                     return;
-                if(e.getButton() == MouseButton.PRIMARY && turnX){
+                if (e.getButton() == MouseButton.PRIMARY && turnX) {
                     drawX();
                     turnX = false;
-                    checkSmallWin();
-                }
-                else if(e.getButton() == MouseButton.PRIMARY && !turnX) {
+                    if (checkSmallWin(this)) {
+                        System.out.println("I must check big box!");
+                        //checkBigWin(this);
+                    }
+                } else if (e.getButton() == MouseButton.PRIMARY && !turnX) {
                     drawO();
                     turnX = true;
-                    checkSmallWin();
+                    if (checkSmallWin(this)) {
+                        System.out.println("I must check big box!");
+                        //checkBigWin(this);
+                    }
                 }
             });
         }
 
-        private void drawX(){
-            System.out.println("You touched x:"+x+" y:"+y);
+        private void drawX() {
+            System.out.println("You touched x:" + x + " y:" + y);
             text.setText("X");
             marked = true;
         }
 
-        private void drawO(){
-            System.out.println("You touched x:"+x+" y:"+y);
+        private void drawO() {
+            System.out.println("You touched x:" + x + " y:" + y);
             text.setText("O");
             marked = true;
         }
 
-        public String getValue(){
+        public int getSpacing() {
+            return spacing;
+        }
+
+        public void setQuadrant(int quadrant) {
+            this.quadrant = quadrant;
+        }
+
+        public int getQuadrant() {
+            return quadrant;
+        }
+
+        public String getValue() {
             return text.getText();
         }
 
@@ -114,58 +131,61 @@ public class singlePlayer extends MasterWindow implements Initializable{
         public void setY(int y) {
             this.y = y;
         }
-    }
 
-    private class Combo {
-        private Tile[] tiles;
-
-        /* take in unspecified amount of tiles */
-        public Combo(Tile... tiles){
-            this.tiles = tiles;
-        }
-
-        public boolean isCombo() {
-            if (tiles[0].getValue().isEmpty())
-                return false;
-
-            return (tiles[0].getValue().equals(tiles[1].getValue())
-                 && tiles[0].getValue().equals(tiles[2].getValue()));
+        public int getSize() {
+            return size;
         }
     }
 
-    private class tileBlock{
+    private class tileBlock {
         private Tile[][] block = new Tile[3][3];
         private int quadrant;
+        private int spacing = 15;
 
 
-        public tileBlock(int quad){
+        public tileBlock(int quad) {
+            int transX, transY;
             quadrant = quad;
-            for(int y=0;y<block.length;y++){
-                for(int x=0;x<block.length;x++){
+
+            for (int y = 0; y < block.length; y++) {
+                for (int x = 0; x < block.length; x++) {
                     Tile tile = new Tile();
 
-                    int transX=0;
-                    if(quadrant%3==0) {
-                        transX = x*100;
-                    }
-                    else if(quadrant%3==1){
-                        transX = (x*100)+ 300;
-                    }
-                    else{
-                        transX = (x*100) + 600;
-                    }
+                    //Calculate x shift
+                    transX = x * tile.getSize() + spacing;
+                    if (quadrant % 3 == 1)
+                        transX += (3 * tile.getSize() + spacing);
+                    else if (quadrant % 3 == 2)
+                        transX += (6 * tile.getSize() + spacing * 2);
 
+                    //Calculate y shift
+                    transY = (y * tile.getSize()) + (quadrant / 3) * (3 * tile.getSize()) + spacing;
+                    if (quadrant >= 3 && quadrant <= 5)
+                        transY += spacing;
+                    else if (quadrant >= 6 && quadrant <= 8)
+                        transY += spacing * 2;
+
+                    //Translate the tile and set their coordinate
                     tile.setTranslateX(transX);
-                    tile.setTranslateY((y*100)+ ((quadrant/3)*300));
-
+                    tile.setTranslateY(transY);
                     tile.setX(x);
                     tile.setY(y);
-                    System.out.println("I created a tile! x:"+x+" y:"+y+"\tMy Quad is "+quadrant);
+                    tile.setQuadrant(quadrant);
+
+                    //Add the tile to the block and pane
                     pane.getChildren().add(tile);
                     block[x][y] = tile;
                 }
             }
 
+        }
+
+        public void removeBlock() {
+            for (int i = 0; i < block.length; i++) {
+                for (int j = 0; j < block.length; j++) {
+                    block[i][j].setVisible(false);
+                }
+            }
         }
 
         public Tile[][] getBlock() {
@@ -183,16 +203,194 @@ public class singlePlayer extends MasterWindow implements Initializable{
         public void setQuadrant(int quadrant) {
             this.quadrant = quadrant;
         }
+
+        //return true if they are the winner
+        public boolean checkGridWin(Tile checkMe) {
+            boolean winner = false;
+            String mark = checkMe.getValue();
+
+            //check cols
+            for (int i = 0; i < block.length; i++) {
+                if (block[checkMe.getX()][i].getValue() != mark)
+                    break;
+                if (i == block.length - 1)
+                    return true;
+            }
+
+            //check rows
+            for (int i = 0; i < block.length; i++) {
+                if (block[i][checkMe.getY()].getValue() != mark)
+                    break;
+                if (i == block.length - 1)
+                    return true;
+            }
+
+            //check diag
+            if (checkMe.getX() == checkMe.getY()) {
+                for (int i = 0; i < block.length; i++) {
+                    if (block[i][i].getValue() != mark)
+                        break;
+                    if (i == block.length - 1)
+                        return true;
+                }
+            }
+
+            //check anti-diag
+            if (checkMe.getX() + checkMe.getY() == block.length - 1) {
+                for (int i = 0; i < block.length; i++) {
+                    if (block[i][block.length - 1 - i].getValue() != mark)
+                        break;
+                    if (i == block.length - 1)
+                        return true;
+                }
+            }
+
+            return winner;
+        }
     }
 
-    /* a user has won a small section */
-    private void checkSmallWin(){
-        for (Combo combo:combos){
-            if(combo.isCombo()){
-                System.out.println("User has won a section!!!");
-                //winAnimation(combo);
+    private class WinnerTile extends StackPane {
+        private Text text = new Text();
+        private int smallTileSize = 75;
+        private boolean marked = false;
+        private int quadrant;
+
+        public WinnerTile() {
+            Rectangle border = new Rectangle(smallTileSize * 3, smallTileSize * 3);
+            border.setFill(null);
+            border.setStroke(Color.BLACK);
+
+            text.setFont(Font.font(100));
+            setAlignment(Pos.CENTER);
+
+            getChildren().addAll(border, text);
+
+        }
+
+        public void setQuadrant(int quadrant) {
+            this.quadrant = quadrant;
+        }
+
+        public void setText(Text text) {
+            this.text = text;
+        }
+
+        public Text getText() {
+            return text;
+        }
+
+        public String getValue() {
+            return text.getText();
+        }
+    }
+
+    private void checkBigWin(Tile tile) {
+        int x=0, y=0;
+        int quad = tile.getQuadrant();
+
+        //get the (x,y) of the last quad won
+        x = quad % 3;
+        if (quad >= 3 && quad <= 5)
+            y = 1;
+        else if (quad >= 6 && quad <= 8)
+            y = 2;
+
+
+        //check cols
+        for (int i = 0; i < winBoard.length; i++) {
+            if (winBoard[x][i].getValue() != tile.getValue())
                 break;
+            if (i == winBoard.length - 1)
+                System.out.println("WE HAVE AN ACTUAL WINNER!");
+        }
+
+        //check rows
+        for (int i = 0; i < winBoard.length; i++) {
+            if (winBoard[i][y].getValue() != tile.getValue())
+                break;
+            if (i == winBoard.length - 1)
+                System.out.println("WE HAVE AN ACTUAL WINNER!");
+        }
+
+        //check diag
+        if (x == y) {
+            for (int i = 0; i < winBoard.length; i++) {
+                if (winBoard[i][i].getValue() != tile.getValue())
+                    break;
+                if (i == winBoard.length - 1)
+                    System.out.println("WE HAVE AN ACTUAL WINNER!");
             }
         }
+
+        //check anti-diag
+        if (x + y == winBoard.length - 1) {
+            for (int i = 0; i < winBoard.length; i++) {
+                if (winBoard[i][winBoard.length - 1 - i].getValue() != tile.getValue())
+                    break;
+                if (i == winBoard.length - 1)
+                    System.out.println("WE HAVE AN ACTUAL WINNER!");
+            }
+        }
+    }
+
+
+
+    private boolean checkSmallWin(Tile tile){
+        int quad = tile.getQuadrant();
+        boolean answer = false;
+        int i=0,j=0;
+        outerLoop:
+        for(i=0;i<board.length;i++){
+            for(j=0;j<board.length;j++){
+                if(board[i][j].getQuadrant() == quad) {
+                    answer = board[i][j].checkGridWin(tile);
+                    break outerLoop;
+                }
+            }
+        }
+
+        if(answer){
+            int spacing = tile.getSpacing();
+            int transX=spacing,transY=spacing+5;
+            int x=0;int y=0;                            //the (x,y) of the quads
+
+            System.out.println("There is a small winner!!");
+            WinnerTile temp = new WinnerTile();
+
+            board[i][j].removeBlock();
+
+            //Calculate x shift
+            if(quad%3==1) {
+                transX += (3 * tile.getSize() + spacing);
+                x=1;
+            }
+            else if(quad%3==2) {
+                transX += (6 * tile.getSize() + spacing * 2);
+                x=2;
+            }
+
+            //Calculate y shift
+            if(quad >= 3 && quad <= 5) {
+                transY += (3 * tile.getSize() + spacing);
+                y=1;
+            }
+            else if(quad >= 6 && quad <= 8) {
+                transY += (6 * tile.getSize() + spacing * 2);
+                y=2;
+            }
+
+            //Translate the tile and set their coordinate
+            temp.setTranslateX(transX);
+            temp.setTranslateY(transY);
+            temp.setQuadrant(quad);
+            temp.getText().setText(tile.getValue());
+
+            winBoard[x][y] = temp;
+            System.out.println("The small winner won on quad:" + quad + "\t which is also x:"+x+" y:"+y);
+
+            //Add the tile to the block and pane
+            pane.getChildren().add(temp);
+        }
+        return answer;
     }
 }

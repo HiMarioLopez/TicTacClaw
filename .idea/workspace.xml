@@ -2,28 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a4afe22-8fc9-49ab-8f8a-7d28a4e4b9ef" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_derby_derby_10_14_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/LoginScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/LoginScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/connectToServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/connectToServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/singlePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/singlePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/ExitBox.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/LoginScreenController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/MasterWindow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/MediaBox.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/UI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/connectToServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/coopScreenController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/homeScreenController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/settingScreenController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/LoginScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/LoginScreenController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/connectToServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/connectToServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/singlePlayer$Combo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/singlePlayer$Tile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/singlePlayer.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,15 +21,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MasterWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MasterWindow.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -65,23 +42,90 @@
       <file leaf-file-name="singlePlayer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/singlePlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1583">
-              <caret line="149" selection-start-line="149" selection-end-line="149" />
+            <state relative-caret-position="707">
+              <caret line="330" column="68" selection-start-line="330" selection-start-column="68" selection-end-line="330" selection-end-column="68" />
               <folding>
-                <element signature="e#4852#4853#0" expanded="true" />
-                <element signature="e#4888#4889#0" expanded="true" />
-                <element signature="e#4936#4937#0" expanded="true" />
-                <element signature="e#4978#4979#0" expanded="true" />
-                <element signature="e#5014#5015#0" expanded="true" />
-                <element signature="e#5053#5054#0" expanded="true" />
-                <element signature="e#5102#5103#0" expanded="true" />
-                <element signature="e#5150#5151#0" expanded="true" />
+                <element signature="method#initialize#0;class#singlePlayer#0" />
+                <element signature="e#3075#3076#0" expanded="true" />
+                <element signature="e#3113#3114#0" expanded="true" />
+                <element signature="e#3162#3163#0" expanded="true" />
+                <element signature="e#3210#3211#0" expanded="true" />
+                <element signature="e#3328#3329#0" expanded="true" />
+                <element signature="e#3367#3368#0" expanded="true" />
+                <element signature="e#3364#3365#0" expanded="true" />
+                <element signature="e#3409#3410#0" expanded="true" />
+                <element signature="e#3319#3320#0" expanded="true" />
+                <element signature="e#3351#3352#0" expanded="true" />
+                <element signature="e#3386#3387#0" expanded="true" />
+                <element signature="e#3420#3421#0" expanded="true" />
+                <element signature="e#3449#3450#0" expanded="true" />
+                <element signature="e#3481#3482#0" expanded="true" />
+                <element signature="e#3516#3517#0" expanded="true" />
+                <element signature="e#3550#3551#0" expanded="true" />
+                <element signature="e#3701#3702#0" expanded="true" />
+                <element signature="e#3736#3737#0" expanded="true" />
+                <element signature="method#removeBlock#0;class#tileBlock#0;class#singlePlayer#0" />
+                <element signature="e#4924#4925#0" expanded="true" />
+                <element signature="e#4960#4961#0" expanded="true" />
+                <element signature="e#5008#5009#0" expanded="true" />
+                <element signature="e#5050#5051#0" expanded="true" />
+                <element signature="e#5086#5087#0" expanded="true" />
+                <element signature="e#5125#5126#0" expanded="true" />
+                <element signature="e#5174#5175#0" expanded="true" />
+                <element signature="e#5222#5223#0" expanded="true" />
+                <element signature="method#WinnerTile#0;class#WinnerTile#0;class#singlePlayer#0" />
+                <element signature="e#7629#7630#0" expanded="true" />
+                <element signature="e#7677#7678#0" expanded="true" />
+                <element signature="e#7719#7720#0" expanded="true" />
+                <element signature="e#7759#7760#0" expanded="true" />
+                <element signature="e#8015#8016#0" expanded="true" />
+                <element signature="e#8050#8051#0" expanded="true" />
+                <element signature="e#8144#8145#0" expanded="true" />
+                <element signature="e#8189#8190#0" expanded="true" />
+                <element signature="method#checkSmallWin#0;class#singlePlayer#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="LoginScreenController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/LoginScreenController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="61" column="10" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
+              <folding>
+                <element signature="e#2056#2057#0" expanded="true" />
+                <element signature="e#2120#2121#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-136">
+              <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connectToServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/connectToServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="23" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>iscombo</find>
+      <find>check</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -90,6 +134,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/LoginScreenController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/singlePlayer.java" />
       </list>
     </option>
@@ -256,12 +302,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522561890381</updated>
-      <workItem from="1522561892237" duration="5815000" />
+      <workItem from="1522561892237" duration="23104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5815000" />
+    <option name="totallyTimeSpent" value="23104000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -276,7 +322,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32352942" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27450982" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
@@ -287,7 +333,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" />
       <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.21786493" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -308,42 +354,24 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/singlePlayer.java</url>
-          <line>40</line>
+          <line>299</line>
           <properties />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="8" />
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="spacing" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MasterWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/homeScreenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="1657" selection-start-line="1657" selection-end-line="1657" />
-          <folding>
-            <element signature="e#66921#66922#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -361,16 +389,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/connectToServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="23" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/loginScreen.fxml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/login.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MasterWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/LoginScreenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="61" column="10" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
+          <folding>
+            <element signature="e#2056#2057#0" expanded="true" />
+            <element signature="e#2120#2121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="1768" selection-start-line="1768" selection-end-line="1768" />
+          <folding>
+            <element signature="e#66921#66922#0" expanded="true" />
+            <element signature="e#66966#66967#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/homeScreenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/javafx-src.zip!/javafx/stage/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/javafx-src.zip!/javafx/event/Event.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
+        <state relative-caret-position="540">
           <caret line="197" selection-start-line="197" selection-end-line="197" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/javafx-src.zip!/javafx/scene/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8809">
+        <state relative-caret-position="223">
           <caret line="2494" selection-start-line="2494" selection-end-line="2494" />
           <folding>
             <element signature="e#66617#66618#0" expanded="true" />
@@ -381,17 +473,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/singlePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1583">
-          <caret line="149" selection-start-line="149" selection-end-line="149" />
+        <state relative-caret-position="707">
+          <caret line="330" column="68" selection-start-line="330" selection-start-column="68" selection-end-line="330" selection-end-column="68" />
           <folding>
-            <element signature="e#4852#4853#0" expanded="true" />
-            <element signature="e#4888#4889#0" expanded="true" />
-            <element signature="e#4936#4937#0" expanded="true" />
-            <element signature="e#4978#4979#0" expanded="true" />
-            <element signature="e#5014#5015#0" expanded="true" />
-            <element signature="e#5053#5054#0" expanded="true" />
-            <element signature="e#5102#5103#0" expanded="true" />
-            <element signature="e#5150#5151#0" expanded="true" />
+            <element signature="method#initialize#0;class#singlePlayer#0" />
+            <element signature="e#3075#3076#0" expanded="true" />
+            <element signature="e#3113#3114#0" expanded="true" />
+            <element signature="e#3162#3163#0" expanded="true" />
+            <element signature="e#3210#3211#0" expanded="true" />
+            <element signature="e#3328#3329#0" expanded="true" />
+            <element signature="e#3367#3368#0" expanded="true" />
+            <element signature="e#3364#3365#0" expanded="true" />
+            <element signature="e#3409#3410#0" expanded="true" />
+            <element signature="e#3319#3320#0" expanded="true" />
+            <element signature="e#3351#3352#0" expanded="true" />
+            <element signature="e#3386#3387#0" expanded="true" />
+            <element signature="e#3420#3421#0" expanded="true" />
+            <element signature="e#3449#3450#0" expanded="true" />
+            <element signature="e#3481#3482#0" expanded="true" />
+            <element signature="e#3516#3517#0" expanded="true" />
+            <element signature="e#3550#3551#0" expanded="true" />
+            <element signature="e#3701#3702#0" expanded="true" />
+            <element signature="e#3736#3737#0" expanded="true" />
+            <element signature="method#removeBlock#0;class#tileBlock#0;class#singlePlayer#0" />
+            <element signature="e#4924#4925#0" expanded="true" />
+            <element signature="e#4960#4961#0" expanded="true" />
+            <element signature="e#5008#5009#0" expanded="true" />
+            <element signature="e#5050#5051#0" expanded="true" />
+            <element signature="e#5086#5087#0" expanded="true" />
+            <element signature="e#5125#5126#0" expanded="true" />
+            <element signature="e#5174#5175#0" expanded="true" />
+            <element signature="e#5222#5223#0" expanded="true" />
+            <element signature="method#WinnerTile#0;class#WinnerTile#0;class#singlePlayer#0" />
+            <element signature="e#7629#7630#0" expanded="true" />
+            <element signature="e#7677#7678#0" expanded="true" />
+            <element signature="e#7719#7720#0" expanded="true" />
+            <element signature="e#7759#7760#0" expanded="true" />
+            <element signature="e#8015#8016#0" expanded="true" />
+            <element signature="e#8050#8051#0" expanded="true" />
+            <element signature="e#8144#8145#0" expanded="true" />
+            <element signature="e#8189#8190#0" expanded="true" />
+            <element signature="method#checkSmallWin#0;class#singlePlayer#0" />
           </folding>
         </state>
       </provider>
