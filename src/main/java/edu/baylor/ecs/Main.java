@@ -38,9 +38,8 @@ public class Main extends Application {
 
 
         master = new MasterWindow(window);
-
-        //window.setScene(loginScene);
-        master.getWindow().setScene(master.getLoginScene());
+        master.connectToLogin();
+        master.getWindow().setScene(master.getCurrentScene());
         master.getWindow().show();
 
         //exit request
@@ -67,14 +66,6 @@ public class Main extends Application {
         } catch (NumberFormatException e) {
             System.out.println("error");
         }
-    }
-
-    public String getSongFile() {
-        return songFile;
-    }
-
-    public void setSongFile(String songFile) {
-        this.songFile = songFile;
     }
 }
 
