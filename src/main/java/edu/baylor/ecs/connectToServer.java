@@ -13,7 +13,7 @@ import java.sql.*;
 public class connectToServer {
     private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
     private static final String DB_CONNECTION = "jdbc:mysql://" +
-            "tictacclawinstance.ckgzixjdcowi.us-east-2.rds.amazonaws.com:" +
+            "tictacclaw-aws.ckgzixjdcowi.us-east-2.rds.amazonaws.com:" +
             "3306/tictacclaw?autoReconnect=true&useSSL=false";
     private static final String DB_USER = "mario";
     private static final String DB_PASSWORD = "Gibson123";
@@ -33,8 +33,6 @@ public class connectToServer {
                 dbConnection.close();
 
                 dbConnection = DriverManager.getConnection(DB_CONNECTION, DB_USER, DB_PASSWORD);
-                statement = dbConnection.createStatement();
-
                 statement = dbConnection.createStatement();
                 statement.executeUpdate("insert into users " +
                         "(usr_Name, usr_Password, usr_HighScore, usr_ImageIndex) " +
