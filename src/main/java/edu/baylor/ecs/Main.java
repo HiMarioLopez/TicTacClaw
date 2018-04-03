@@ -28,7 +28,7 @@ public class Main extends Application {
 
         Media sound = new Media(this.getClass().getResource("/Wolves.m4a").toString());
         MediaPlayer mediaPlayers = new MediaPlayer(sound);
-        mediaPlayers.play();
+        //mediaPlayers.play();
         //AudioClip note = new AudioClip(this.getClass().getResource("/Wolves.mp3").toString());
         //note.play(100);
         //System.out.println(note.isPlaying());

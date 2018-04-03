@@ -308,20 +308,24 @@ public class singlePlayer extends MasterWindow implements Initializable {
         else if (quad >= 6 && quad <= 8)
             y = 2;
 
+        int smallTileSize = winBoard[x][y].getSmallTileSize();
+        double startX=0,startY=0,endX=0,endY=0;
+        int spacing = winBoard[x][0].getSpacing();
 
         //check cols
         for (int i = 0; i < winBoard.length; i++) {
             if (winBoard[x][i].getValue() != tile.getValue())
                     break;
             if (i == winBoard.length - 1) {
-                double start=0,end=0;
-                int spacing = winBoard[x][0].getSpacing();
-                start = winBoard[x][0].getSmallTileSize() * 1.5 + spacing;
-                end = winBoard[x][winBoard.length-1].getSmallTileSize() * 7.5 + spacing;
 
+                startX = (smallTileSize * 1.5) + spacing*(x+1) + (x*3*smallTileSize);
+                startY = (smallTileSize * 1.5) + spacing+4;
+
+                endX = startX;
+                endY = startY + (smallTileSize*6) + (spacing*2);
 
                 System.out.println("WE HAVE AN ACTUAL WINNER!\tPlaying animation");
-                playWinAnimation(start,start,end);
+                playWinAnimation(startX,startY,endX,endY);
             }
         }
 
@@ -329,8 +333,18 @@ public class singlePlayer extends MasterWindow implements Initializable {
         for (int i = 0; i < winBoard.length; i++) {
             if (winBoard[i][y].getValue() != tile.getValue())
                 break;
-            if (i == winBoard.length - 1)
+            if (i == winBoard.length - 1) {
+
+                startX = (smallTileSize * 1.5) + spacing+4;
+                startY = (smallTileSize * 1.5) + spacing*(y+1) + (y*3*smallTileSize) + 8;
+
+                endX = startX + (smallTileSize*6) + (spacing*2);
+                endY = startY;
+
                 System.out.println("WE HAVE AN ACTUAL WINNER!");
+                playWinAnimation(startX,startY,endX,endY);
+
+            }
         }
 
         //check diag
@@ -338,8 +352,17 @@ public class singlePlayer extends MasterWindow implements Initializable {
             for (int i = 0; i < winBoard.length; i++) {
                 if (winBoard[i][i].getValue() != tile.getValue())
                     break;
-                if (i == winBoard.length - 1)
+                if (i == winBoard.length - 1) {
+
+                    startX = (smallTileSize * 1.5) + spacing+4;
+                    startY = startX + 5;
+
+                    endX = startX + (smallTileSize*6) + (spacing*2);
+                    endY = endX + 5;
+
                     System.out.println("WE HAVE AN ACTUAL WINNER!");
+                    playWinAnimation(startX,startY,endX,endY);
+                }
             }
         }
 
@@ -348,8 +371,17 @@ public class singlePlayer extends MasterWindow implements Initializable {
             for (int i = 0; i < winBoard.length; i++) {
                 if (winBoard[i][winBoard.length - 1 - i].getValue() != tile.getValue())
                     break;
-                if (i == winBoard.length - 1)
+                if (i == winBoard.length - 1) {
+
+                    startX = (smallTileSize * 1.5) + spacing+4 +5;
+                    startY = (smallTileSize*7.5) + spacing*3;
+
+                    endX = (smallTileSize*7.5) + spacing*(x+1);
+                    endY = (smallTileSize * 1.5) + spacing+6;
+
                     System.out.println("WE HAVE AN ACTUAL WINNER!");
+                    playWinAnimation(startX,startY,endX,endY);
+                }
             }
         }
     }
@@ -424,6 +456,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
         line.setStartY(startY);
         line.setEndX(startX);
         line.setEndY(startY);
+        line.setStrokeWidth(5);
 
         pane.getChildren().add(line);
 
