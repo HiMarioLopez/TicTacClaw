@@ -13,7 +13,7 @@ import java.sql.*;
 public class connectToServer {
     private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
     private static final String DB_CONNECTION = "jdbc:mysql://" +
-            "tictacclawinstance.ckgzixjdcowi.us-east-2.rds.amazonaws.com:" +
+            "tictacclaw-aws.ckgzixjdcowi.us-east-2.rds.amazonaws.com:" +
             "3306/tictacclaw?autoReconnect=true&useSSL=false";
     private static final String DB_USER = "mario";
     private static final String DB_PASSWORD = "Gibson123";

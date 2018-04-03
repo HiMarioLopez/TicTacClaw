@@ -17,7 +17,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>8.8.3</version>
                 <configuration>
-                    <mainClass>your.package.with.Launcher</mainClass>
+                    <mainClass>edu.baylor.ecs.Main</mainClass>
                 </configuration>
             </plugin>
             <plugin>
@@ -43,14 +43,5 @@
     <groupId>edu.baylor.edu</groupId>
     <artifactId>tictacclaw</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.apache.derby/derby -->
-        <dependency>
-            <groupId>org.apache.derby</groupId>
-            <artifactId>derby</artifactId>
-            <version>10.14.1.0</version>
-        </dependency>
-    </dependencies>
 
 </project>
