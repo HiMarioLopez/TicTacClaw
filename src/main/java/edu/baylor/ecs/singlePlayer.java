@@ -1,5 +1,8 @@
 package edu.baylor.ecs;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
@@ -8,9 +11,11 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
@@ -42,6 +47,9 @@ public class singlePlayer extends MasterWindow implements Initializable {
             for (int x = 0; x < 3; x++) {
                 tileBlock block = new tileBlock(quad);
                 board[x][y] = block;
+
+                WinnerTile winner = new WinnerTile();
+                winBoard[x][y] = winner;
                 quad++;
             }
         }
@@ -75,14 +83,14 @@ public class singlePlayer extends MasterWindow implements Initializable {
                     turnX = false;
                     if (checkSmallWin(this)) {
                         System.out.println("I must check big box!");
-                        //checkBigWin(this);
+                        checkBigWin(this);
                     }
                 } else if (e.getButton() == MouseButton.PRIMARY && !turnX) {
                     drawO();
                     turnX = true;
                     if (checkSmallWin(this)) {
                         System.out.println("I must check big box!");
-                        //checkBigWin(this);
+                        checkBigWin(this);
                     }
                 }
             });
@@ -252,8 +260,8 @@ public class singlePlayer extends MasterWindow implements Initializable {
     private class WinnerTile extends StackPane {
         private Text text = new Text();
         private int smallTileSize = 75;
-        private boolean marked = false;
         private int quadrant;
+        private int spacing = 15;
 
         public WinnerTile() {
             Rectangle border = new Rectangle(smallTileSize * 3, smallTileSize * 3);
@@ -261,6 +269,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
             border.setStroke(Color.BLACK);
 
             text.setFont(Font.font(100));
+            text.setText(" ");
             setAlignment(Pos.CENTER);
 
             getChildren().addAll(border, text);
@@ -271,16 +280,20 @@ public class singlePlayer extends MasterWindow implements Initializable {
             this.quadrant = quadrant;
         }
 
-        public void setText(Text text) {
-            this.text = text;
-        }
-
         public Text getText() {
             return text;
         }
 
         public String getValue() {
             return text.getText();
+        }
+
+        public int getSmallTileSize() {
+            return smallTileSize;
+        }
+
+        public int getSpacing() {
+            return spacing;
         }
     }
 
@@ -299,9 +312,17 @@ public class singlePlayer extends MasterWindow implements Initializable {
         //check cols
         for (int i = 0; i < winBoard.length; i++) {
             if (winBoard[x][i].getValue() != tile.getValue())
-                break;
-            if (i == winBoard.length - 1)
-                System.out.println("WE HAVE AN ACTUAL WINNER!");
+                    break;
+            if (i == winBoard.length - 1) {
+                double start=0,end=0;
+                int spacing = winBoard[x][0].getSpacing();
+                start = winBoard[x][0].getSmallTileSize() * 1.5 + spacing;
+                end = winBoard[x][winBoard.length-1].getSmallTileSize() * 7.5 + spacing;
+
+
+                System.out.println("WE HAVE AN ACTUAL WINNER!\tPlaying animation");
+                playWinAnimation(start,start,end);
+            }
         }
 
         //check rows
@@ -349,14 +370,16 @@ public class singlePlayer extends MasterWindow implements Initializable {
             }
         }
 
+        //Add the winner tile to the winBoard
         if(answer){
-            int spacing = tile.getSpacing();
+            WinnerTile temp = new WinnerTile();
+            int spacing = temp.getSpacing();
             int transX=spacing,transY=spacing+5;
             int x=0;int y=0;                            //the (x,y) of the quads
 
             System.out.println("There is a small winner!!");
-            WinnerTile temp = new WinnerTile();
 
+            //Clear the gridBlock in the location of the win
             board[i][j].removeBlock();
 
             //Calculate x shift
@@ -392,5 +415,22 @@ public class singlePlayer extends MasterWindow implements Initializable {
             pane.getChildren().add(temp);
         }
         return answer;
+    }
+
+    private void playWinAnimation(double startX,double startY,double endX,double endY){
+
+        Line line = new Line();
+        line.setStartX(startX);
+        line.setStartY(startY);
+        line.setEndX(startX);
+        line.setEndY(startY);
+
+        pane.getChildren().add(line);
+
+        Timeline timeline = new Timeline();
+        timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(1.5),
+                new KeyValue(line.endXProperty(), endX),
+                new KeyValue(line.endYProperty(), endY)));
+        timeline.play();
     }
 }
