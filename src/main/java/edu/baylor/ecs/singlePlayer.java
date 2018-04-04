@@ -6,6 +6,7 @@ import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.Pane;
@@ -15,6 +16,7 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -22,6 +24,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.concurrent.TimeUnit;
 
 public class singlePlayer extends MasterWindow implements Initializable {
     private tileBlock[][] board = new tileBlock[3][3];
@@ -80,18 +83,18 @@ public class singlePlayer extends MasterWindow implements Initializable {
                     return;
                 if (e.getButton() == MouseButton.PRIMARY && turnX) {
                     drawX();
-                    turnX = false;
                     if (checkSmallWin(this)) {
                         System.out.println("I must check big box!");
                         checkBigWin(this);
                     }
+                    turnX = false;
                 } else if (e.getButton() == MouseButton.PRIMARY && !turnX) {
                     drawO();
-                    turnX = true;
                     if (checkSmallWin(this)) {
                         System.out.println("I must check big box!");
                         checkBigWin(this);
                     }
+                    turnX = true;
                 }
             });
         }
@@ -324,8 +327,13 @@ public class singlePlayer extends MasterWindow implements Initializable {
                 endX = startX;
                 endY = startY + (smallTileSize*6) + (spacing*2);
 
-                System.out.println("WE HAVE AN ACTUAL WINNER!\tPlaying animation");
+                System.out.println("WE HAVE AN ACTUAL WINNER!");
                 playWinAnimation(startX,startY,endX,endY);
+
+                try{
+                    callWinBox();
+                } catch (IOException ex) { ex.printStackTrace();}
+
             }
         }
 
@@ -343,6 +351,10 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
                 System.out.println("WE HAVE AN ACTUAL WINNER!");
                 playWinAnimation(startX,startY,endX,endY);
+
+                try{
+                    callWinBox();
+                } catch (IOException ex) { ex.printStackTrace();}
 
             }
         }
@@ -362,6 +374,11 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
                     System.out.println("WE HAVE AN ACTUAL WINNER!");
                     playWinAnimation(startX,startY,endX,endY);
+
+                    try{
+                        callWinBox();
+                    } catch (IOException ex) { ex.printStackTrace();}
+
                 }
             }
         }
@@ -381,6 +398,11 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
                     System.out.println("WE HAVE AN ACTUAL WINNER!");
                     playWinAnimation(startX,startY,endX,endY);
+
+                    try{
+                        callWinBox();
+                    } catch (IOException ex) { ex.printStackTrace();}
+
                 }
             }
         }
@@ -450,7 +472,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
     }
 
     private void playWinAnimation(double startX,double startY,double endX,double endY){
-
+        System.out.println("Playing animation");
         Line line = new Line();
         line.setStartX(startX);
         line.setStartY(startY);
@@ -465,5 +487,17 @@ public class singlePlayer extends MasterWindow implements Initializable {
                 new KeyValue(line.endXProperty(), endX),
                 new KeyValue(line.endYProperty(), endY)));
         timeline.play();
+        getWindow().show();
+    }
+
+    private void callWinBox() throws IOException{
+
+//        try{
+//            Thread.sleep(10000);
+//        } catch (InterruptedException e){ Thread.currentThread().interrupt();}
+        Stage old = getWindow();
+        WinBox.display(getMaster(),turnX);
+        old.close();
+        getWindow().show();
     }
 }

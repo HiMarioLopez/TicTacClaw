@@ -88,4 +88,8 @@ public class MasterWindow {
         this.window = window;
     }
 
+    public MasterWindow getMaster(){
+        return  this;
+    }
+
 }
