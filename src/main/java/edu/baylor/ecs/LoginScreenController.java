@@ -34,9 +34,6 @@ public class LoginScreenController extends MasterWindow{
     @FXML
     private PasswordField password;
 
-
-
-
     public LoginScreenController(){
         //System.out.println("Created LoginScreenController");
     }
@@ -44,7 +41,6 @@ public class LoginScreenController extends MasterWindow{
     //loginButton
     public void loginAction(ActionEvent event) throws IOException{
         System.out.println("User press Login button");
-
 
         if (login(username.getText(), password.getText())) {
             System.out.println("Login successful!");
@@ -56,11 +52,6 @@ public class LoginScreenController extends MasterWindow{
         } else {
             System.out.println("ERROR! Invalid credentials. Please try again.");
         }
-        this.connectToHome();
-        setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
-        //getWindow().setScene(getCurrentScene());
-        //mediaBox.playMediaBox();
-        //getWindow().show();
     }
 
     //registerButton
