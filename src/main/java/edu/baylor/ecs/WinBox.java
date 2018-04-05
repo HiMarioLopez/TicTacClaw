@@ -31,7 +31,7 @@ public class WinBox {
 
         homeButton.setOnAction(e -> {
             try {
-                master.connectToHome();
+                master.connectToWin();
             } catch (IOException ex) { ex.printStackTrace();}
             master.setWindow((Stage)((Node)e.getSource()).getScene().getWindow());
             master.getWindow().setScene(master.getCurrentScene());

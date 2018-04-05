@@ -3,6 +3,8 @@ package edu.baylor.ecs;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
@@ -30,7 +32,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
     private tileBlock[][] board = new tileBlock[3][3];
     private WinnerTile[][] winBoard = new WinnerTile[3][3];
     private boolean valid = true;
-    private boolean turnX = true;
+    private static boolean turnX = true;
     private int width = 800;
     private int height = 800;
 
@@ -330,10 +332,6 @@ public class singlePlayer extends MasterWindow implements Initializable {
                 System.out.println("WE HAVE AN ACTUAL WINNER!");
                 playWinAnimation(startX,startY,endX,endY);
 
-                try{
-                    callWinBox();
-                } catch (IOException ex) { ex.printStackTrace();}
-
             }
         }
 
@@ -351,10 +349,6 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
                 System.out.println("WE HAVE AN ACTUAL WINNER!");
                 playWinAnimation(startX,startY,endX,endY);
-
-                try{
-                    callWinBox();
-                } catch (IOException ex) { ex.printStackTrace();}
 
             }
         }
@@ -375,10 +369,6 @@ public class singlePlayer extends MasterWindow implements Initializable {
                     System.out.println("WE HAVE AN ACTUAL WINNER!");
                     playWinAnimation(startX,startY,endX,endY);
 
-                    try{
-                        callWinBox();
-                    } catch (IOException ex) { ex.printStackTrace();}
-
                 }
             }
         }
@@ -398,10 +388,6 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
                     System.out.println("WE HAVE AN ACTUAL WINNER!");
                     playWinAnimation(startX,startY,endX,endY);
-
-                    try{
-                        callWinBox();
-                    } catch (IOException ex) { ex.printStackTrace();}
 
                 }
             }
@@ -471,33 +457,35 @@ public class singlePlayer extends MasterWindow implements Initializable {
         return answer;
     }
 
-    private void playWinAnimation(double startX,double startY,double endX,double endY){
+    private void playWinAnimation(double startX, double startY, double endX, double endY){
         System.out.println("Playing animation");
+
+        //Create the line
         Line line = new Line();
         line.setStartX(startX);
         line.setStartY(startY);
         line.setEndX(startX);
         line.setEndY(startY);
         line.setStrokeWidth(5);
-
         pane.getChildren().add(line);
 
+        //Animate the line being drawn over the winning tiles
         Timeline timeline = new Timeline();
         timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(1.5),
                 new KeyValue(line.endXProperty(), endX),
                 new KeyValue(line.endYProperty(), endY)));
         timeline.play();
-        getWindow().show();
+
+        //Open up the WinBox to congratulate the winner
+        timeline.setOnFinished(e -> {
+            try{
+                getMaster().connectToWin();
+            } catch (IOException ex) {ex.printStackTrace();}
+            getMaster().getWindow().setScene(getMaster().getCurrentScene());
+        });
     }
 
-    private void callWinBox() throws IOException{
-
-//        try{
-//            Thread.sleep(10000);
-//        } catch (InterruptedException e){ Thread.currentThread().interrupt();}
-        Stage old = getWindow();
-        WinBox.display(getMaster(),turnX);
-        old.close();
-        getWindow().show();
+    public static boolean getWinner(){
+        return turnX;
     }
 }

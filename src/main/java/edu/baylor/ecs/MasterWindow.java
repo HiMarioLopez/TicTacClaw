@@ -66,6 +66,12 @@ public class MasterWindow {
         currentScene.getStylesheets().add("/login.css");
     }
 
+    protected void connectToWin() throws IOException{
+        rootParent = FXMLLoader.load(getClass().getResource("/winBox.fxml"));
+        currentScene = new Scene(rootParent);
+        currentScene.getStylesheets().add("/winBox.css");
+    }
+
 
 
 
