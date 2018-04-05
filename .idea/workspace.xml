@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a4afe22-8fc9-49ab-8f8a-7d28a4e4b9ef" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/winBoxController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/winBox.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/winBox.fxml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MasterWindow.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MasterWindow.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/UI.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/WinBox.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/WinBox.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/homeScreenController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/homeScreenController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/settingScreenController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/settingScreenController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/singlePlayer.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/singlePlayer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/homeScreen.fxml" afterPath="$PROJECT_DIR$/src/main/resources/homeScreen.fxml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/MasterWindow.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/MasterWindow.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/WinBox.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/WinBox.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/singlePlayer.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/singlePlayer.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/WinBox.java" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="winBoxController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="winBoxController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/winBoxController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="47" column="45" lean-forward="false" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
+            <state relative-caret-position="268">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1527#1528#0" expanded="true" />
@@ -97,10 +85,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="singlePlayer.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="singlePlayer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/singlePlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2680">
+            <state relative-caret-position="331">
               <caret line="473" column="71" lean-forward="true" selection-start-line="473" selection-start-column="71" selection-end-line="473" selection-end-column="71" />
               <folding>
                 <element signature="method#initialize#0;class#singlePlayer#0" expanded="false" />
@@ -150,13 +138,13 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/ExitBox.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MasterWindow.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/WinBox.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/settingScreenController.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/homeScreenController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/winBox.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/winBox.css" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/singlePlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/winBoxController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/WinBox.java" />
       </list>
     </option>
   </component>
@@ -379,12 +367,12 @@
       <workItem from="1522728420551" duration="4987000" />
       <workItem from="1522794502255" duration="1667000" />
       <workItem from="1522871123054" duration="6034000" />
-      <workItem from="1522892040945" duration="4342000" />
+      <workItem from="1522892040945" duration="4468000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45508000" />
+    <option name="totallyTimeSpent" value="45634000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -399,12 +387,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17564403" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17564403" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123046875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32943013" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -417,7 +406,6 @@
       <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -716,16 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/WinBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="36" column="66" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="36" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/ExitBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -804,21 +782,23 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/singlePlayer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/winBoxController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2680">
-          <caret line="473" column="71" lean-forward="true" selection-start-line="473" selection-start-column="71" selection-end-line="473" selection-end-column="71" />
+        <state relative-caret-position="268">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <element signature="method#initialize#0;class#singlePlayer#0" expanded="false" />
-            <element signature="class#Tile#0;class#singlePlayer#0" expanded="false" />
-            <element signature="class#tileBlock#0;class#singlePlayer#0" expanded="false" />
-            <element signature="method#removeBlock#0;class#tileBlock#0;class#singlePlayer#0" expanded="false" />
-            <element signature="method#checkGridWin#0;class#tileBlock#0;class#singlePlayer#0" expanded="false" />
-            <element signature="class#WinnerTile#0;class#singlePlayer#0" expanded="false" />
-            <element signature="method#checkSmallWin#0;class#singlePlayer#0" expanded="false" />
-            <element signature="e#14779#14780#0" expanded="true" />
-            <element signature="e#14807#14808#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+            <element signature="e#1574#1575#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/WinBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -830,14 +810,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/winBoxController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/singlePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="47" column="45" lean-forward="false" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
+        <state relative-caret-position="331">
+          <caret line="473" column="71" lean-forward="true" selection-start-line="473" selection-start-column="71" selection-end-line="473" selection-end-column="71" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1527#1528#0" expanded="true" />
-            <element signature="e#1574#1575#0" expanded="true" />
+            <element signature="method#initialize#0;class#singlePlayer#0" expanded="false" />
+            <element signature="class#Tile#0;class#singlePlayer#0" expanded="false" />
+            <element signature="class#tileBlock#0;class#singlePlayer#0" expanded="false" />
+            <element signature="method#removeBlock#0;class#tileBlock#0;class#singlePlayer#0" expanded="false" />
+            <element signature="method#checkGridWin#0;class#tileBlock#0;class#singlePlayer#0" expanded="false" />
+            <element signature="class#WinnerTile#0;class#singlePlayer#0" expanded="false" />
+            <element signature="method#checkSmallWin#0;class#singlePlayer#0" expanded="false" />
+            <element signature="e#14779#14780#0" expanded="true" />
+            <element signature="e#14807#14808#0" expanded="true" />
           </folding>
         </state>
       </provider>
