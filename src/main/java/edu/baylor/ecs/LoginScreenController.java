@@ -45,6 +45,7 @@ public class LoginScreenController extends MasterWindow{
     public void loginAction(ActionEvent event) throws IOException{
         System.out.println("User press Login button");
 
+        /*
         if (login(username.getText(), password.getText())) {
             System.out.println("Login successful!");
             this.connectToHome();
@@ -54,7 +55,12 @@ public class LoginScreenController extends MasterWindow{
             getWindow().show();
         } else {
             System.out.println("ERROR! Invalid credentials. Please try again.");
-        }
+        }*/
+        this.connectToHome();
+        setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
+        getWindow().setScene(getCurrentScene());
+        //mediaBox.playMediaBox();
+        getWindow().show();
     }
 
     //registerButton

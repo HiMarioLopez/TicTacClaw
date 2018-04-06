@@ -22,7 +22,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class homeScreenController extends MasterWindow{
+public class homeScreenController extends MasterWindow implements Initializable{
 
     @FXML
     private Button coopButton,multiplayerButton,settingButton,exitButton;
@@ -33,13 +33,25 @@ public class homeScreenController extends MasterWindow{
         System.out.println("Created home");
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        getWindow().setMinWidth(450);
+        getWindow().setMaxWidth(650);
+
+        getWindow().setMinHeight(500);
+        getWindow().setMaxHeight(600);
+
+
+        getWindow().setWidth(500);
+        getWindow().setHeight(550);
+    }
+
     public void coopAction(ActionEvent event) throws IOException {
         System.out.println("User press Co-op");
 
         this.connectToSingle();
         setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
         getWindow().setScene(getCurrentScene());
-        //this.connectToSingle();
         getWindow().show();
     }
 
@@ -53,20 +65,11 @@ public class homeScreenController extends MasterWindow{
         this.connectToSetting();
         setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
         getWindow().setScene(getCurrentScene());
-
-        getWindow().setMinWidth(650);
-        getWindow().setMinHeight(650);
-
-        getWindow().setMaxHeight(750);
-        getWindow().setMaxWidth(750);
-
         getWindow().show();
     }
 
-    public void exitAction(ActionEvent event){
-        System.out.println("User press Exit");
-        setWindow((Stage)exitButton.getScene().getWindow());
-        this.closeProgram(getWindow());
+    public void closeProgram(ActionEvent event){
+        super.closeProgram(getWindow());
     }
 
 }
