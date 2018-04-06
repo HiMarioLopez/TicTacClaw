@@ -9,7 +9,7 @@ import javafx.geometry.*;
 
 public class ExitBox {
 
-    static boolean answer;
+    private static boolean answer;
 
     public static boolean display (String title, String message){
         Stage alertWindow = new Stage();

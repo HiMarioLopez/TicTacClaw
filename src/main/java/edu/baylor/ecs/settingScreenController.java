@@ -44,6 +44,12 @@ public class settingScreenController extends MasterWindow implements Initializab
     public void initialize(URL location, ResourceBundle resources) {
         //resolutionBox.getItems().clear();
         System.out.println("Called init");
+        getWindow().setMinWidth(650);
+        getWindow().setMinHeight(650);
+
+        getWindow().setMaxHeight(750);
+        getWindow().setMaxWidth(750);
+
         resolutionBox.getItems().addAll("1280 x 1024", "1600 x 1200" , "1680 x 1050" , "1920 x 1080");
 
         fullscreenBox.getItems().addAll("Windowed", "Windowed Fullscreen");
@@ -70,17 +76,6 @@ public class settingScreenController extends MasterWindow implements Initializab
         this.connectToHome();
         setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
         getWindow().setScene(getCurrentScene());
-
-        getWindow().setMinWidth(450);
-        getWindow().setMaxWidth(650);
-
-        getWindow().setMinHeight(500);
-        getWindow().setMaxHeight(600);
-
-
-        getWindow().setWidth(500);
-        getWindow().setHeight(550);
-
         getWindow().show();
     }
 
