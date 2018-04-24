@@ -1,5 +1,5 @@
 .root{
-    -fx-background-color: #2a2a2a;
+    -fx-background-color: linear-gradient(#585858,#484848);
     -fx-font-size: 10pt;
 }
 
