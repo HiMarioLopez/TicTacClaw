@@ -2,6 +2,7 @@ package edu.baylor.ecs;
 
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +12,8 @@ public class MasterWindow {
     private static Stage window;
     private static Scene currentScene;
     private static Parent rootParent;
+    protected final static int maxWidth = (int) Screen.getPrimary().getVisualBounds().getWidth();
+    protected final static int maxHeight = (int) Screen.getPrimary().getVisualBounds().getHeight();
     //protected MediaBox mediaBox = new MediaBox();
 
     public MasterWindow(){
@@ -19,18 +22,7 @@ public class MasterWindow {
 
     public MasterWindow(Stage otherWindow){
         window = otherWindow;
-
         window.setTitle("Tic-Tac-Claw");
-        window.setMinWidth(450);
-        window.setMaxWidth(650);
-
-        window.setMinHeight(500);
-        window.setMaxHeight(600);
-
-
-        window.setWidth(500);
-        window.setHeight(550);
-
     }
 
     public void closeProgram(Stage window) {

@@ -11,6 +11,7 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
@@ -19,7 +20,6 @@ import javafx.scene.text.Text;
 import javafx.stage.Screen;
 import javafx.util.Duration;
 
-import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -31,9 +31,8 @@ public class singlePlayer extends MasterWindow implements Initializable {
     private boolean firstTurn = true;
     private boolean valid = true;
     private static boolean turnX = true;
-    private final int maxWidth = (int) Screen.getPrimary().getVisualBounds().getWidth();
-    private final int maxHeight = (int) Screen.getPrimary().getVisualBounds().getHeight();
-    //private final double screenResolutionMultiplier = 0.7;
+    private final static int spacing = maxWidth/120;
+    private final static int tileSize = maxWidth/25;
 
     @FXML
     private BorderPane borderpane;
@@ -42,7 +41,10 @@ public class singlePlayer extends MasterWindow implements Initializable {
     private Pane pane;
 
     @FXML
-    private Label player1Turn, player2Turn;
+    private Label player1Turn, player2Turn, player1Label, player2Label, titleLabel;
+
+    @FXML
+    private VBox player1VBOX,player2VBOX;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -50,7 +52,20 @@ public class singlePlayer extends MasterWindow implements Initializable {
         borderpane.setPrefHeight(maxHeight);
         borderpane.setPrefWidth(maxWidth);
 
-        pane.setPrefSize(maxWidth/2, maxHeight/2);
+        int paneSize = calcPaneSize();
+        pane.setPrefSize(paneSize, paneSize);
+
+        player1VBOX.setSpacing(maxHeight/4);
+        player2VBOX.setSpacing(maxHeight/4);
+
+        player1Turn.setFont(Font.font("System",maxWidth/50));
+        player2Turn.setFont(Font.font("System",maxWidth/50));
+
+        player1Label.setFont(Font.font("System",maxWidth/35));
+        player2Label.setFont(Font.font("System",maxWidth/35));
+
+        titleLabel.setFont(Font.font("System",maxWidth/25));
+
 
         getWindow().setMaxWidth(maxWidth);
         getWindow().setMaxHeight(maxHeight);
@@ -77,9 +92,6 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
     private class Tile extends StackPane {
         private Text text = new Text();
-       // private int size = 75;
-        private int size = maxWidth/20;
-        private int spacing = 15;
         private int x;
         private int y;
         private boolean marked = false;
@@ -87,7 +99,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
         public Tile() {
             //Create the tile appearance and add it to the pane
-            Rectangle border = new Rectangle(size, size);
+            Rectangle border = new Rectangle(tileSize, tileSize);
             border.setFill(null);
             border.setStroke(Color.BLACK);
 
@@ -190,10 +202,6 @@ public class singlePlayer extends MasterWindow implements Initializable {
             marked = true;
         }
 
-        public int getSpacing() {
-            return spacing;
-        }
-
         public void setQuadrant(int quadrant) {
             this.quadrant = quadrant;
         }
@@ -220,10 +228,6 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
         public void setY(int y) {
             this.y = y;
-        }
-
-        public int getSize() {
-            return size;
         }
 
         //calculate the quadrant based on the X,Y values
@@ -257,7 +261,6 @@ public class singlePlayer extends MasterWindow implements Initializable {
     private class tileBlock {
         private Tile[][] block = new Tile[3][3];
         private int quadrant;
-        private int spacing = 15;
 
 
         public tileBlock(int quad) {
@@ -269,14 +272,14 @@ public class singlePlayer extends MasterWindow implements Initializable {
                     Tile tile = new Tile();
 
                     //Calculate x shift
-                    transX = x * tile.getSize() + spacing;
+                    transX = x * tileSize + spacing;
                     if (quadrant % 3 == 1)
-                        transX += (3 * tile.getSize() + spacing);
+                        transX += (3 * tileSize + spacing);
                     else if (quadrant % 3 == 2)
-                        transX += (6 * tile.getSize() + spacing * 2);
+                        transX += (6 * tileSize + spacing * 2);
 
                     //Calculate y shift
-                    transY = (y * tile.getSize()) + (quadrant / 3) * (3 * tile.getSize()) + spacing;
+                    transY = (y * tileSize) + (quadrant / 3) * (3 * tileSize) + spacing;
                     if (quadrant >= 3 && quadrant <= 5)
                         transY += spacing;
                     else if (quadrant >= 6 && quadrant <= 8)
@@ -369,13 +372,11 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
     private class WinnerTile extends StackPane {
         private Text text = new Text();
-        private int smallTileSize = 75;
         private int quadrant;
-        private int spacing = 15;
         private boolean hasWon = false;
 
         public WinnerTile() {
-            Rectangle border = new Rectangle(smallTileSize * 3, smallTileSize * 3);
+            Rectangle border = new Rectangle(tileSize * 3, tileSize * 3);
             border.setFill(null);
             border.setStroke(Color.BLACK);
 
@@ -397,14 +398,6 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
         public String getValue() {
             return text.getText();
-        }
-
-        public int getSmallTileSize() {
-            return smallTileSize;
-        }
-
-        public int getSpacing() {
-            return spacing;
         }
 
         public boolean isHasWon() {
@@ -432,9 +425,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
         else if (quad >= 6 && quad <= 8)
             y = 2;
 
-        int smallTileSize = winBoard[x][y].getSmallTileSize();
         double startX=0,startY=0,endX=0,endY=0;
-        int spacing = winBoard[x][0].getSpacing();
 
         //check cols
         for (int i = 0; i < winBoard.length; i++) {
@@ -442,11 +433,11 @@ public class singlePlayer extends MasterWindow implements Initializable {
                     break;
             if (i == winBoard.length - 1) {
 
-                startX = (smallTileSize * 1.5) + spacing*(x+1) + (x*3*smallTileSize);
-                startY = (smallTileSize * 1.5) + spacing+4;
+                startX = (tileSize * 1.5) + spacing*(x+1) + (x*3*tileSize);
+                startY = (tileSize * 1.5) + spacing;
 
                 endX = startX;
-                endY = startY + (smallTileSize*6) + (spacing*2);
+                endY = startY + (tileSize*6) + (spacing*2);
 
                 System.out.println("WE HAVE AN ACTUAL WINNER!");
                 playWinAnimation(startX,startY,endX,endY);
@@ -460,10 +451,10 @@ public class singlePlayer extends MasterWindow implements Initializable {
                 break;
             if (i == winBoard.length - 1) {
 
-                startX = (smallTileSize * 1.5) + spacing+4;
-                startY = (smallTileSize * 1.5) + spacing*(y+1) + (y*3*smallTileSize) + 8;
+                startX = (tileSize * 1.5) + spacing;
+                startY = (tileSize * 1.5) + spacing*(y+1) + (y*3*tileSize);
 
-                endX = startX + (smallTileSize*6) + (spacing*2);
+                endX = startX + (tileSize*6) + (spacing*2);
                 endY = startY;
 
                 System.out.println("WE HAVE AN ACTUAL WINNER!");
@@ -479,11 +470,11 @@ public class singlePlayer extends MasterWindow implements Initializable {
                     break;
                 if (i == winBoard.length - 1) {
 
-                    startX = (smallTileSize * 1.5) + spacing+4;
-                    startY = startX + 5;
+                    startX = (tileSize * 1.5) + spacing;
+                    startY = startX;
 
-                    endX = startX + (smallTileSize*6) + (spacing*2);
-                    endY = endX + 5;
+                    endX = startX + (tileSize*6) + (spacing*2);
+                    endY = endX;
 
                     System.out.println("WE HAVE AN ACTUAL WINNER!");
                     playWinAnimation(startX,startY,endX,endY);
@@ -499,11 +490,11 @@ public class singlePlayer extends MasterWindow implements Initializable {
                     break;
                 if (i == winBoard.length - 1) {
 
-                    startX = (smallTileSize * 1.5) + spacing+4 +5;
-                    startY = (smallTileSize*7.5) + spacing*3;
+                    startX = (tileSize * 1.5) + spacing;
+                    startY = (tileSize*7.5) + spacing*3;
 
-                    endX = (smallTileSize*7.5) + spacing*(x+1);
-                    endY = (smallTileSize * 1.5) + spacing+6;
+                    endX = (tileSize*7.5) + spacing*(x+1);
+                    endY = (tileSize * 1.5) + spacing;
 
                     System.out.println("WE HAVE AN ACTUAL WINNER!");
                     playWinAnimation(startX,startY,endX,endY);
@@ -534,8 +525,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
         //Add the winner tile to the winBoard
         if(answer){
             WinnerTile temp = new WinnerTile();
-            int spacing = temp.getSpacing();
-            int transX=spacing,transY=spacing+5;
+            int transX=spacing,transY=spacing;
             int x=0;int y=0;                            //the (x,y) of the quads
 
             System.out.println("There is a small winner!!");
@@ -545,21 +535,21 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
             //Calculate x shift
             if(quad%3==1) {
-                transX += (3 * tile.getSize() + spacing);
+                transX += (3 * tileSize + spacing);
                 x=1;
             }
             else if(quad%3==2) {
-                transX += (6 * tile.getSize() + spacing * 2);
+                transX += (6 * tileSize + spacing * 2);
                 x=2;
             }
 
             //Calculate y shift
             if(quad >= 3 && quad <= 5) {
-                transY += (3 * tile.getSize() + spacing);
+                transY += (3 * tileSize + spacing);
                 y=1;
             }
             else if(quad >= 6 && quad <= 8) {
-                transY += (6 * tile.getSize() + spacing * 2);
+                transY += (6 * tileSize + spacing * 2);
                 y=2;
             }
 
@@ -612,5 +602,10 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
     public static boolean getWinner(){
         return turnX;
+    }
+
+    private int calcPaneSize(){
+        int total = (9 * tileSize) + (2* spacing);
+        return total;
     }
 }

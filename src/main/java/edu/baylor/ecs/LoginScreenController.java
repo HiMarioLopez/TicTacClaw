@@ -28,7 +28,7 @@ import static edu.baylor.ecs.EncryptPassword.encrypt;
 import static edu.baylor.ecs.connectToServer.login;
 import static edu.baylor.ecs.connectToServer.register;
 
-public class LoginScreenController extends MasterWindow{
+public class LoginScreenController extends MasterWindow implements Initializable{
 
     @FXML
     private Button loginButton, registerButton;
@@ -46,7 +46,23 @@ public class LoginScreenController extends MasterWindow{
 
 
     public LoginScreenController(){
-        //System.out.println("Created LoginScreenController");
+        System.out.println("Login was created");
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        double height = maxHeight/2.5;
+        double width = maxWidth/5;
+
+        getWindow().setMinWidth(width);
+        getWindow().setMaxWidth(width);
+
+        getWindow().setMinHeight(height);
+        getWindow().setMaxHeight(height);
+
+
+        getWindow().setWidth(width);
+        getWindow().setHeight(height);
     }
 
     //loginButton
@@ -99,4 +115,5 @@ public class LoginScreenController extends MasterWindow{
     public void forgotAction(ActionEvent event){
         System.out.println("User press Forgot Password");
     }
+
 }

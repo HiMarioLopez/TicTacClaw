@@ -13,9 +13,9 @@
       <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
    </padding>
    <left>
-      <VBox alignment="TOP_CENTER" spacing="250.0" BorderPane.alignment="CENTER">
+      <VBox fx:id="player1VBOX" alignment="TOP_CENTER" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" text="Player 1">
+            <Label fx:id="player1Label" alignment="CENTER" text="Player 1">
                <font>
                   <Font size="18.0" />
                </font>
@@ -36,21 +36,21 @@
    <top>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Tic-Tac-Claw">
+            <Label fx:id="titleLabel" alignment="CENTER" text="Tic-Tac-Claw">
                <font>
                   <Font size="36.0" />
                </font>
             </Label>
          </children>
          <BorderPane.margin>
-            <Insets bottom="10.0" />
+            <Insets />
          </BorderPane.margin>
       </HBox>
    </top>
    <right>
-      <VBox alignment="TOP_CENTER" spacing="250.0" BorderPane.alignment="CENTER">
+      <VBox fx:id="player2VBOX" alignment="TOP_CENTER" spacing="250.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="TOP_CENTER" text="Player 2">
+            <Label fx:id="player2Label" alignment="TOP_CENTER" text="Player 2">
                <font>
                   <Font size="18.0" />
                </font>
