@@ -16,6 +16,7 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.stage.Screen;
 import javafx.util.Duration;
 
 import java.awt.*;
@@ -30,8 +31,9 @@ public class singlePlayer extends MasterWindow implements Initializable {
     private boolean firstTurn = true;
     private boolean valid = true;
     private static boolean turnX = true;
-    private int width = 1000;
-    private int height = 1000;
+    private final int maxWidth = (int) Screen.getPrimary().getVisualBounds().getWidth();
+    private final int maxHeight = (int) Screen.getPrimary().getVisualBounds().getHeight();
+    //private final double screenResolutionMultiplier = 0.7;
 
     @FXML
     private BorderPane borderpane;
@@ -44,17 +46,16 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
-        int w = gd.getDisplayMode().getWidth();
-        int h = gd.getDisplayMode().getHeight();
-        borderpane.setPrefHeight(h);
-        borderpane.setPrefWidth(w);
+        //System.out.println("My heigh is:");
+        borderpane.setPrefHeight(maxHeight);
+        borderpane.setPrefWidth(maxWidth);
 
-        pane.setPrefSize(width, height);
-        getWindow().setMaxWidth(width);
-        getWindow().setMaxHeight(height);
-        getWindow().setHeight(height);
-        getWindow().setWidth(width);
+        pane.setPrefSize(maxWidth/2, maxHeight/2);
+
+        getWindow().setMaxWidth(maxWidth);
+        getWindow().setMaxHeight(maxHeight);
+        getWindow().setHeight(maxHeight);
+        getWindow().setWidth(maxWidth);
 
         int quad = 0;
         for (int y = 0; y < 3; y++) {
@@ -76,7 +77,8 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
     private class Tile extends StackPane {
         private Text text = new Text();
-        private int size = 75;
+       // private int size = 75;
+        private int size = maxWidth/20;
         private int spacing = 15;
         private int x;
         private int y;

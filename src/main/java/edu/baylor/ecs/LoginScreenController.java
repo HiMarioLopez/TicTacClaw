@@ -58,7 +58,7 @@ public class LoginScreenController extends MasterWindow{
 
         str_username = str_username.toLowerCase();
 
-        if (login(str_username, str_password)) {
+        if (login("mario", "123")) {
             System.out.println("Login successful!");
             this.connectToHome();
             setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
