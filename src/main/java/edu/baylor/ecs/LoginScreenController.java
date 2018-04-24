@@ -51,18 +51,7 @@ public class LoginScreenController extends MasterWindow implements Initializable
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        double height = maxHeight/2.5;
-        double width = maxWidth/5;
-
-        getWindow().setMinWidth(width);
-        getWindow().setMaxWidth(width);
-
-        getWindow().setMinHeight(height);
-        getWindow().setMaxHeight(height);
-
-
-        getWindow().setWidth(width);
-        getWindow().setHeight(height);
+        defaultInit();
     }
 
     //loginButton

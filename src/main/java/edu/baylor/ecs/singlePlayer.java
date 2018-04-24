@@ -41,7 +41,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
     private Pane pane;
 
     @FXML
-    private Label player1Turn, player2Turn, player1Label, player2Label, titleLabel;
+    private Label player1Turn, player2Turn, player1Label, player2Label, titleLabel, quadID;
 
     @FXML
     private VBox player1VBOX,player2VBOX;
@@ -60,6 +60,8 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
         player1Turn.setFont(Font.font("System",maxWidth/50));
         player2Turn.setFont(Font.font("System",maxWidth/50));
+
+        quadID.setFont(Font.font("System",maxWidth/50));
 
         player1Label.setFont(Font.font("System",maxWidth/35));
         player2Label.setFont(Font.font("System",maxWidth/35));
@@ -154,6 +156,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
                     turnX = false;
                     player1Turn.setVisible(false);
                     player2Turn.setVisible(true);
+                    quadID.setText("Quadrant number to play: " + (previousTile.calculateBigQuad()+1));
 
                     //it is O's turn
                 } else if (e.getButton() == MouseButton.PRIMARY && !turnX) {
@@ -184,6 +187,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
                     turnX = true;
                     player2Turn.setVisible(false);
                     player1Turn.setVisible(true);
+                    quadID.setText("Quadrant number to play: " + (previousTile.calculateBigQuad()+1));
                 }
             });
         }

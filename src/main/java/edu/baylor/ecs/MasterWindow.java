@@ -64,8 +64,19 @@ public class MasterWindow {
         currentScene.getStylesheets().add("/winBox.css");
     }
 
+    protected void defaultInit(){
+        double height = 600;
+        double width = 500;
 
+        getWindow().setMinWidth(width);
+        getWindow().setMaxWidth(width);
 
+        getWindow().setMinHeight(height);
+        getWindow().setMaxHeight(height);
+
+        getWindow().setWidth(width);
+        getWindow().setHeight(height);
+    }
 
 
     public static Scene getCurrentScene() {

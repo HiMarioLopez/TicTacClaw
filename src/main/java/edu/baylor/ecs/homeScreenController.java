@@ -35,18 +35,7 @@ public class homeScreenController extends MasterWindow implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        double height = maxHeight/2.5;
-        double width = maxWidth/5;
-
-        getWindow().setMinWidth(width);
-        getWindow().setMaxWidth(width);
-
-        getWindow().setMinHeight(height);
-        getWindow().setMaxHeight(height);
-
-
-        getWindow().setWidth(width);
-        getWindow().setHeight(height);
+        defaultInit();
     }
 
     public void coopAction(ActionEvent event) throws IOException {
