@@ -12,11 +12,19 @@ import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.event.ActionEvent;
+import org.jasypt.util.password.StrongPasswordEncryptor;
 
+import javax.crypto.spec.SecretKeySpec;
 import java.io.IOException;
 import java.net.URL;
+import java.security.GeneralSecurityException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.util.ResourceBundle;
 
+import static edu.baylor.ecs.EncryptPassword.createSecretKey;
+import static edu.baylor.ecs.EncryptPassword.decrypt;
+import static edu.baylor.ecs.EncryptPassword.encrypt;
 import static edu.baylor.ecs.connectToServer.login;
 import static edu.baylor.ecs.connectToServer.register;
 
@@ -42,11 +50,15 @@ public class LoginScreenController extends MasterWindow{
     }
 
     //loginButton
-    public void loginAction(ActionEvent event) throws IOException{
+    public void loginAction(ActionEvent event) throws IOException, GeneralSecurityException {
         System.out.println("User press Login button");
 
-        /*
-        if (login(username.getText(), password.getText())) {
+        String str_username = username.getText();
+        String str_password = password.getText();
+
+        str_username = str_username.toLowerCase();
+
+        if (login(str_username, str_password)) {
             System.out.println("Login successful!");
             this.connectToHome();
             setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
@@ -55,22 +67,30 @@ public class LoginScreenController extends MasterWindow{
             getWindow().show();
         } else {
             System.out.println("ERROR! Invalid credentials. Please try again.");
-        }*/
-        this.connectToHome();
-        setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
-        getWindow().setScene(getCurrentScene());
-        //mediaBox.playMediaBox();
-        getWindow().show();
+        }
     }
 
     //registerButton
-    public void registerAction(ActionEvent event){
+    public void registerAction(ActionEvent event) throws IOException, GeneralSecurityException {
         System.out.println("User press Register button");
 
-        if (register(username.getText(), password.getText())) {
+        String str_username = username.getText();
+        String str_password = password.getText();
+
+        str_username = str_username.toLowerCase();
+
+        StrongPasswordEncryptor passwordEncryptor = new StrongPasswordEncryptor();
+        String encryptedPassword = passwordEncryptor.encryptPassword(str_password);
+
+        if (register(str_username, encryptedPassword)) {
             System.out.println("Registration successful!");
+            this.connectToHome();
+            setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
+            getWindow().setScene(getCurrentScene());
+            //mediaBox.playMediaBox();
+            getWindow().show();
         } else {
-            System.out.println("ERROR! Registration unsuccessful. Did you forget your password?");
+            System.out.println("ERROR! Registration unsuccessful. Is this username already in use?");
         }
 
     }
