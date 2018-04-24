@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseButton;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
@@ -16,6 +17,8 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
+
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -31,6 +34,9 @@ public class singlePlayer extends MasterWindow implements Initializable {
     private int height = 1000;
 
     @FXML
+    private BorderPane borderpane;
+
+    @FXML
     private Pane pane;
 
     @FXML
@@ -38,6 +44,12 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+        int w = gd.getDisplayMode().getWidth();
+        int h = gd.getDisplayMode().getHeight();
+        borderpane.setPrefHeight(h);
+        borderpane.setPrefWidth(w);
+
         pane.setPrefSize(width, height);
         getWindow().setMaxWidth(width);
         getWindow().setMaxHeight(height);
