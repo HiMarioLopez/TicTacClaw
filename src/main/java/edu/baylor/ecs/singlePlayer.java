@@ -33,6 +33,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
     private static boolean turnX = true;
     private final static int spacing = maxWidth/120;
     private final static int tileSize = maxWidth/25;
+    private final static int tileFont = maxWidth/30;
 
     @FXML
     private BorderPane borderpane;
@@ -105,7 +106,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
             border.setFill(null);
             border.setStroke(Color.BLACK);
 
-            text.setFont(Font.font(65));
+            text.setFont(Font.font(tileFont));
             setAlignment(Pos.CENTER);
 
             getChildren().addAll(border, text);
