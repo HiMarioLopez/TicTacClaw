@@ -12,7 +12,6 @@ import org.jasypt.util.password.StrongPasswordEncryptor;
 
 import java.io.IOException;
 import java.net.URL;
-import java.security.GeneralSecurityException;
 import java.util.ResourceBundle;
 
 import static edu.baylor.ecs.connectToServer.login;

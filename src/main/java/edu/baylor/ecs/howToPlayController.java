@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.text.Font;
-import javafx.event.ActionEvent;
 
 import java.io.IOException;
 import java.net.URL;
@@ -43,7 +42,7 @@ public class howToPlayController extends MasterWindow implements Initializable {
         instructions.setWrapText(true);
     }
 
-    public void goBackAction(ActionEvent event) throws IOException {
+    public void goBackAction() throws IOException {
         backToHome();
     }
 }

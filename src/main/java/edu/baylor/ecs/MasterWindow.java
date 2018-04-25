@@ -51,10 +51,6 @@ public class MasterWindow {
         connect("/loginScreen.fxml","/default.css");
     }
 
-    protected void connectToWin() throws IOException{
-        connect("/winBox.fxml","/default.css");
-    }
-
     protected void connectHowToPlay() throws IOException{
         connect("/howToPlay.fxml","/default.css");
     }

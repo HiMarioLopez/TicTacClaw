@@ -29,12 +29,12 @@ import java.util.ResourceBundle;
 
 import static edu.baylor.ecs.MasterWindow.*;
 
+@SuppressWarnings("unused")
 public class singlePlayer implements Initializable {
     private final tileBlock[][] board = new tileBlock[3][3];
     private final WinnerTile[][] winBoard = new WinnerTile[3][3];
     private Tile previousTile = new Tile();
     private boolean firstTurn = true;
-    private boolean valid = true;
     private static boolean turnX = true;
     private final static int spacing = maxWidth/120;
     private final static int tileSize = maxWidth/25;
@@ -127,7 +127,7 @@ public class singlePlayer implements Initializable {
                     return;
 
                 //has the quadrant already been won?
-                boolean playAnywhere = false;
+                boolean playAnywhere;
 
                 //it is X's turn
                 if (e.getButton() == MouseButton.PRIMARY && turnX) {
@@ -271,8 +271,8 @@ public class singlePlayer implements Initializable {
     }
 
     private class tileBlock {
-        private Tile[][] block = new Tile[3][3];
-        private int quadrant;
+        private final Tile[][] block = new Tile[3][3];
+        private final int quadrant;
         private int filledCount = 0;
 
 
@@ -322,20 +322,8 @@ public class singlePlayer implements Initializable {
             }
         }
 
-        public Tile[][] getBlock() {
-            return block;
-        }
-
-        public void setBlock(Tile[][] block) {
-            this.block = block;
-        }
-
         private int getQuadrant() {
             return quadrant;
-        }
-
-        public void setQuadrant(int quadrant) {
-            this.quadrant = quadrant;
         }
 
         //return true if they are the winner
@@ -436,7 +424,7 @@ public class singlePlayer implements Initializable {
 
     //check if the player has won the large, outer tic tac toe board, play win animation if true
     private void checkBigWin(Tile tile) {
-        int x=0, y=0;
+        int x, y=0;
         int quad = tile.getQuadrant();
 
         //get the (x,y) of the last quad won
@@ -446,7 +434,7 @@ public class singlePlayer implements Initializable {
         else if (quad >= 6 && quad <= 8)
             y = 2;
 
-        double startX=0,startY=0,endX=0,endY=0;
+        double startX,startY,endX,endY;
 
         //check cols
         for (int i = 0; i < winBoard.length; i++) {
@@ -534,7 +522,7 @@ public class singlePlayer implements Initializable {
                 if(i == 2 && j == 2){
                     System.out.println("There was a tie!");
                     TieBox alert = new TieBox("Game Over","The game was a tie!");
-                    goHome();
+                    changeScreen("/homeScreen.fxml");
                 }
             }
         }
@@ -546,7 +534,7 @@ public class singlePlayer implements Initializable {
     private boolean checkSmallWin(Tile tile){
         int quad = tile.getQuadrant();
         boolean answer = false;
-        int i=0,j=0;
+        int i,j=0;
 
         outerLoop:
         for(i=0;i<board.length;i++){
@@ -640,7 +628,7 @@ public class singlePlayer implements Initializable {
         timeline.play();
 
         //Open up the WinBox to congratulate the winner
-        timeline.setOnFinished(e -> goHome());
+        timeline.setOnFinished(e -> changeScreen("/winBox.fxml"));
     }
 
     public static boolean getWinner(){
@@ -651,10 +639,10 @@ public class singlePlayer implements Initializable {
         return (9 * tileSize) + (2* spacing);
     }
 
-    private void goHome(){
+    private void changeScreen(String fxml){
         Parent rootParent = null;
         try {
-            rootParent = FXMLLoader.load(getClass().getResource("/homeScreen.fxml"));
+            rootParent = FXMLLoader.load(getClass().getResource(fxml));
         } catch (IOException e1) {e1.printStackTrace(); }
         Scene temp = new Scene(rootParent);
         temp.getStylesheets().add("/default.css");

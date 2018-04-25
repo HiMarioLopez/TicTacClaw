@@ -54,7 +54,7 @@ public class homeScreenController extends MasterWindow implements Initializable{
         getWindow().show();
     }
 
-    public void closeProgram(ActionEvent event){
+    public void closeProgram(){
         super.closeProgram(getWindow());
     }
 

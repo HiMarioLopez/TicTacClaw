@@ -12,9 +12,6 @@ import java.util.ResourceBundle;
 public class settingScreenController extends MasterWindow implements Initializable{
 
     @FXML
-    private ChoiceBox resolutionBox,fullscreenBox;
-
-    @FXML
     private Slider volumeSlider;
 
     @FXML

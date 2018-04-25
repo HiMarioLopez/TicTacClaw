@@ -6,7 +6,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.event.ActionEvent;
 import javafx.scene.text.Font;
 
 import java.io.IOException;
@@ -42,11 +41,11 @@ public class winBoxController extends MasterWindow implements Initializable{
         image.setImage(confetti);
     }
 
-    public void backToHome(ActionEvent event) throws IOException{
+    public void ToHome() throws IOException{
         backToHome();
     }
 
-    public void closeProgram(ActionEvent event){
+    public void closeProgram(){
         super.closeProgram(getWindow());
     }
 }

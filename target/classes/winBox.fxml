@@ -18,7 +18,7 @@
       <ImageView id="confetti" fx:id="image" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
       <HBox alignment="CENTER" spacing="20.0">
          <children>
-            <Button fx:id="backHomeButton" mnemonicParsing="false" onAction="#backToHome" text="Back to Home" />
+            <Button fx:id="backHomeButton" mnemonicParsing="false" onAction="#ToHome" text="Back to Home" />
             <Button fx:id="exitButton" mnemonicParsing="false" onAction="#closeProgram" text="Exit">
                <HBox.margin>
                   <Insets />
