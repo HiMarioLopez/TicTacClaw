@@ -27,7 +27,7 @@ public class winBoxController extends MasterWindow implements Initializable{
     @FXML
     private Button backHomeButton,exitButton;
 
-    private final Image confetti = new Image("/confetti.png");
+    private final Image confetti = new Image("/pictures/confetti.png");
 
 
     @Override

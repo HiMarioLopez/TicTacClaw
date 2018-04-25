@@ -37,23 +37,23 @@ public class MasterWindow {
     }
 
     protected void connectToSingle() throws IOException {
-        connect("/singlePlayer.fxml","/singlePlayer.css");
+        connect("/fxml/singlePlayer.fxml", "/css/singlePlayer.css");
     }
 
     protected void connectToSetting() throws IOException {
-        connect("/settingScreen.fxml","/default.css");
+        connect("/fxml/settingScreen.fxml", "/css/default.css");
     }
 
     protected void connectToHome() throws IOException{
-        connect("/homeScreen.fxml","/default.css");
+        connect("/fxml/homeScreen.fxml", "/css/default.css");
     }
 
     public void connectToLogin() throws IOException{
-        connect("/loginScreen.fxml","/default.css");
+        connect("/fxml/loginScreen.fxml", "/css/default.css");
     }
 
     protected void connectHowToPlay() throws IOException{
-        connect("/howToPlay.fxml","/default.css");
+        connect("/fxml/howToPlay.fxml", "/css/default.css");
     }
 
     protected void defaultInit(){

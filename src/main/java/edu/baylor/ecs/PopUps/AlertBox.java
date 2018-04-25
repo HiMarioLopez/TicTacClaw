@@ -48,7 +48,7 @@ public class AlertBox{
         vbox.getChildren().addAll(textbox,hbox);
 
         scene = new Scene(vbox);
-        scene.getStylesheets().add("/default.css");
+        scene.getStylesheets().add("/css/default.css");
     }
 
     public void display(){

@@ -138,7 +138,7 @@ public class singlePlayer implements Initializable {
 
                     //make sure turn is valid and if the previous quad has been won, go anywhere
                     if(!firstTurn && (previousTile.calculateBigQuad() != this.getQuadrant()) && !playAnywhere){
-                        System.out.printf("My previous quad is %d and this quad is %d",previousTile.calculateBigQuad(),this.getQuadrant());
+                        System.out.printf("My previous quad is %d and this quad is %d\n",previousTile.calculateBigQuad(),this.getQuadrant());
                         WrongMoveBox wrong = new WrongMoveBox("Wrong Move","You must play in the correct quadrant from the last move!");
                         return;
                     }
@@ -524,7 +524,7 @@ public class singlePlayer implements Initializable {
                 if(i == 2 && j == 2){
                     System.out.println("There was a tie!");
                     TieBox alert = new TieBox("Game Over","The game was a tie!");
-                    changeScreen("/homeScreen.fxml");
+                    changeScreen("/fxml/homeScreen.fxml");
                 }
             }
         }
@@ -630,7 +630,7 @@ public class singlePlayer implements Initializable {
         timeline.play();
 
         //Open up the WinBox to congratulate the winner
-        timeline.setOnFinished(e -> changeScreen("/winBox.fxml"));
+        timeline.setOnFinished(e -> changeScreen("/fxml/winBox.fxml"));
     }
 
     public static boolean getWinner(){
@@ -647,7 +647,7 @@ public class singlePlayer implements Initializable {
             rootParent = FXMLLoader.load(getClass().getResource(fxml));
         } catch (IOException e1) {e1.printStackTrace(); }
         Scene temp = new Scene(rootParent);
-        temp.getStylesheets().add("/default.css");
+        temp.getStylesheets().add("/css/default.css");
 
         //getMaster().connectToWin();
         getWindow().setScene(temp);
