@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.event.ActionEvent;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -33,28 +34,18 @@ public class winBoxController extends MasterWindow implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        getWindow().setMinWidth(450);
-        getWindow().setMaxWidth(550);
-
-        getWindow().setMinHeight(450);
-        getWindow().setMaxHeight(550);
-
-        getWindow().setWidth(500);
-        getWindow().setHeight(500);
+        winnerLabel.setFont(Font.font("System",maxWidth/50));
 
         if(getWinner())
-            winnerLabel.setText("Looks like O won!");
+            winnerLabel.setText("Looks like Player 2 has won!");
         else
-            winnerLabel.setText("Looks like X won!");
+            winnerLabel.setText("Looks like Player 1 has won!");
 
         image.setImage(confetti);
     }
 
     public void backToHome(ActionEvent event) throws IOException{
-        this.connectToHome();
-        setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
-        getWindow().setScene(getCurrentScene());
-        getWindow().show();
+        backToHome();
     }
 
     public void closeProgram(ActionEvent event){

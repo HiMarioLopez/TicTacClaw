@@ -51,13 +51,17 @@ public class Main extends Application {
         });
     }
 
-    public void closeProgram() {
-        boolean result = ExitBox.display("Alert Window", "Do you really want to leave?");
-        if (result) {
-            System.out.println("Saving files...");
-            master.getWindow().close();
-        }
-    }
+//    public void closeProgram() {
+//        //boolean result = ExitBox.display("Alert Window", "Do you really want to leave?");
+//        ExitBox exitBox= new ExitBox("Alert Window", "Do you really want to leave?");
+//        boolean result = exitBox.exitDisplay();
+//
+//        if (result) {
+//            System.out.println("Saving files...");
+//            //mediaBox.getMediaPlayer().stop();
+//            master.getWindow().close();
+//        }
+//    }
 
     private void isAccountValid(TextField input, String message) {
         try {

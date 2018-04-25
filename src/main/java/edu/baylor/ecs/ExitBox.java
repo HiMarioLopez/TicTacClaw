@@ -1,30 +1,32 @@
 package edu.baylor.ecs;
 
+import javafx.scene.text.Font;
 import javafx.stage.*;
 import javafx.scene.*;
 import javafx.scene.layout.*;
 import javafx.scene.control.*;
 import javafx.geometry.*;
 
+import static edu.baylor.ecs.MasterWindow.maxWidth;
 
-public class ExitBox {
+public class ExitBox extends AlertBox{
 
+    private Button yesButton,noButton;
     private static boolean answer;
 
-    public static boolean display (String title, String message){
-        Stage alertWindow = new Stage();
+    public ExitBox(String title, String message) {
+        super(title, message);
 
-        //block user interaction until this is taken care of
-        alertWindow.initModality(Modality.APPLICATION_MODAL);
-        alertWindow.setTitle(title);
-        alertWindow.setMinWidth(250);
+        textbox.setFont((Font.font("System", maxWidth / 120)));
 
-        Label label = new Label(message);
+        yesButton = new Button("Yes");
+        noButton = new Button("No");
 
-        //Create buttons
-        Button yesButton = new Button("Yes");
-        Button noButton = new Button("No");
+        hbox.getChildren().clear();
+        hbox.getChildren().addAll(yesButton,noButton);
+        }
 
+    public boolean exitDisplay(){
         yesButton.setOnAction(e -> {
             answer = true;
             alertWindow.close();
@@ -34,11 +36,6 @@ public class ExitBox {
             alertWindow.close();
         });
 
-        VBox layout = new VBox(10);
-        layout.getChildren().addAll(label,yesButton,noButton);
-        layout.setAlignment(Pos.CENTER);
-
-        Scene scene = new Scene(layout);
         alertWindow.setScene(scene);
         alertWindow.showAndWait();
 

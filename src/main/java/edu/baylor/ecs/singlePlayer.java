@@ -49,7 +49,8 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //System.out.println("My heigh is:");
+
+        //dynamically resize the board to your screen
         borderpane.setPrefHeight(maxHeight);
         borderpane.setPrefWidth(maxWidth);
 
@@ -70,11 +71,13 @@ public class singlePlayer extends MasterWindow implements Initializable {
         titleLabel.setFont(Font.font("System",maxWidth/25));
 
 
+        getWindow().setMaximized(true);
         getWindow().setMaxWidth(maxWidth);
         getWindow().setMaxHeight(maxHeight);
         getWindow().setHeight(maxHeight);
         getWindow().setWidth(maxWidth);
 
+        //create the gameboard
         int quad = 0;
         for (int y = 0; y < 3; y++) {
             for (int x = 0; x < 3; x++) {
@@ -128,14 +131,14 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
                     //make sure turn is valid and if the previous quad has been won, go anywhere
                     if(!firstTurn && (previousTile.calculateBigQuad() != this.getQuadrant()) && !playAnywhere){
-                        System.out.println("WRONG MOVE FOOL!");
                         System.out.printf("My previous quad is %d and this quad is %d",previousTile.calculateBigQuad(),this.getQuadrant());
-                        WrongMoveBox.display("Wrong Move","You must play in the correct quadrant from the last move!");
+                        WrongMoveBox wrong = new WrongMoveBox("Wrong Move","You must play in the correct quadrant from the last move!");
                         return;
                     }
 
                     //take note if the first move
-                    else if(firstTurn){
+                    else
+                        if(firstTurn){
                         System.out.println("This is my first move!");
                         previousTile = this;
                         firstTurn = false;
@@ -168,7 +171,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
                     if(!firstTurn && (previousTile.calculateBigQuad() != this.getQuadrant()) && !playAnywhere){
                         System.out.println("WRONG MOVE FOOL!");
                         System.out.printf("My previous quad is %d and this quad is %d",previousTile.calculateBigQuad(),this.getQuadrant());
-                        WrongMoveBox.display("Wrong Move","You must play in the correct quadrant from the last move!");
+                        WrongMoveBox wrong = new WrongMoveBox("Wrong Move","You must play in the correct quadrant from the last move!");
                         return;
                     }
 
@@ -266,6 +269,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
     private class tileBlock {
         private Tile[][] block = new Tile[3][3];
         private int quadrant;
+        private int filledCount = 0;
 
 
         public tileBlock(int quad) {
@@ -372,6 +376,14 @@ public class singlePlayer extends MasterWindow implements Initializable {
             }
 
             return winner;
+        }
+
+        public int getFilledCount() {
+            return filledCount;
+        }
+
+        public void incrementFilledCount() {
+            this.filledCount++;
         }
     }
 
@@ -507,6 +519,26 @@ public class singlePlayer extends MasterWindow implements Initializable {
                 }
             }
         }
+
+        //check for a tie
+        for(int i = 0; i < winBoard.length; i++){
+            for(int j = 0;j < winBoard.length; j++){
+                if(!winBoard[i][j].hasWon){
+                    System.out.println("No big tie yet");
+                    return;
+                }
+                if(i == 2 && j == 2){
+                    System.out.println("There was a tie!");
+                    TieBox alert = new TieBox("Game Over","The game was a tie!");
+
+                    try {
+                        getMaster().backToHome();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
     }
 
 
@@ -527,13 +559,14 @@ public class singlePlayer extends MasterWindow implements Initializable {
             }
         }
 
+        System.out.println("The incrementing fill is: " + board[i][j].getFilledCount());
         //Add the winner tile to the winBoard
-        if(answer){
+        if(answer || board[i][j].getFilledCount() == 8){
             WinnerTile temp = new WinnerTile();
             int transX=spacing,transY=spacing;
             int x=0;int y=0;                            //the (x,y) of the quads
 
-            System.out.println("There is a small winner!!");
+            System.out.println("There is a small winner or it was a Cat!!");
 
             //Clear the gridBlock in the location of the win
             board[i][j].removeBlock();
@@ -562,7 +595,14 @@ public class singlePlayer extends MasterWindow implements Initializable {
             temp.setTranslateX(transX);
             temp.setTranslateY(transY);
             temp.setQuadrant(quad);
-            temp.getText().setText(tile.getValue());
+
+            if(answer){
+                temp.getText().setText(tile.getValue());
+            }
+            else{
+                temp.getText().setText("Tie");
+                temp.getText().setFont(Font.font("System",maxWidth/75));
+            }
 
             //add the WinnerTile to the board
             winBoard[x][y] = temp;
@@ -572,6 +612,10 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
             //Add the tile to the block and pane
             pane.getChildren().add(temp);
+        }
+        //There is no winner, increment count of tileBlock
+        else{
+            board[i][j].incrementFilledCount();
         }
         return answer;
     }

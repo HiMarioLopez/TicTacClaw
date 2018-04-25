@@ -1,6 +1,5 @@
 package edu.baylor.ecs;
 
-import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
@@ -26,7 +25,10 @@ public class MasterWindow {
     }
 
     public void closeProgram(Stage window) {
-        boolean result = ExitBox.display("Alert Window", "Do you really want to leave?");
+        //boolean result = ExitBox.display("Alert Window", "Do you really want to leave?");
+        ExitBox exitBox= new ExitBox("Alert Window", "Do you really want to leave?");
+        boolean result = exitBox.exitDisplay();
+
         if (result) {
             System.out.println("Saving files...");
             //mediaBox.getMediaPlayer().stop();
@@ -61,7 +63,7 @@ public class MasterWindow {
     protected void connectToWin() throws IOException{
         rootParent = FXMLLoader.load(getClass().getResource("/winBox.fxml"));
         currentScene = new Scene(rootParent);
-        currentScene.getStylesheets().add("/winBox.css");
+        currentScene.getStylesheets().add("/default.css");
     }
 
     protected void defaultInit(){
@@ -99,6 +101,12 @@ public class MasterWindow {
 
     public MasterWindow getMaster(){
         return  this;
+    }
+
+    public void backToHome() throws IOException {
+        this.connectToHome();
+        getWindow().setScene(getCurrentScene());
+        getWindow().show();
     }
 
 }
