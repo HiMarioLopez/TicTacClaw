@@ -1,17 +1,13 @@
 package edu.baylor.ecs;
 
 import javafx.scene.text.Font;
-import javafx.stage.*;
-import javafx.scene.*;
-import javafx.scene.layout.*;
 import javafx.scene.control.*;
-import javafx.geometry.*;
 
 import static edu.baylor.ecs.MasterWindow.maxWidth;
 
 public class ExitBox extends AlertBox{
 
-    private Button yesButton,noButton;
+    private final Button yesButton,noButton;
     private static boolean answer;
 
     public ExitBox(String title, String message) {

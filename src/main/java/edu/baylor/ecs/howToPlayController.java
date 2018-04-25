@@ -2,29 +2,13 @@ package edu.baylor.ecs;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.text.Font;
-import javafx.stage.Stage;
-import javafx.scene.Parent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.event.ActionEvent;
-import org.jasypt.util.password.StrongPasswordEncryptor;
 
-import javax.crypto.spec.SecretKeySpec;
 import java.io.IOException;
 import java.net.URL;
-import java.security.GeneralSecurityException;
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
 import java.util.ResourceBundle;
-
-import static edu.baylor.ecs.EncryptPassword.createSecretKey;
-import static edu.baylor.ecs.EncryptPassword.decrypt;
-import static edu.baylor.ecs.EncryptPassword.encrypt;
-import static edu.baylor.ecs.connectToServer.login;
-import static edu.baylor.ecs.connectToServer.register;
 
 public class howToPlayController extends MasterWindow implements Initializable {
 

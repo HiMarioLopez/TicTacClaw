@@ -2,14 +2,12 @@ package edu.baylor.ecs;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.event.ActionEvent;
 import javafx.scene.text.Font;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -29,7 +27,7 @@ public class winBoxController extends MasterWindow implements Initializable{
     @FXML
     private Button backHomeButton,exitButton;
 
-    private Image confetti = new Image("/confetti.png");
+    private final Image confetti = new Image("/confetti.png");
 
 
     @Override

@@ -34,9 +34,7 @@ public class AlertBox{
 
         defaultButton = new Button("Ok");
 
-        defaultButton.setOnAction(e -> {
-            alertWindow.close();
-        });
+        defaultButton.setOnAction(e -> alertWindow.close());
 
 
         VBox vbox = new VBox(40);

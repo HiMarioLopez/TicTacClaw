@@ -1,7 +1,6 @@
 package edu.baylor.ecs;
 
 import javafx.scene.media.Media;
-import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
 public class MediaBox {

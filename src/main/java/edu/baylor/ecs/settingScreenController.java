@@ -1,20 +1,8 @@
 package edu.baylor.ecs;
 
-import javafx.application.Application;
-import javafx.collections.FXCollections;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
-import javafx.scene.Parent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.event.ActionEvent;
 
 import java.io.IOException;
@@ -49,17 +37,6 @@ public class settingScreenController extends MasterWindow implements Initializab
 
         getWindow().setMaxHeight(750);
         getWindow().setMaxWidth(750);
-
-        resolutionBox.getItems().addAll("1280 x 1024", "1600 x 1200" , "1680 x 1050" , "1920 x 1080");
-
-        fullscreenBox.getItems().addAll("Windowed", "Windowed Fullscreen");
-    }
-
-    public void resolutionAction(ActionEvent event){
-
-    }
-
-    public void fullscreenAction(ActionEvent event){
 
     }
 

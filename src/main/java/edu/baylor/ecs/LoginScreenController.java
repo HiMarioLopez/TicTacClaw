@@ -2,29 +2,19 @@ package edu.baylor.ecs;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.scene.Parent;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.event.ActionEvent;
 import org.jasypt.util.password.StrongPasswordEncryptor;
 
-import javax.crypto.spec.SecretKeySpec;
 import java.io.IOException;
 import java.net.URL;
 import java.security.GeneralSecurityException;
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
 import java.util.ResourceBundle;
 
-import static edu.baylor.ecs.EncryptPassword.createSecretKey;
-import static edu.baylor.ecs.EncryptPassword.decrypt;
-import static edu.baylor.ecs.EncryptPassword.encrypt;
 import static edu.baylor.ecs.connectToServer.login;
 import static edu.baylor.ecs.connectToServer.register;
 
@@ -52,7 +42,7 @@ public class LoginScreenController extends MasterWindow implements Initializable
     }
 
     //loginButton
-    public void loginAction(ActionEvent event) throws IOException, GeneralSecurityException {
+    public void loginAction(ActionEvent event) throws IOException {
         System.out.println("User press Login button");
 
         String str_username = username.getText();
@@ -73,7 +63,7 @@ public class LoginScreenController extends MasterWindow implements Initializable
     }
 
     //registerButton
-    public void registerAction(ActionEvent event) throws IOException, GeneralSecurityException {
+    public void registerAction(ActionEvent event) throws IOException {
         System.out.println("User press Register button");
 
         String str_username = username.getText();

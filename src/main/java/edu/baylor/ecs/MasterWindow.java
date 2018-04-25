@@ -10,9 +10,8 @@ import java.io.IOException;
 public class MasterWindow {
     private static Stage window;
     private static Scene currentScene;
-    private static Parent rootParent;
-    protected final static int maxWidth = (int) Screen.getPrimary().getVisualBounds().getWidth();
-    protected final static int maxHeight = (int) Screen.getPrimary().getVisualBounds().getHeight();
+    final static int maxWidth = (int) Screen.getPrimary().getVisualBounds().getWidth();
+    final static int maxHeight = (int) Screen.getPrimary().getVisualBounds().getHeight();
     //protected MediaBox mediaBox = new MediaBox();
 
     public MasterWindow(){
@@ -64,14 +63,14 @@ public class MasterWindow {
         double height = 600;
         double width = 500;
 
-        getWindow().setMinWidth(width);
-        getWindow().setMaxWidth(width);
+        window.setMinWidth(width);
+        window.setMaxWidth(width);
 
-        getWindow().setMinHeight(height);
-        getWindow().setMaxHeight(height);
+        window.setMinHeight(height);
+        window.setMaxHeight(height);
 
-        getWindow().setWidth(width);
-        getWindow().setHeight(height);
+        window.setWidth(width);
+        window.setHeight(height);
     }
 
 
@@ -79,32 +78,23 @@ public class MasterWindow {
         return currentScene;
     }
 
-    public void setCurrentScene(Scene currentScene) {
-        this.currentScene = currentScene;
-    }
-
-
-
     public static Stage getWindow() {
         return window;
     }
 
-    public void setWindow(Stage window) {
-        this.window = window;
-    }
 
-    public MasterWindow getMaster(){
-        return  this;
+    public void setWindow(Stage other) {
+        window = other;
     }
 
     public void backToHome() throws IOException {
         this.connectToHome();
-        getWindow().setScene(getCurrentScene());
-        getWindow().show();
+        window.setScene(getCurrentScene());
+        window.show();
     }
 
     private void connect(String fxml,String css) throws IOException {
-        rootParent = FXMLLoader.load(getClass().getResource(fxml));
+        Parent rootParent = FXMLLoader.load(getClass().getResource(fxml));
         currentScene = new Scene(rootParent);
         currentScene.getStylesheets().add(css);
     }

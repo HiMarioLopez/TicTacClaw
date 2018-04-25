@@ -4,8 +4,11 @@ import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.BorderPane;
@@ -17,16 +20,18 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.stage.Screen;
 import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class singlePlayer extends MasterWindow implements Initializable {
-    private tileBlock[][] board = new tileBlock[3][3];
-    private WinnerTile[][] winBoard = new WinnerTile[3][3];
+import static edu.baylor.ecs.MasterWindow.*;
+
+public class singlePlayer implements Initializable {
+    private final tileBlock[][] board = new tileBlock[3][3];
+    private final WinnerTile[][] winBoard = new WinnerTile[3][3];
     private Tile previousTile = new Tile();
     private boolean firstTurn = true;
     private boolean valid = true;
@@ -97,13 +102,13 @@ public class singlePlayer extends MasterWindow implements Initializable {
     }
 
     private class Tile extends StackPane {
-        private Text text = new Text();
+        private final Text text = new Text();
         private int x;
         private int y;
         private boolean marked = false;
         private int quadrant;
 
-        public Tile() {
+        Tile() {
             //Create the tile appearance and add it to the pane
             Rectangle border = new Rectangle(tileSize, tileSize);
             border.setFill(null);
@@ -210,38 +215,37 @@ public class singlePlayer extends MasterWindow implements Initializable {
             marked = true;
         }
 
-        public void setQuadrant(int quadrant) {
+        private void setQuadrant(int quadrant) {
             this.quadrant = quadrant;
         }
 
-        public int getQuadrant() {
+        private int getQuadrant() {
             return quadrant;
         }
 
-        public String getValue() {
+        private String getValue() {
             return text.getText();
         }
 
-        public int getX() {
+        private int getX() {
             return x;
         }
 
-        public void setX(int x) {
+        private void setX(int x) {
             this.x = x;
         }
 
-        public int getY() {
+        private int getY() {
             return y;
         }
 
-        public void setY(int y) {
+        private void setY(int y) {
             this.y = y;
         }
 
         //calculate the quadrant based on the X,Y values
         private int calculateBigQuad(){
-            int quad = this.x+ (this.y * 3);
-            return quad;
+            return this.x+ (this.y * 3);
         }
 
         //determine if the quadrant has already been won, return answer
@@ -272,7 +276,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
         private int filledCount = 0;
 
 
-        public tileBlock(int quad) {
+        tileBlock(int quad) {
             int transX, transY;
             quadrant = quad;
 
@@ -310,10 +314,10 @@ public class singlePlayer extends MasterWindow implements Initializable {
         }
 
         //remove the tiles underneath the WinnerTile
-        public void removeBlock() {
-            for (int i = 0; i < block.length; i++) {
+        void removeBlock() {
+            for (Tile[] aBlock : block) {
                 for (int j = 0; j < block.length; j++) {
-                    block[i][j].setVisible(false);
+                    aBlock[j].setVisible(false);
                 }
             }
         }
@@ -326,7 +330,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
             this.block = block;
         }
 
-        public int getQuadrant() {
+        private int getQuadrant() {
             return quadrant;
         }
 
@@ -335,13 +339,13 @@ public class singlePlayer extends MasterWindow implements Initializable {
         }
 
         //return true if they are the winner
-        public boolean checkGridWin(Tile checkMe) {
+        private boolean checkGridWin(Tile checkMe) {
             boolean winner = false;
             String mark = checkMe.getValue();
 
             //check cols
             for (int i = 0; i < block.length; i++) {
-                if (block[checkMe.getX()][i].getValue() != mark)
+                if (!Objects.equals(block[checkMe.getX()][i].getValue(), mark))
                     break;
                 if (i == block.length - 1)
                     return true;
@@ -349,7 +353,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
             //check rows
             for (int i = 0; i < block.length; i++) {
-                if (block[i][checkMe.getY()].getValue() != mark)
+                if (!Objects.equals(block[i][checkMe.getY()].getValue(), mark))
                     break;
                 if (i == block.length - 1)
                     return true;
@@ -358,7 +362,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
             //check diag
             if (checkMe.getX() == checkMe.getY()) {
                 for (int i = 0; i < block.length; i++) {
-                    if (block[i][i].getValue() != mark)
+                    if (!Objects.equals(block[i][i].getValue(), mark))
                         break;
                     if (i == block.length - 1)
                         return true;
@@ -368,7 +372,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
             //check anti-diag
             if (checkMe.getX() + checkMe.getY() == block.length - 1) {
                 for (int i = 0; i < block.length; i++) {
-                    if (block[i][block.length - 1 - i].getValue() != mark)
+                    if (!Objects.equals(block[i][block.length - 1 - i].getValue(), mark))
                         break;
                     if (i == block.length - 1)
                         return true;
@@ -378,21 +382,21 @@ public class singlePlayer extends MasterWindow implements Initializable {
             return winner;
         }
 
-        public int getFilledCount() {
+        private int getFilledCount() {
             return filledCount;
         }
 
-        public void incrementFilledCount() {
+        private void incrementFilledCount() {
             this.filledCount++;
         }
     }
 
     private class WinnerTile extends StackPane {
-        private Text text = new Text();
+        private final Text text = new Text();
         private int quadrant;
         private boolean hasWon = false;
 
-        public WinnerTile() {
+        private WinnerTile() {
             Rectangle border = new Rectangle(tileSize * 3, tileSize * 3);
             border.setFill(null);
             border.setStroke(Color.BLACK);
@@ -405,27 +409,27 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
         }
 
-        public void setQuadrant(int quadrant) {
+        private void setQuadrant(int quadrant) {
             this.quadrant = quadrant;
         }
 
-        public Text getText() {
+        private Text getText() {
             return text;
         }
 
-        public String getValue() {
+        private String getValue() {
             return text.getText();
         }
 
-        public boolean isHasWon() {
+        private boolean isHasWon() {
             return hasWon;
         }
 
-        public void setHasWon(boolean hasWon) {
+        private void setHasWon(boolean hasWon) {
             this.hasWon = hasWon;
         }
 
-        public int getQuadrant() {
+        private int getQuadrant() {
             return quadrant;
         }
     }
@@ -446,7 +450,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
         //check cols
         for (int i = 0; i < winBoard.length; i++) {
-            if (winBoard[x][i].getValue() != tile.getValue())
+            if (!Objects.equals(winBoard[x][i].getValue(), tile.getValue()))
                     break;
             if (i == winBoard.length - 1) {
 
@@ -464,7 +468,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
 
         //check rows
         for (int i = 0; i < winBoard.length; i++) {
-            if (winBoard[i][y].getValue() != tile.getValue())
+            if (!Objects.equals(winBoard[i][y].getValue(), tile.getValue()))
                 break;
             if (i == winBoard.length - 1) {
 
@@ -483,7 +487,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
         //check diag
         if (x == y) {
             for (int i = 0; i < winBoard.length; i++) {
-                if (winBoard[i][i].getValue() != tile.getValue())
+                if (!Objects.equals(winBoard[i][i].getValue(), tile.getValue()))
                     break;
                 if (i == winBoard.length - 1) {
 
@@ -503,7 +507,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
         //check anti-diag
         if (x + y == winBoard.length - 1) {
             for (int i = 0; i < winBoard.length; i++) {
-                if (winBoard[i][winBoard.length - 1 - i].getValue() != tile.getValue())
+                if (!Objects.equals(winBoard[i][winBoard.length - 1 - i].getValue(), tile.getValue()))
                     break;
                 if (i == winBoard.length - 1) {
 
@@ -530,12 +534,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
                 if(i == 2 && j == 2){
                     System.out.println("There was a tie!");
                     TieBox alert = new TieBox("Game Over","The game was a tie!");
-
-                    try {
-                        getMaster().backToHome();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    goHome();
                 }
             }
         }
@@ -641,12 +640,7 @@ public class singlePlayer extends MasterWindow implements Initializable {
         timeline.play();
 
         //Open up the WinBox to congratulate the winner
-        timeline.setOnFinished(e -> {
-            try{
-                getMaster().connectToWin();
-            } catch (IOException ex) {ex.printStackTrace();}
-            getMaster().getWindow().setScene(getMaster().getCurrentScene());
-        });
+        timeline.setOnFinished(e -> goHome());
     }
 
     public static boolean getWinner(){
@@ -654,7 +648,18 @@ public class singlePlayer extends MasterWindow implements Initializable {
     }
 
     private int calcPaneSize(){
-        int total = (9 * tileSize) + (2* spacing);
-        return total;
+        return (9 * tileSize) + (2* spacing);
+    }
+
+    private void goHome(){
+        Parent rootParent = null;
+        try {
+            rootParent = FXMLLoader.load(getClass().getResource("/homeScreen.fxml"));
+        } catch (IOException e1) {e1.printStackTrace(); }
+        Scene temp = new Scene(rootParent);
+        temp.getStylesheets().add("/default.css");
+
+        //getMaster().connectToWin();
+        getWindow().setScene(temp);
     }
 }

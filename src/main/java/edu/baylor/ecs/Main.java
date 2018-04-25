@@ -4,13 +4,7 @@
 package edu.baylor.ecs;
 
 import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.scene.Parent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.media.Media;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
@@ -63,13 +57,6 @@ public class Main extends Application {
 //        }
 //    }
 
-    private void isAccountValid(TextField input, String message) {
-        try {
-            String user = message;
-        } catch (NumberFormatException e) {
-            System.out.println("error");
-        }
-    }
 }
 
 //REFERENCE CODE HERE

@@ -45,7 +45,7 @@ public class EncryptPassword {
         return new String(pbeCipher.doFinal(base64Decode(property)), "UTF-8");
     }
 
-    public static byte[] base64Decode(String property) throws IOException {
+    public static byte[] base64Decode(String property) {
         return Base64.getDecoder().decode(property);
     }
 }
