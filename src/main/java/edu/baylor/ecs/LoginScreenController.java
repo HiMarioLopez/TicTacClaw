@@ -34,9 +34,6 @@ public class LoginScreenController extends MasterWindow implements Initializable
     private Button loginButton, registerButton;
 
     @FXML
-    private Hyperlink forgotPassword;
-
-    @FXML
     private TextField username;
 
     @FXML
@@ -99,10 +96,4 @@ public class LoginScreenController extends MasterWindow implements Initializable
         }
 
     }
-
-    //forgotPassword
-    public void forgotAction(ActionEvent event){
-        System.out.println("User press Forgot Password");
-    }
-
 }

@@ -73,10 +73,7 @@ public class settingScreenController extends MasterWindow implements Initializab
 
     
     public void backAction(ActionEvent event) throws IOException {
-        this.connectToHome();
-        setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
-        getWindow().setScene(getCurrentScene());
-        getWindow().show();
+        backToHome();
     }
 
 }

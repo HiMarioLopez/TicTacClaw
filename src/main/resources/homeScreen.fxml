@@ -26,7 +26,7 @@
             </HBox>
             <HBox alignment="CENTER" layoutX="20.0" layoutY="20.0">
                <children>
-                  <Button fx:id="multiplayerButton" alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#multiplayerAction" text="Multiplayer">
+                  <Button fx:id="howToPlayButton" alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#howToPlayAction" text="How to Play">
                      <padding>
                         <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
                      </padding>

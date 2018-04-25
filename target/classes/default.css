@@ -15,3 +15,7 @@
 #confetti{
     -fx-background-color: #2a2a2a;
 }
+
+.text-area .content{
+    -fx-background-color: gainsboro;
+}

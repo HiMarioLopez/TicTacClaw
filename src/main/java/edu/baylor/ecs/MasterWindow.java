@@ -37,33 +37,27 @@ public class MasterWindow {
     }
 
     protected void connectToSingle() throws IOException {
-        rootParent = FXMLLoader.load(getClass().getResource("/singlePlayer.fxml"));
-        currentScene = new Scene(rootParent);
-        currentScene.getStylesheets().add("/singlePlayer.css");
+        connect("/singlePlayer.fxml","/singlePlayer.css");
     }
 
     protected void connectToSetting() throws IOException {
-        rootParent = FXMLLoader.load(getClass().getResource("/settingScreen.fxml"));
-        currentScene = new Scene(rootParent);
-        currentScene.getStylesheets().add("/settingScreen.css");
+        connect("/settingScreen.fxml","/default.css");
     }
 
     protected void connectToHome() throws IOException{
-        rootParent = FXMLLoader.load(getClass().getResource("/homeScreen.fxml"));
-        currentScene = new Scene(rootParent);
-        currentScene.getStylesheets().add("/homeScreen.css");
+        connect("/homeScreen.fxml","/default.css");
     }
 
     protected void connectToLogin() throws IOException{
-        rootParent = FXMLLoader.load(getClass().getResource("/loginScreen.fxml"));
-        currentScene = new Scene(rootParent);
-        currentScene.getStylesheets().add("/login.css");
+        connect("/loginScreen.fxml","/default.css");
     }
 
     protected void connectToWin() throws IOException{
-        rootParent = FXMLLoader.load(getClass().getResource("/winBox.fxml"));
-        currentScene = new Scene(rootParent);
-        currentScene.getStylesheets().add("/default.css");
+        connect("/winBox.fxml","/default.css");
+    }
+
+    protected void connectHowToPlay() throws IOException{
+        connect("/howToPlay.fxml","/default.css");
     }
 
     protected void defaultInit(){
@@ -107,6 +101,12 @@ public class MasterWindow {
         this.connectToHome();
         getWindow().setScene(getCurrentScene());
         getWindow().show();
+    }
+
+    private void connect(String fxml,String css) throws IOException {
+        rootParent = FXMLLoader.load(getClass().getResource(fxml));
+        currentScene = new Scene(rootParent);
+        currentScene.getStylesheets().add(css);
     }
 
 }

@@ -25,7 +25,7 @@ import java.util.ResourceBundle;
 public class homeScreenController extends MasterWindow implements Initializable{
 
     @FXML
-    private Button coopButton,multiplayerButton,settingButton,exitButton;
+    private Button coopButton,howToPlayButton,settingButton,exitButton;
 
 
 
@@ -47,8 +47,13 @@ public class homeScreenController extends MasterWindow implements Initializable{
         getWindow().show();
     }
 
-    public void multiplayerAction(ActionEvent event){
+    public void howToPlayAction(ActionEvent event) throws IOException {
         System.out.println("User press Multiplayer");
+
+        this.connectHowToPlay();
+        setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
+        getWindow().setScene(getCurrentScene());
+        getWindow().show();
     }
 
     public void settingAction(ActionEvent event) throws IOException {
