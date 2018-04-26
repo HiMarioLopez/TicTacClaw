@@ -9,8 +9,5 @@
         <module name="tictacclaw" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="tictacclaw" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

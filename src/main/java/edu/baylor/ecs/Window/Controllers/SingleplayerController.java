@@ -18,6 +18,6 @@ public class SingleplayerController extends MasterWindow implements Initializabl
     }
 
     @Override
-    public final void initialize(final URL location, final ResourceBundle resources) { }
+    public void initialize(final URL location, final ResourceBundle resources) { }
 
 }
