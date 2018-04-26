@@ -197,17 +197,15 @@ class Tile extends StackPane {
 
         outer:
         if (!singlePlayer.firstTurn) {
-            for (WinnerTile row [] : singlePlayer.winBoard) {
-                for (WinnerTile col : row) {
-                    //find the WinnerTile with the same quadrants
-                    if (col.getQuadrant()
-                            == singlePlayer.previousTile.calculateBigQuad()) {
-                        //check if the tile has already been won
-                        if (col.isHasWon()) {
-                            answer = true;
-                        }
-                        break outer;
+            WinBoardIterator iterator = new WinBoardIterator(singlePlayer.winBoard);
+            while (iterator.hasNext()) {
+                WinnerTile temp = iterator.next();
+                if (temp.getQuadrant() == singlePlayer.previousTile.calculateBigQuad()) {
+                    if (temp.isHasWon()) {
+                        System.out.println("He can play anywhere!");
+                        answer = true;
                     }
+                    break outer;
                 }
             }
         }

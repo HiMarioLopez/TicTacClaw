@@ -60,7 +60,7 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
     }
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public final void initialize(URL location, ResourceBundle resources) {
 
         //dynamically resize the board to your screen
         borderpane.setPrefHeight(MAX_HEIGHT);
