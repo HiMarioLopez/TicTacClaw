@@ -32,14 +32,9 @@
 </file>
 <file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Game\SinglePlayer.java">
 <error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
-<error line="51" column="20" severity="error" message="Variable &apos;turnX&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
-<error line="78" column="11" severity="error" message="Variable &apos;player1Turn&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
-<error line="83" column="11" severity="error" message="Variable &apos;player2Turn&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
-<error line="103" column="11" severity="error" message="Variable &apos;quadID&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
-<error line="635" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="635" column="23" severity="error" message="Name &apos;FirstTurnDone&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
 </file>
 <file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Game\Tile.java">
+<error line="70" severity="error" message="Line is longer than 80 characters (found 81)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 </file>
 <file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\MediaPlayer\MediaBox.java">
 <error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>

@@ -7,6 +7,7 @@
     <list default="true" id="9a4afe22-8fc9-49ab-8f8a-7d28a4e4b9ef" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/SinglePlayer.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/SinglePlayer.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/Tile.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/Tile.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Game/Tile.class" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,28 +19,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Tile.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Tile.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/Tile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2134">
-              <caret line="74" column="47" lean-forward="false" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
+            <state relative-caret-position="162">
+              <caret line="70" column="20" lean-forward="false" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
               <folding>
-                <element signature="e#6275#6276#0" expanded="true" />
-                <element signature="e#6311#6312#0" expanded="true" />
-                <element signature="e#6420#6421#0" expanded="true" />
-                <element signature="e#6451#6452#0" expanded="true" />
-                <element signature="e#6553#6554#0" expanded="true" />
-                <element signature="e#6590#6591#0" expanded="true" />
-                <element signature="e#6686#6687#0" expanded="true" />
-                <element signature="e#6710#6711#0" expanded="true" />
-                <element signature="e#6820#6821#0" expanded="true" />
-                <element signature="e#6849#6850#0" expanded="true" />
-                <element signature="e#6945#6946#0" expanded="true" />
-                <element signature="e#6969#6970#0" expanded="true" />
-                <element signature="e#7079#7080#0" expanded="true" />
-                <element signature="e#7108#7109#0" expanded="true" />
-                <element signature="e#7279#7280#0" expanded="true" />
-                <element signature="e#7332#7333#0" expanded="true" />
+                <element signature="e#6375#6376#0" expanded="true" />
+                <element signature="e#6411#6412#0" expanded="true" />
+                <element signature="e#6520#6521#0" expanded="true" />
+                <element signature="e#6551#6552#0" expanded="true" />
+                <element signature="e#6653#6654#0" expanded="true" />
+                <element signature="e#6690#6691#0" expanded="true" />
+                <element signature="e#6786#6787#0" expanded="true" />
+                <element signature="e#6810#6811#0" expanded="true" />
+                <element signature="e#6920#6921#0" expanded="true" />
+                <element signature="e#6949#6950#0" expanded="true" />
+                <element signature="e#7045#7046#0" expanded="true" />
+                <element signature="e#7069#7070#0" expanded="true" />
+                <element signature="e#7179#7180#0" expanded="true" />
+                <element signature="e#7208#7209#0" expanded="true" />
+                <element signature="e#7379#7380#0" expanded="true" />
+                <element signature="e#7432#7433#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WrongMoveBox.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/WrongMoveBox.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,34 +98,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SinglePlayer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SinglePlayer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/SinglePlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state relative-caret-position="666">
+              <caret line="659" column="24" lean-forward="false" selection-start-line="659" selection-start-column="24" selection-end-line="659" selection-end-column="24" />
               <folding>
-                <element signature="e#3556#3557#0" expanded="true" />
-                <element signature="e#3579#3580#0" expanded="true" />
-                <element signature="e#7621#7622#0" expanded="true" />
-                <element signature="e#7660#7661#0" expanded="true" />
-                <element signature="e#9653#9654#0" expanded="true" />
-                <element signature="e#9695#9696#0" expanded="true" />
-                <element signature="e#9793#9794#0" expanded="true" />
-                <element signature="e#9835#9836#0" expanded="true" />
-                <element signature="e#18948#18949#0" expanded="true" />
-                <element signature="e#18976#18977#0" expanded="true" />
-                <element signature="e#19250#19251#0" expanded="true" />
-                <element signature="e#19291#19292#0" expanded="true" />
-                <element signature="e#19561#19562#0" expanded="true" />
-                <element signature="e#19592#19593#0" expanded="true" />
-                <element signature="e#19679#19680#0" expanded="true" />
-                <element signature="e#19714#19715#0" expanded="true" />
-                <element signature="e#19829#19830#0" expanded="true" />
-                <element signature="e#19873#19874#0" expanded="true" />
-                <element signature="e#19977#19978#0" expanded="true" />
-                <element signature="e#20009#20010#0" expanded="true" />
-                <element signature="e#20092#20093#0" expanded="true" />
-                <element signature="e#20125#20126#0" expanded="true" />
+                <element signature="e#3588#3589#0" expanded="true" />
+                <element signature="e#3611#3612#0" expanded="true" />
+                <element signature="e#7653#7654#0" expanded="true" />
+                <element signature="e#7692#7693#0" expanded="true" />
+                <element signature="e#9685#9686#0" expanded="true" />
+                <element signature="e#9727#9728#0" expanded="true" />
+                <element signature="e#9825#9826#0" expanded="true" />
+                <element signature="e#9867#9868#0" expanded="true" />
+                <element signature="e#18980#18981#0" expanded="true" />
+                <element signature="e#19008#19009#0" expanded="true" />
+                <element signature="e#19282#19283#0" expanded="true" />
+                <element signature="e#19323#19324#0" expanded="true" />
+                <element signature="e#19593#19594#0" expanded="true" />
+                <element signature="e#19624#19625#0" expanded="true" />
+                <element signature="e#19711#19712#0" expanded="true" />
+                <element signature="e#19746#19747#0" expanded="true" />
+                <element signature="e#19861#19862#0" expanded="true" />
+                <element signature="e#19905#19906#0" expanded="true" />
+                <element signature="e#20010#20011#0" expanded="true" />
+                <element signature="e#20042#20043#0" expanded="true" />
+                <element signature="e#20126#20127#0" expanded="true" />
+                <element signature="e#20159#20160#0" expanded="true" />
+                <element signature="e#20255#20256#0" expanded="true" />
+                <element signature="e#20289#20290#0" expanded="true" />
+                <element signature="e#20385#20386#0" expanded="true" />
+                <element signature="e#20419#20420#0" expanded="true" />
+                <element signature="e#20514#20515#0" expanded="true" />
+                <element signature="e#20543#20544#0" expanded="true" />
+                <element signature="e#20649#20650#0" expanded="true" />
+                <element signature="e#20677#20678#0" expanded="true" />
+                <element signature="e#20782#20783#0" expanded="true" />
+                <element signature="e#20823#20824#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -140,16 +163,6 @@
                 <marker date="1524767824725" expanded="true" signature="3220:3350" ph="INSERT INTO Users... " />
                 <marker date="1524767824725" expanded="true" signature="4501:4581" ph="SELECT usr_P... Users" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/App/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="15" column="47" lean-forward="false" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -211,8 +224,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>winanim</find>
-      <find>changeSc</find>
       <find>my pre</find>
       <find>hasWon</find>
       <find>object</find>
@@ -240,7 +251,9 @@
       <find>3</find>
       <find>8</find>
       <find>firstTurn</find>
+      <find>quad</find>
       <find>winbao</find>
+      <find>wrongM</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -303,8 +316,8 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/WrongMoveBox.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MediaPlayer/MediaBox.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/App/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/Tile.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/SinglePlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/Tile.java" />
       </list>
     </option>
   </component>
@@ -663,12 +676,12 @@
       <workItem from="1524525246018" duration="19152000" />
       <workItem from="1524612606632" duration="27959000" />
       <workItem from="1524703498853" duration="31097000" />
-      <workItem from="1524767880098" duration="10344000" />
+      <workItem from="1524767880098" duration="11317000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138129000" />
+    <option name="totallyTimeSpent" value="139102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -738,28 +751,38 @@
         <state relative-caret-position="765">
           <caret line="77" column="26" lean-forward="false" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
           <folding>
-            <element signature="e#3556#3557#0" expanded="true" />
-            <element signature="e#3579#3580#0" expanded="true" />
-            <element signature="e#7621#7622#0" expanded="true" />
-            <element signature="e#7660#7661#0" expanded="true" />
-            <element signature="e#9653#9654#0" expanded="true" />
-            <element signature="e#9695#9696#0" expanded="true" />
-            <element signature="e#9793#9794#0" expanded="true" />
-            <element signature="e#9835#9836#0" expanded="true" />
-            <element signature="e#18948#18949#0" expanded="true" />
-            <element signature="e#18976#18977#0" expanded="true" />
-            <element signature="e#19250#19251#0" expanded="true" />
-            <element signature="e#19291#19292#0" expanded="true" />
-            <element signature="e#19561#19562#0" expanded="true" />
-            <element signature="e#19592#19593#0" expanded="true" />
-            <element signature="e#19679#19680#0" expanded="true" />
-            <element signature="e#19714#19715#0" expanded="true" />
-            <element signature="e#19829#19830#0" expanded="true" />
-            <element signature="e#19873#19874#0" expanded="true" />
-            <element signature="e#19977#19978#0" expanded="true" />
-            <element signature="e#20009#20010#0" expanded="true" />
-            <element signature="e#20092#20093#0" expanded="true" />
-            <element signature="e#20125#20126#0" expanded="true" />
+            <element signature="e#3588#3589#0" expanded="true" />
+            <element signature="e#3611#3612#0" expanded="true" />
+            <element signature="e#7653#7654#0" expanded="true" />
+            <element signature="e#7692#7693#0" expanded="true" />
+            <element signature="e#9685#9686#0" expanded="true" />
+            <element signature="e#9727#9728#0" expanded="true" />
+            <element signature="e#9825#9826#0" expanded="true" />
+            <element signature="e#9867#9868#0" expanded="true" />
+            <element signature="e#18980#18981#0" expanded="true" />
+            <element signature="e#19008#19009#0" expanded="true" />
+            <element signature="e#19282#19283#0" expanded="true" />
+            <element signature="e#19323#19324#0" expanded="true" />
+            <element signature="e#19593#19594#0" expanded="true" />
+            <element signature="e#19624#19625#0" expanded="true" />
+            <element signature="e#19711#19712#0" expanded="true" />
+            <element signature="e#19746#19747#0" expanded="true" />
+            <element signature="e#19861#19862#0" expanded="true" />
+            <element signature="e#19905#19906#0" expanded="true" />
+            <element signature="e#20010#20011#0" expanded="true" />
+            <element signature="e#20042#20043#0" expanded="true" />
+            <element signature="e#20126#20127#0" expanded="true" />
+            <element signature="e#20159#20160#0" expanded="true" />
+            <element signature="e#20255#20256#0" expanded="true" />
+            <element signature="e#20289#20290#0" expanded="true" />
+            <element signature="e#20385#20386#0" expanded="true" />
+            <element signature="e#20419#20420#0" expanded="true" />
+            <element signature="e#20514#20515#0" expanded="true" />
+            <element signature="e#20543#20544#0" expanded="true" />
+            <element signature="e#20649#20650#0" expanded="true" />
+            <element signature="e#20677#20678#0" expanded="true" />
+            <element signature="e#20782#20783#0" expanded="true" />
+            <element signature="e#20823#20824#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -991,16 +1014,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/WrongMoveBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MediaPlayer/MediaBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -1113,58 +1126,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/Tile.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/SinglePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2134">
-          <caret line="74" column="47" lean-forward="false" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
+        <state relative-caret-position="666">
+          <caret line="659" column="24" lean-forward="false" selection-start-line="659" selection-start-column="24" selection-end-line="659" selection-end-column="24" />
           <folding>
-            <element signature="e#6275#6276#0" expanded="true" />
-            <element signature="e#6311#6312#0" expanded="true" />
-            <element signature="e#6420#6421#0" expanded="true" />
-            <element signature="e#6451#6452#0" expanded="true" />
-            <element signature="e#6553#6554#0" expanded="true" />
-            <element signature="e#6590#6591#0" expanded="true" />
-            <element signature="e#6686#6687#0" expanded="true" />
-            <element signature="e#6710#6711#0" expanded="true" />
-            <element signature="e#6820#6821#0" expanded="true" />
-            <element signature="e#6849#6850#0" expanded="true" />
-            <element signature="e#6945#6946#0" expanded="true" />
-            <element signature="e#6969#6970#0" expanded="true" />
-            <element signature="e#7079#7080#0" expanded="true" />
-            <element signature="e#7108#7109#0" expanded="true" />
-            <element signature="e#7279#7280#0" expanded="true" />
-            <element signature="e#7332#7333#0" expanded="true" />
+            <element signature="e#3588#3589#0" expanded="true" />
+            <element signature="e#3611#3612#0" expanded="true" />
+            <element signature="e#7653#7654#0" expanded="true" />
+            <element signature="e#7692#7693#0" expanded="true" />
+            <element signature="e#9685#9686#0" expanded="true" />
+            <element signature="e#9727#9728#0" expanded="true" />
+            <element signature="e#9825#9826#0" expanded="true" />
+            <element signature="e#9867#9868#0" expanded="true" />
+            <element signature="e#18980#18981#0" expanded="true" />
+            <element signature="e#19008#19009#0" expanded="true" />
+            <element signature="e#19282#19283#0" expanded="true" />
+            <element signature="e#19323#19324#0" expanded="true" />
+            <element signature="e#19593#19594#0" expanded="true" />
+            <element signature="e#19624#19625#0" expanded="true" />
+            <element signature="e#19711#19712#0" expanded="true" />
+            <element signature="e#19746#19747#0" expanded="true" />
+            <element signature="e#19861#19862#0" expanded="true" />
+            <element signature="e#19905#19906#0" expanded="true" />
+            <element signature="e#20010#20011#0" expanded="true" />
+            <element signature="e#20042#20043#0" expanded="true" />
+            <element signature="e#20126#20127#0" expanded="true" />
+            <element signature="e#20159#20160#0" expanded="true" />
+            <element signature="e#20255#20256#0" expanded="true" />
+            <element signature="e#20289#20290#0" expanded="true" />
+            <element signature="e#20385#20386#0" expanded="true" />
+            <element signature="e#20419#20420#0" expanded="true" />
+            <element signature="e#20514#20515#0" expanded="true" />
+            <element signature="e#20543#20544#0" expanded="true" />
+            <element signature="e#20649#20650#0" expanded="true" />
+            <element signature="e#20677#20678#0" expanded="true" />
+            <element signature="e#20782#20783#0" expanded="true" />
+            <element signature="e#20823#20824#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/SinglePlayer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/WrongMoveBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state relative-caret-position="160">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
-            <element signature="e#3556#3557#0" expanded="true" />
-            <element signature="e#3579#3580#0" expanded="true" />
-            <element signature="e#7621#7622#0" expanded="true" />
-            <element signature="e#7660#7661#0" expanded="true" />
-            <element signature="e#9653#9654#0" expanded="true" />
-            <element signature="e#9695#9696#0" expanded="true" />
-            <element signature="e#9793#9794#0" expanded="true" />
-            <element signature="e#9835#9836#0" expanded="true" />
-            <element signature="e#18948#18949#0" expanded="true" />
-            <element signature="e#18976#18977#0" expanded="true" />
-            <element signature="e#19250#19251#0" expanded="true" />
-            <element signature="e#19291#19292#0" expanded="true" />
-            <element signature="e#19561#19562#0" expanded="true" />
-            <element signature="e#19592#19593#0" expanded="true" />
-            <element signature="e#19679#19680#0" expanded="true" />
-            <element signature="e#19714#19715#0" expanded="true" />
-            <element signature="e#19829#19830#0" expanded="true" />
-            <element signature="e#19873#19874#0" expanded="true" />
-            <element signature="e#19977#19978#0" expanded="true" />
-            <element signature="e#20009#20010#0" expanded="true" />
-            <element signature="e#20092#20093#0" expanded="true" />
-            <element signature="e#20125#20126#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="70" column="20" lean-forward="false" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
+          <folding>
+            <element signature="e#6375#6376#0" expanded="true" />
+            <element signature="e#6411#6412#0" expanded="true" />
+            <element signature="e#6520#6521#0" expanded="true" />
+            <element signature="e#6551#6552#0" expanded="true" />
+            <element signature="e#6653#6654#0" expanded="true" />
+            <element signature="e#6690#6691#0" expanded="true" />
+            <element signature="e#6786#6787#0" expanded="true" />
+            <element signature="e#6810#6811#0" expanded="true" />
+            <element signature="e#6920#6921#0" expanded="true" />
+            <element signature="e#6949#6950#0" expanded="true" />
+            <element signature="e#7045#7046#0" expanded="true" />
+            <element signature="e#7069#7070#0" expanded="true" />
+            <element signature="e#7179#7180#0" expanded="true" />
+            <element signature="e#7208#7209#0" expanded="true" />
+            <element signature="e#7379#7380#0" expanded="true" />
+            <element signature="e#7432#7433#0" expanded="true" />
           </folding>
         </state>
       </provider>

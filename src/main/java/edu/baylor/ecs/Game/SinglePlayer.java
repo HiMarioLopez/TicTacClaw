@@ -48,7 +48,7 @@ public class SinglePlayer extends SingleplayerController
 
     /** If it is Player 1's turn.
      */
-    static boolean turnX = true;
+    private static boolean turnX = true;
 
     /** The default spacing between Tiles.
      */
@@ -75,12 +75,12 @@ public class SinglePlayer extends SingleplayerController
     /** Tell the user if it is Player 1's turn.
      */
     @FXML
-    Label player1Turn;
+    private Label player1Turn;
 
     /** Tell the user if it is Player 2's turn.
      */
     @FXML
-    Label player2Turn;
+    private Label player2Turn;
 
     /** Title of Player 1's side.
      */
@@ -100,7 +100,7 @@ public class SinglePlayer extends SingleplayerController
     /** Tell the user where to play.
      */
     @FXML
-    Label quadID;
+    private Label quadID;
 
     /** The sidebar to inform players who's turn.
      */
@@ -627,13 +627,38 @@ public class SinglePlayer extends SingleplayerController
         this.previousTile = previous;
     }
 
-    /** @return determine if the first turn has been taken */
+    /** @return determine if the first turn has been taken. */
     public final boolean isFirstTurn() {
         return firstTurn;
     }
 
-    /** the first turn has been passed */
+    /** the first turn has been passed. */
     public final void firstTurnDone() {
         firstTurn = false;
+    }
+
+    /** @return the Label for Player1's turn box. */
+    public final Label getPlayer1Turn() {
+        return player1Turn;
+    }
+
+    /** @return the Label for Player1's turn box. */
+    public final Label getPlayer2Turn() {
+        return player2Turn;
+    }
+
+    /** @return the Label for which quadrant to play. */
+    public final Label getQuadID() {
+        return quadID;
+    }
+
+    /** @return return true if it is X's turn, false otherwise. */
+    public static boolean isTurnX() {
+        return turnX;
+    }
+
+    /** @param turn the update who's turn it is*/
+    public static void setTurnX(final boolean turn) {
+        SinglePlayer.turnX = turn;
     }
 }
