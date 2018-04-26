@@ -29,11 +29,11 @@ public class HowToPlayController extends MasterWindow implements Initializable {
     public final void initialize(final URL location,
                                  final ResourceBundle resources) {
 
-        getWindow().setMinWidth(maxWidth / 2.0);
-        getWindow().setMinHeight(maxHeight / 2.0);
+        getWindow().setMinWidth(MAX_WIDTH / 2.0);
+        getWindow().setMinHeight(MAX_HEIGHT / 2.0);
 
-        getWindow().setMaxHeight(maxHeight / 2.0);
-        getWindow().setMaxWidth(maxWidth / 2.0);
+        getWindow().setMaxHeight(MAX_HEIGHT / 2.0);
+        getWindow().setMaxWidth(MAX_WIDTH / 2.0);
 
         String instruct = "The game is similar to Tic-Tac-Toe, only there is a"
                 + " slight twist. To start the game, Player 1 places an X on "
@@ -46,9 +46,9 @@ public class HowToPlayController extends MasterWindow implements Initializable {
                 + " you win the game when you win three boards "
                 + "together (across rows, columns or diagnols). ";
 
-        titleBox.setFont((Font.font("System", maxWidth / 50.0)));
+        titleBox.setFont((Font.font("System", MAX_WIDTH / 50.0)));
 
-        instructions.setFont((Font.font("System", maxWidth / 100.0)));
+        instructions.setFont((Font.font("System", MAX_WIDTH / 100.0)));
         instructions.setText(instruct);
         instructions.setWrapText(true);
     }

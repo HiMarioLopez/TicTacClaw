@@ -9,13 +9,15 @@ import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
 import java.io.IOException;
 
+/** Author: Brandon Mork. */
 public class MasterWindow {
     private static Stage window;
     private static Scene currentScene;
-    public final static double maxWidth = (int) Screen.getPrimary().getVisualBounds().getWidth();
-    protected final static double maxHeight = (int) Screen.getPrimary().getVisualBounds().getHeight();
+    public static final double MAX_WIDTH = (int) Screen.getPrimary().getVisualBounds().getWidth();
+    protected static final double MAX_HEIGHT = (int) Screen.getPrimary().getVisualBounds().getHeight();
 
-    protected MasterWindow(){
+    /** Author: Brandon Mork. */
+    protected MasterWindow() {
         System.out.println("Ceated MasterWindow");
         window.setOnCloseRequest(e -> {
             e.consume();
@@ -23,13 +25,15 @@ public class MasterWindow {
         });
     }
 
-    public MasterWindow(Stage otherWindow){
+    /** Author: Brandon Mork. */
+    public MasterWindow(final Stage otherWindow) {
         window = otherWindow;
         window.setTitle("Tic-Tac-Claw");
     }
 
-    public void closeProgram(Stage window) {
-        ExitBox exitBox= new ExitBox("Alert Window", "Do you really want to leave?");
+    /** Author: Brandon Mork. */
+    public final void closeProgram(final Stage window) {
+        ExitBox exitBox = new ExitBox("Alert Window", "Do you really want to leave?");
         boolean result = exitBox.exitDisplay();
 
         if (result) {
@@ -40,31 +44,38 @@ public class MasterWindow {
 
     }
 
-    protected void connectToSingle() throws IOException {
+    /** Author: Brandon Mork. */
+    protected final void connectToSingle() throws IOException {
         connect("/fxml/singlePlayer.fxml", "/css/singlePlayer.css");
     }
 
-    protected void connectToSetting() throws IOException {
+    /** Author: Brandon Mork. */
+    protected final void connectToSetting() throws IOException {
         connect("/fxml/settingScreen.fxml", "/css/default.css");
     }
 
-    protected void connectToHome() throws IOException{
+    /** Author: Brandon Mork. */
+    protected final void connectToHome() throws IOException {
         connect("/fxml/homeScreen.fxml", "/css/default.css");
     }
 
-    public void connectToLogin() throws IOException{
+    /** Author: Brandon Mork. */
+    public final void connectToLogin() throws IOException {
         connect("/fxml/loginScreen.fxml", "/css/default.css");
     }
 
-    protected void connectHowToPlay() throws IOException{
+    /** Author: Brandon Mork. */
+    protected final void connectHowToPlay() throws IOException {
         connect("/fxml/howToPlay.fxml", "/css/default.css");
     }
 
-    protected void connectToWinBox()throws IOException{
+    /** Author: Brandon Mork. */
+    protected final void connectToWinBox()throws IOException {
         connect("/fxml/winBox.fxml", "/css/default.css");
     }
 
-    protected void defaultInit(){
+    /** Author: Brandon Mork. */
+    protected final void defaultInit() {
         double height = 600;
         double width = 500;
 
@@ -78,37 +89,42 @@ public class MasterWindow {
         window.setHeight(height);
     }
 
-
+    /** Author: Brandon Mork. */
     protected static Scene getCurrentScene() {
         return currentScene;
     }
 
+    /** Author: Brandon Mork. */
     protected static Stage getWindow() {
         return window;
     }
 
-    public void updateScene() {
+    /** Author: Brandon Mork. */
+    public final void updateScene() {
         window.setScene(currentScene);
     }
 
-    public void display(){
+    /** Author: Brandon Mork. */
+    public final void display() {
         window.show();
     }
 
-    protected void setWindow(Stage other) {
+    /** Author: Brandon Mork. */
+    protected final void setWindow(final Stage other) {
         window = other;
     }
 
-    protected void backToHome() throws IOException {
+    /** Author: Brandon Mork. */
+    protected final void backToHome() throws IOException {
         this.connectToHome();
         window.setScene(getCurrentScene());
         window.show();
     }
 
-    private void connect(String fxml,String css) throws IOException {
+    /** Author: Brandon Mork. */
+    private void connect(final String fxml, final String css) throws IOException {
         Parent rootParent = FXMLLoader.load(MasterWindow.class.getResource(fxml));
         currentScene = new Scene(rootParent);
         currentScene.getStylesheets().add(css);
     }
-
 }

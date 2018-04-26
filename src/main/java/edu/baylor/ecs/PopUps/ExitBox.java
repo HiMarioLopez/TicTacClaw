@@ -3,7 +3,7 @@ package edu.baylor.ecs.PopUps;
 import javafx.scene.control.Button;
 import javafx.scene.text.Font;
 
-import static edu.baylor.ecs.Window.MasterWindow.maxWidth;
+import static edu.baylor.ecs.Window.MasterWindow.MAX_WIDTH;
 
 /** Author: Brandon Mork. */
 public class ExitBox extends AlertBox {
@@ -15,7 +15,7 @@ public class ExitBox extends AlertBox {
     public ExitBox(final String title, final String message) {
         super(title, message);
 
-        textbox.setFont((Font.font("System", maxWidth / 120)));
+        textbox.setFont((Font.font("System", MAX_WIDTH / 120)));
 
         yesButton = new Button("Yes");
         noButton = new Button("No");

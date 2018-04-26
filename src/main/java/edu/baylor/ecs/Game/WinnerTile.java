@@ -9,11 +9,13 @@ import javafx.scene.text.Text;
 
 import static edu.baylor.ecs.Game.SinglePlayer.SIZE_OF_BOARD;
 
+/** Author: Brandon Mork. */
 class WinnerTile extends StackPane {
     private final Text text = new Text();
     private int quadrant;
     boolean hasWon = false;
 
+    /** Author: Brandon Mork. */
     WinnerTile() {
         Rectangle border =
                 new Rectangle(SinglePlayer.TILE_SIZE * SIZE_OF_BOARD,
@@ -29,26 +31,32 @@ class WinnerTile extends StackPane {
 
     }
 
+    /** Author: Brandon Mork. */
     void setQuadrant(int quadrant) {
         this.quadrant = quadrant;
     }
 
+    /** Author: Brandon Mork. */
     Text getText() {
         return text;
     }
 
+    /** Author: Brandon Mork. */
     String getValue() {
         return text.getText();
     }
 
+    /** Author: Brandon Mork. */
     boolean isHasWon() {
         return hasWon;
     }
 
+    /** Author: Brandon Mork. */
     void setHasWon() {
         this.hasWon = true;
     }
 
+    /** Author: Brandon Mork. */
     int getQuadrant() {
         return quadrant;
     }

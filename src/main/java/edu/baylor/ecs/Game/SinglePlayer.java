@@ -28,9 +28,9 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
     Tile previousTile = new Tile(this);
     boolean firstTurn = true;
     static boolean turnX = true;
-    private final static double SPACING = maxWidth / 120.0;
-    static final double TILE_SIZE = maxWidth / 25.0;
-    static final double TILE_FONT = maxWidth / 30.0;
+    private final static double SPACING = MAX_WIDTH / 120.0;
+    static final double TILE_SIZE = MAX_WIDTH / 25.0;
+    static final double TILE_FONT = MAX_WIDTH / 30.0;
 
     @FXML
     private BorderPane borderpane;
@@ -52,10 +52,10 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
     Label quadID;
 
     @FXML
-    private VBox player1VBOX,player2VBOX;
+    private VBox player1VBOX, player2VBOX;
 
     /** Author: Brandon Mork. */
-    public SinglePlayer(){
+    public SinglePlayer() {
         super();
     }
 
@@ -63,24 +63,24 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
     public void initialize(URL location, ResourceBundle resources) {
 
         //dynamically resize the board to your screen
-        borderpane.setPrefHeight(maxHeight);
-        borderpane.setPrefWidth(maxWidth);
+        borderpane.setPrefHeight(MAX_HEIGHT);
+        borderpane.setPrefWidth(MAX_WIDTH);
 
         int paneSize = calcPaneSize();
         pane.setPrefSize(paneSize, paneSize);
 
-        player1VBOX.setSpacing(maxHeight / 4.0);
-        player2VBOX.setSpacing(maxHeight / 4.0);
+        player1VBOX.setSpacing(MAX_HEIGHT / 4.0);
+        player2VBOX.setSpacing(MAX_HEIGHT / 4.0);
 
-        player1Turn.setFont(Font.font("System", maxWidth / 50.0));
-        player2Turn.setFont(Font.font("System", maxWidth / 50.0));
+        player1Turn.setFont(Font.font("System", MAX_WIDTH / 50.0));
+        player2Turn.setFont(Font.font("System", MAX_WIDTH / 50.0));
 
-        quadID.setFont(Font.font("System", maxWidth / 50.0));
+        quadID.setFont(Font.font("System", MAX_WIDTH / 50.0));
 
-        player1Label.setFont(Font.font("System", maxWidth / 35.0));
-        player2Label.setFont(Font.font("System", maxWidth / 35.0));
+        player1Label.setFont(Font.font("System", MAX_WIDTH / 35.0));
+        player2Label.setFont(Font.font("System", MAX_WIDTH / 35.0));
 
-        titleLabel.setFont(Font.font("System", maxWidth / 25.0));
+        titleLabel.setFont(Font.font("System", MAX_WIDTH / 25.0));
 
         //create the gameboard
         int quad = 0;
@@ -108,7 +108,7 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
         private int filledCount = 0;
 
         /** Author: Brandon Mork. */
-        TileBlock(int quad) {
+        TileBlock(final int quad) {
             double transX, transY;
             quadrant = quad;
 
@@ -222,7 +222,7 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
 
     //check if the player has won the large, outer tic tac toe board, play win animation if true
     void checkBigWin(Tile tile) {
-        int x, y=0;
+        int x, y = 0;
         int quad = tile.getQuadrant();
 
         //get the (x,y) of the last quad won
@@ -256,12 +256,13 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
 
         //check rows
         for (int i = 0; i < winBoard.length; i++) {
-            if (!Objects.equals(winBoard[i][y].getValue(), tile.getValue()))
+            if (!Objects.equals(winBoard[i][y].getValue(), tile.getValue())) {
                 break;
+            }
             if (i == winBoard.length - 1) {
 
                 startX = (TILE_SIZE * 1.5) + SPACING;
-                startY = (TILE_SIZE * 1.5) + SPACING *(y + 1) + (y * 3 * TILE_SIZE);
+                startY = (TILE_SIZE * 1.5) + SPACING * (y + 1) + (y * 3 * TILE_SIZE);
 
                 endX = startX + (TILE_SIZE * 6) + (SPACING * 2);
                 endY = startY;
@@ -275,10 +276,10 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
         //check diag
         if (x == y) {
             for (int i = 0; i < winBoard.length; i++) {
-                if (!Objects.equals(winBoard[i][i].getValue(), tile.getValue()))
+                if (!Objects.equals(winBoard[i][i].getValue(), tile.getValue())) {
                     break;
+                }
                 if (i == winBoard.length - 1) {
-
                     startX = (TILE_SIZE * 1.5) + SPACING;
                     //noinspection SuspiciousNameCombination
                     startY = startX;
@@ -297,8 +298,9 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
         //check anti-diag
         if (x + y == winBoard.length - 1) {
             for (int i = 0; i < winBoard.length; i++) {
-                if (!Objects.equals(winBoard[i][winBoard.length - 1 - i].getValue(), tile.getValue()))
+                if (!Objects.equals(winBoard[i][winBoard.length - 1 - i].getValue(), tile.getValue())) {
                     break;
+                }
                 if (i == winBoard.length - 1) {
 
                     startX = (TILE_SIZE * 1.5) + SPACING;
@@ -326,7 +328,10 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
                     alert.display();
                     try {
                         this.connectToHome();
-                    } catch (IOException e) { e.printStackTrace(); }
+                    } catch (IOException e)
+                    {
+                        e.printStackTrace();
+                    }
                     getWindow().setScene(getCurrentScene());
                     getWindow().show();
                 }
@@ -337,14 +342,14 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
 
 
     //check if the player was won the inner tic tac toe board, return true if they have
-    boolean checkSmallWin(Tile tile) {
+    final boolean checkSmallWin(Tile tile) {
         int quad = tile.getQuadrant();
         boolean answer = false;
         int i, j = 0;
 
         outerLoop:
-        for (i = 0; i < board.length; i++){
-            for (j = 0; j < board.length; j++){
+        for (i = 0; i < board.length; i++) {
+            for (j = 0; j < board.length; j++) {
                 if (board[i][j].getQuadrant() == quad) {
                     answer = board[i][j].checkGridWin(tile);
                     break outerLoop;
@@ -356,7 +361,7 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
         //Add the winner tile to the winBoard
         if (answer || board[i][j].getFilledCount() == 8) {
             WinnerTile temp = new WinnerTile();
-            int transX= (int) SPACING,transY= (int) SPACING;
+            int transX = (int) SPACING, transY = (int) SPACING;
             int x = 0, y = 0;                            //the (x,y) of the quads
 
             System.out.println("There is a small winner or it was a Cat!!");
@@ -391,7 +396,7 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
                 temp.getText().setText(tile.getValue());
             } else {
                 temp.getText().setText("Tie");
-                temp.getText().setFont(Font.font("System", (maxWidth / 75.0)));
+                temp.getText().setFont(Font.font("System", (MAX_WIDTH / 75.0)));
             }
 
             //add the WinnerTile to the board

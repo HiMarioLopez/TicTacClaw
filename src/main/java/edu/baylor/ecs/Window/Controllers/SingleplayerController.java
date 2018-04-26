@@ -6,17 +6,18 @@ import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/** Author: Brandon Mork. */
+public class SingleplayerController extends MasterWindow implements Initializable {
 
-public class SingleplayerController extends MasterWindow implements Initializable{
-
-    protected SingleplayerController(){
+    protected SingleplayerController() {
         getWindow().setMaximized(true);
-        getWindow().setMaxWidth(maxWidth);
-        getWindow().setMaxHeight(maxHeight);
-        getWindow().setHeight(maxHeight);
-        getWindow().setWidth(maxWidth);
+        getWindow().setMaxWidth(MAX_WIDTH);
+        getWindow().setMaxHeight(MAX_HEIGHT);
+        getWindow().setHeight(MAX_HEIGHT);
+        getWindow().setWidth(MAX_WIDTH);
     }
+
     @Override
-    public void initialize(URL location, ResourceBundle resources) { }
+    public final void initialize(final URL location, final ResourceBundle resources) { }
 
 }

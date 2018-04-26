@@ -15,8 +15,8 @@ import java.util.ResourceBundle;
 
 import static edu.baylor.ecs.Game.SinglePlayer.getWinner;
 
-
-public class WinBoxController extends MasterWindow implements Initializable{
+/** Author: Brandon Mork. */
+public class WinBoxController extends MasterWindow implements Initializable {
 
     @FXML
     private Label winnerLabel;
@@ -25,28 +25,30 @@ public class WinBoxController extends MasterWindow implements Initializable{
     private ImageView image;
 
     @FXML
-    private Button backHomeButton,exitButton;
+    private Button backHomeButton, exitButton;
 
     private final Image confetti = new Image("/pictures/confetti.png");
 
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        winnerLabel.setFont(Font.font("System",maxWidth/50));
+    public final void initialize(final URL location, final ResourceBundle resources) {
+        winnerLabel.setFont(Font.font("System", MAX_WIDTH / 50));
 
-        if(getWinner())
+        if (getWinner()) {
             winnerLabel.setText("Looks like Player 2 has won!");
-        else
+        } else {
             winnerLabel.setText("Looks like Player 1 has won!");
-
+        }
         image.setImage(confetti);
     }
 
-    public void toHome() throws IOException{
+    /** Author: Brandon Mork. */
+    public final void toHome() throws IOException {
         backToHome();
     }
 
-    public void closeProgram(){
+    /** Author: Brandon Mork. */
+    public final void closeProgram() {
         super.closeProgram(getWindow());
     }
 }

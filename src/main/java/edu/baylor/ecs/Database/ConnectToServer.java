@@ -10,7 +10,12 @@ package edu.baylor.ecs.Database;
 
 import org.jasypt.util.password.StrongPasswordEncryptor;
 
-import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 
 /** Author: Mario Lopez. */
 public class ConnectToServer {
@@ -22,7 +27,7 @@ public class ConnectToServer {
     private static final String DB_PASSWORD = "password";
 
     /** Author: Mario Lopez. */
-    public static void main(String args[]) throws SQLException {
+    public static void main(final String args[]) throws SQLException {
         createTable();
     }
 

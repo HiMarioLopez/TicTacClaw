@@ -5,14 +5,16 @@ import javafx.scene.media.MediaPlayer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MediaBox {
+/** Author: Brandon Mork. */
+public final class MediaBox {
 
-    private static volatile MediaBox single_instance = null;
+    private static volatile MediaBox singleInstance = null;
     private MediaPlayer mediaPlayer;
     private final List<String> songList;
     private Boolean playing;
 
 
+    /** Author: Brandon Mork. */
     private MediaBox() {
         System.out.println("MediaBox created");
         songList = new ArrayList<>();
@@ -20,6 +22,7 @@ public class MediaBox {
         playing = false;
     }
 
+    /** Author: Brandon Mork. */
     public void playMediaBox() {
         System.out.println("The media has started");
         Media media = new Media(this.getClass()
@@ -30,6 +33,7 @@ public class MediaBox {
         playing = true;
     }
 
+    /** Author: Brandon Mork. */
     public void stopMediaBox() {
         System.out.println("The media has stopped");
         if (playing) {
@@ -39,27 +43,31 @@ public class MediaBox {
 
     }
 
-    public void changeVolume(double volume) {
+    /** Author: Brandon Mork. */
+    public void changeVolume(final double volume) {
         mediaPlayer.setVolume(volume);
     }
 
+    /** Author: Brandon Mork. */
     public double getVolume() {
         return mediaPlayer.getVolume();
     }
 
+    /** Author: Brandon Mork. */
     public boolean isPlaying() {
         return playing;
     }
 
+    /** Author: Brandon Mork. */
     public static MediaBox getInstance() {
-        if (single_instance == null) {
+        if (singleInstance == null) {
             synchronized (MediaBox.class) {
-                if (single_instance == null) {
-                    single_instance = new MediaBox();
+                if (singleInstance == null) {
+                    singleInstance = new MediaBox();
                 }
             }
         }
 
-        return single_instance;
+        return singleInstance;
     }
 }

@@ -19,6 +19,7 @@ import java.util.ResourceBundle;
 import static edu.baylor.ecs.Database.ConnectToServer.login;
 import static edu.baylor.ecs.Database.ConnectToServer.register;
 
+/** Author: Brandon Mork. */
 public class LoginScreenController extends MasterWindow implements Initializable{
 
     @FXML
@@ -30,17 +31,18 @@ public class LoginScreenController extends MasterWindow implements Initializable
     @FXML
     private PasswordField password;
 
-    public LoginScreenController(){
+    /** Author: Brandon Mork. */
+    public LoginScreenController() {
         System.out.println("Login was created");
     }
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public final void initialize (final URL location, final ResourceBundle resources) {
         defaultInit();
     }
 
-    //loginButton
-    public void loginAction(ActionEvent event) throws IOException, SQLException {
+    /** Author: Brandon Mork. */
+    public final void loginAction(final ActionEvent event) throws IOException, SQLException {
         System.out.println("User press Login button");
 
         String str_username = username.getText();
@@ -51,7 +53,7 @@ public class LoginScreenController extends MasterWindow implements Initializable
         if (login(str_username, str_password)) {
             System.out.println("Login successful!");
             this.connectToHome();
-            setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
+            setWindow((Stage) ((Node) event.getSource()).getScene().getWindow());
             getWindow().setScene(getCurrentScene());
             getWindow().show();
         } else {
@@ -59,8 +61,8 @@ public class LoginScreenController extends MasterWindow implements Initializable
         }
     }
 
-    //registerButton
-    public void registerAction(ActionEvent event) throws IOException, SQLException {
+    /** Author: Brandon Mork. */
+    public final void registerAction(final ActionEvent event) throws IOException, SQLException {
         System.out.println("User press Register button");
 
         StrongPasswordEncryptor passwordEncryptor = new StrongPasswordEncryptor();
@@ -69,7 +71,7 @@ public class LoginScreenController extends MasterWindow implements Initializable
         if (register(username.getText().toLowerCase(), encryptedPassword)) {
             System.out.println("Registration successful!");
             this.connectToHome();
-            setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
+            setWindow((Stage) ((Node) event.getSource()).getScene().getWindow());
             getWindow().setScene(getCurrentScene());
             //mediaBox.playMediaBox();
             getWindow().show();

@@ -9,6 +9,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
+/** Author: Brandon Mork. */
 class Tile extends StackPane {
     private final SinglePlayer singlePlayer;
     private final Text text = new Text();
@@ -17,6 +18,7 @@ class Tile extends StackPane {
     private boolean marked = false;
     private int quadrant;
 
+    /** Author: Brandon Mork. */
     Tile(final SinglePlayer singlePlayer) {
         this.singlePlayer = singlePlayer;
         //Create the tile appearance and add it to the pane
@@ -58,12 +60,13 @@ class Tile extends StackPane {
                             "You must play in the correct quadrant "
                                     + "from the last move!");
                     return;
-                }else
+                } else {
                     //take note of the first move
                     if (singlePlayer.firstTurn) {
-                    System.out.println("This is my first move!");
-                    singlePlayer.previousTile = this;
-                    singlePlayer.firstTurn = false;
+                        System.out.println("This is my first move!");
+                        singlePlayer.previousTile = this;
+                        singlePlayer.firstTurn = false;
+                    }
                 }
 
                 //draw the X
@@ -130,54 +133,65 @@ class Tile extends StackPane {
         });
     }
 
-    //set the text of the tile to "X"
+    /** Author: Brandon Mork.
+     *  set the text of the tile to "X" */
     private void drawX() {
         System.out.println("You touched x:" + x + " y:" + y);
         text.setText("X");
         marked = true;
     }
 
-    //set the text of the tile to "O"
+    /** Author: Brandon Mork.
+     *  set the text of the tile to "O" */
     private void drawO() {
         System.out.println("You touched x:" + x + " y:" + y);
         text.setText("O");
         marked = true;
     }
 
+    /** Author: Brandon Mork. */
     void setQuadrant(int quadrant) {
         this.quadrant = quadrant;
     }
 
+    /** Author: Brandon Mork. */
     int getQuadrant() {
         return quadrant;
     }
 
+    /** Author: Brandon Mork. */
     String getValue() {
         return text.getText();
     }
 
+    /** Author: Brandon Mork. */
     int getX() {
         return x;
     }
 
+    /** Author: Brandon Mork. */
     void setX(int x) {
         this.x = x;
     }
 
+    /** Author: Brandon Mork. */
     int getY() {
         return y;
     }
 
+    /** Author: Brandon Mork. */
     void setY(int y) {
         this.y = y;
     }
 
-    //calculate the quadrant based on the X,Y values
+    /** Author: Brandon Mork.
+     * calculate the quadrant based on the X,Y values */
     private int calculateBigQuad() {
         return this.x + (this.y * 3);
     }
 
-    //determine if the quadrant has already been won, return answer
+    /** Author: Brandon Mork.
+     * determine if the quadrant has already been won, return answer */
     private boolean calcPlayAnywhere() {
         boolean answer = false;
 
@@ -189,7 +203,7 @@ class Tile extends StackPane {
                     if (col.getQuadrant()
                             == singlePlayer.previousTile.calculateBigQuad()) {
                         //check if the tile has already been won
-                        if (col.isHasWon()){
+                        if (col.isHasWon()) {
                             answer = true;
                         }
                         break outer;
