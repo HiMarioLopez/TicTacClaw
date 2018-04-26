@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class settingScreenController extends MasterWindow implements Initializable{
+public class SettingScreenController extends MasterWindow implements Initializable{
 
     @FXML
     private Slider volumeSlider;
@@ -22,7 +22,7 @@ public class settingScreenController extends MasterWindow implements Initializab
     private Button backButton;
 
 
-    public settingScreenController(){
+    public SettingScreenController(){
         System.out.println("Created settings");
     }
 

@@ -1,6 +1,6 @@
 /*
  * Author: Mario Arturo Lopez
- * File: connectToServer.java
+ * File: ConnectToServer.java
  * Project: Final Project
  * Course: CSI 3130/3371 Spring 2018
  * Due Date: TDB
@@ -12,7 +12,7 @@ import org.jasypt.util.password.StrongPasswordEncryptor;
 
 import java.sql.*;
 
-public class connectToServer {
+public class ConnectToServer {
     private static final String DB_DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String DB_CONNECTION = "jdbc:mysql://" +
             "gryzl.ckgzixjdcowi.us-east-2.rds.amazonaws.com:" +

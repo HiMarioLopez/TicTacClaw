@@ -32,7 +32,7 @@ import java.util.ResourceBundle;
 import static edu.baylor.ecs.Window.MasterWindow.*;
 
 @SuppressWarnings("unused")
-public class singlePlayer implements Initializable {
+public class SinglePlayer implements Initializable {
     private final tileBlock[][] board = new tileBlock[3][3];
     private final WinnerTile[][] winBoard = new WinnerTile[3][3];
     private Tile previousTile = new Tile();

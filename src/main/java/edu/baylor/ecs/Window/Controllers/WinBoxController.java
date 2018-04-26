@@ -13,10 +13,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static edu.baylor.ecs.Game.singlePlayer.getWinner;
+import static edu.baylor.ecs.Game.SinglePlayer.getWinner;
 
 
-public class winBoxController extends MasterWindow implements Initializable{
+public class WinBoxController extends MasterWindow implements Initializable{
 
     @FXML
     private Label winnerLabel;

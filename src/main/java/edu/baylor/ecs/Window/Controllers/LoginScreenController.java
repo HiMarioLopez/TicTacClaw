@@ -16,8 +16,8 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-import static edu.baylor.ecs.Database.connectToServer.login;
-import static edu.baylor.ecs.Database.connectToServer.register;
+import static edu.baylor.ecs.Database.ConnectToServer.login;
+import static edu.baylor.ecs.Database.ConnectToServer.register;
 
 public class LoginScreenController extends MasterWindow implements Initializable{
 

@@ -11,7 +11,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class howToPlayController extends MasterWindow implements Initializable {
+public class HowToPlayController extends MasterWindow implements Initializable {
 
     @FXML
     private Label titleBox;
@@ -19,7 +19,7 @@ public class howToPlayController extends MasterWindow implements Initializable {
     @FXML
     private TextArea instructions;
 
-    public howToPlayController() { }
+    public HowToPlayController() { }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

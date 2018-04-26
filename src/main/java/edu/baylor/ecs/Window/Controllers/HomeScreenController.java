@@ -12,14 +12,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class homeScreenController extends MasterWindow implements Initializable{
+public class HomeScreenController extends MasterWindow implements Initializable{
 
     @FXML
     private Button coopButton,howToPlayButton,settingButton,exitButton;
 
 
 
-    public homeScreenController(){
+    public HomeScreenController(){
         System.out.println("Created home");
     }
 
