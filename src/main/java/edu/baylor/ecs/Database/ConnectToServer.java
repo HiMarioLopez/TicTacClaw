@@ -55,17 +55,18 @@ public class ConnectToServer {
         }
     }
 
-    public static boolean register(String usr_Name, String usr_Password) throws SQLException {
+    public static boolean register(final String usr_Name, final String usr_Password) throws SQLException {
         boolean registrationStatus = true;
         Connection dbConnection = null;
         PreparedStatement statement = null;
+        ResultSet rs = null;
         try {
             Class.forName(DB_DRIVER);
             dbConnection = DriverManager.getConnection(DB_CONNECTION,DB_USER, DB_PASSWORD);
 
             statement = dbConnection.prepareStatement("SELECT * FROM Users WHERE usr_Name=?");
             statement.setString(1, usr_Name);
-            ResultSet rs = statement.executeQuery();
+            rs = statement.executeQuery();
 
             if(rs.next()) {
                 registrationStatus = false;
@@ -90,6 +91,9 @@ public class ConnectToServer {
                 dbConnection.close();
             if(statement != null)
                 statement.close();
+            if(rs != null)
+                rs.close();
+
         }
 
         return registrationStatus;

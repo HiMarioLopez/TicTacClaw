@@ -30,9 +30,6 @@ public class LoginScreenController extends MasterWindow implements Initializable
     @FXML
     private PasswordField password;
 
-
-
-
     public LoginScreenController(){
         System.out.println("Login was created");
     }
@@ -67,15 +64,10 @@ public class LoginScreenController extends MasterWindow implements Initializable
     public void registerAction(ActionEvent event) throws IOException, SQLException {
         System.out.println("User press Register button");
 
-        String str_username = username.getText();
-        String str_password = password.getText();
-
-        str_username = str_username.toLowerCase();
-
         StrongPasswordEncryptor passwordEncryptor = new StrongPasswordEncryptor();
-        String encryptedPassword = passwordEncryptor.encryptPassword(str_password);
+        String encryptedPassword = passwordEncryptor.encryptPassword(password.getText());
 
-        if (register(str_username, encryptedPassword)) {
+        if (register(username.getText().toLowerCase(), encryptedPassword)) {
             System.out.println("Registration successful!");
             this.connectToHome();
             setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
