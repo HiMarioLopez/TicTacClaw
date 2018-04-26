@@ -1,12 +1,14 @@
 package edu.baylor.ecs.Game;
 
 import edu.baylor.ecs.PopUps.TieBox;
+import edu.baylor.ecs.Window.Controllers.SingleplayerController;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -15,6 +17,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Font;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -25,7 +28,7 @@ import java.util.ResourceBundle;
 import static edu.baylor.ecs.Window.MasterWindow.*;
 
 @SuppressWarnings("unused")
-public class SinglePlayer implements Initializable {
+public class SinglePlayer extends SingleplayerController implements Initializable {
     private final tileBlock[][] board = new tileBlock[3][3];
     final WinnerTile[][] winBoard = new WinnerTile[3][3];
     Tile previousTile = new Tile(this);
@@ -60,7 +63,7 @@ public class SinglePlayer implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        //dynamically resize the board to your screen
+//        //dynamically resize the board to your screen
         borderpane.setPrefHeight(maxHeight);
         borderpane.setPrefWidth(maxWidth);
 
@@ -79,13 +82,13 @@ public class SinglePlayer implements Initializable {
         player2Label.setFont(Font.font("System",maxWidth/35));
 
         titleLabel.setFont(Font.font("System",maxWidth/25));
-
-
-        getWindow().setMaximized(true);
-        getWindow().setMaxWidth(maxWidth);
-        getWindow().setMaxHeight(maxHeight);
-        getWindow().setHeight(maxHeight);
-        getWindow().setWidth(maxWidth);
+//
+//
+//        getWindow().setMaximized(true);
+//        getWindow().setMaxWidth(maxWidth);
+//        getWindow().setMaxHeight(maxHeight);
+//        getWindow().setHeight(maxHeight);
+//        getWindow().setWidth(maxWidth);
 
         //create the gameboard
         int quad = 0;
@@ -317,7 +320,11 @@ public class SinglePlayer implements Initializable {
                 if(i == 2 && j == 2){
                     System.out.println("There was a tie!");
                     TieBox alert = new TieBox("Game Over","The game was a tie!");
-                    changeScreen("/fxml/homeScreen.fxml");
+                    try {
+                        this.connectToHome();
+                    } catch (IOException e) {e.printStackTrace(); }
+                    getWindow().setScene(getCurrentScene());
+                    getWindow().show();
                 }
             }
         }
@@ -423,7 +430,13 @@ public class SinglePlayer implements Initializable {
         timeline.play();
 
         //Open up the WinBox to congratulate the winner
-        timeline.setOnFinished(e -> changeScreen("/fxml/winBox.fxml"));
+        timeline.setOnFinished(e -> {
+            try {
+                connectToWinBox();
+            } catch (IOException e1) {e1.printStackTrace(); }
+            getWindow().setScene(getCurrentScene());
+            getWindow().show();
+        });
     }
 
     public static boolean getWinner(){
@@ -432,17 +445,5 @@ public class SinglePlayer implements Initializable {
 
     private int calcPaneSize(){
         return (9 * tileSize) + (2* spacing);
-    }
-
-    private void changeScreen(String fxml){
-        Parent rootParent;
-        try {
-            rootParent = FXMLLoader.load(getClass().getResource(fxml));
-            Scene temp = new Scene(rootParent);
-            temp.getStylesheets().add("/css/default.css");
-
-            //getMaster().connectToWin();
-            getWindow().setScene(temp);
-        } catch (IOException e1) {e1.printStackTrace(); }
     }
 }

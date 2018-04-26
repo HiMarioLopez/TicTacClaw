@@ -36,6 +36,7 @@ public class LoginScreenController extends MasterWindow implements Initializable
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        System.out.println("Hello");
         defaultInit();
     }
 

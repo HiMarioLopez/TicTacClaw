@@ -28,13 +28,7 @@ public class Main extends Application {
         //Create MasterWindow and connect to Login Page
         master = new MasterWindow(window);
         master.connectToLogin();
-        master.getWindow().setScene(master.getCurrentScene());
-        master.getWindow().show();
-
-        //exit request
-        master.getWindow().setOnCloseRequest(e -> {
-            e.consume();
-            master.closeProgram(master.getWindow());
-        });
+        master.updateScene();
+        master.display();
     }
 }

@@ -14,10 +14,13 @@ public class MasterWindow {
     private static Scene currentScene;
     public final static int maxWidth = (int) Screen.getPrimary().getVisualBounds().getWidth();
     public final static int maxHeight = (int) Screen.getPrimary().getVisualBounds().getHeight();
-    //protected MediaBox mediaBox = new MediaBox();
 
     public MasterWindow(){
         System.out.println("Ceated MasterWindow");
+        window.setOnCloseRequest(e -> {
+            e.consume();
+            closeProgram(window);
+        });
     }
 
     public MasterWindow(Stage otherWindow){
@@ -58,6 +61,10 @@ public class MasterWindow {
         connect("/fxml/howToPlay.fxml", "/css/default.css");
     }
 
+    protected void connectToWinBox()throws IOException{
+        connect("/fxml/winBox.fxml", "/css/default.css");
+    }
+
     protected void defaultInit(){
         double height = 600;
         double width = 500;
@@ -73,14 +80,21 @@ public class MasterWindow {
     }
 
 
-    public static Scene getCurrentScene() {
+    protected static Scene getCurrentScene() {
         return currentScene;
     }
 
-    public static Stage getWindow() {
+    protected static Stage getWindow() {
         return window;
     }
 
+    public void updateScene() {
+        window.setScene(currentScene);
+    }
+
+    public void display(){
+        window.show();
+    }
 
     public void setWindow(Stage other) {
         window = other;

@@ -1,14 +1,13 @@
 edu\baylor\ecs\PopUps\TieBox.class
 edu\baylor\ecs\Window\Controllers\HomeScreenController.class
-edu\baylor\ecs\Game\SinglePlayer$WinnerTile.class
+edu\baylor\ecs\Game\WinnerTile.class
 edu\baylor\ecs\Window\Controllers\HowToPlayController.class
 edu\baylor\ecs\App\Main.class
 edu\baylor\ecs\Window\Controllers\SettingScreenController.class
 edu\baylor\ecs\Window\Controllers\LoginScreenController.class
-edu\baylor\ecs\MediaBox.class
-edu\baylor\ecs\Game\SinglePlayer$1.class
-edu\baylor\ecs\Game\SinglePlayer$Tile.class
+edu\baylor\ecs\Game\Tile.class
 edu\baylor\ecs\Game\SinglePlayer.class
+edu\baylor\ecs\Window\Controllers\SingleplayerController.class
 edu\baylor\ecs\PopUps\ExitBox.class
 edu\baylor\ecs\PopUps\WrongMoveBox.class
 edu\baylor\ecs\PopUps\AlertBox.class
