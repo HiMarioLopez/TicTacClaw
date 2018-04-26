@@ -30,8 +30,6 @@ public class SettingScreenController extends MasterWindow implements Initializab
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //resolutionBox.getItems().clear();
-        System.out.println("Called init");
         getWindow().setMinWidth(650);
         getWindow().setMinHeight(650);
 
