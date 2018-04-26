@@ -1,4 +1,16 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
 .idea/
-tictacclaw.iml
-Tic-Tac-Claw.iml
-TicTacClaw-Maven.iml
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
