@@ -9,7 +9,7 @@ import java.util.ResourceBundle;
 
 public class SingleplayerController extends MasterWindow implements Initializable{
 
-    public SingleplayerController(){
+    protected SingleplayerController(){
         getWindow().setMaximized(true);
         getWindow().setMaxWidth(maxWidth);
         getWindow().setMaxHeight(maxHeight);

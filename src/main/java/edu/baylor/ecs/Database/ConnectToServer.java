@@ -24,7 +24,7 @@ public class ConnectToServer {
         createTable();
     }
 
-    public static void createTable() throws SQLException {
+    private static void createTable() throws SQLException {
         PreparedStatement statement = null;
         Connection dbConnection = null;
         try {

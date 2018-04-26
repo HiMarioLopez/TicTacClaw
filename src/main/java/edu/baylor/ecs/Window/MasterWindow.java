@@ -13,9 +13,9 @@ public class MasterWindow {
     private static Stage window;
     private static Scene currentScene;
     public final static int maxWidth = (int) Screen.getPrimary().getVisualBounds().getWidth();
-    public final static int maxHeight = (int) Screen.getPrimary().getVisualBounds().getHeight();
+    protected final static int maxHeight = (int) Screen.getPrimary().getVisualBounds().getHeight();
 
-    public MasterWindow(){
+    protected MasterWindow(){
         System.out.println("Ceated MasterWindow");
         window.setOnCloseRequest(e -> {
             e.consume();
@@ -96,11 +96,11 @@ public class MasterWindow {
         window.show();
     }
 
-    public void setWindow(Stage other) {
+    protected void setWindow(Stage other) {
         window = other;
     }
 
-    public void backToHome() throws IOException {
+    protected void backToHome() throws IOException {
         this.connectToHome();
         window.setScene(getCurrentScene());
         window.show();

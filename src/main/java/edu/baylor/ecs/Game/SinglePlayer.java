@@ -52,6 +52,10 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
     @FXML
     private VBox player1VBOX,player2VBOX;
 
+    public SinglePlayer(){
+        super();
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -152,7 +156,6 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
 
         //return true if they are the winner
         private boolean checkGridWin(Tile checkMe) {
-            boolean winner = false;
             String mark = checkMe.getValue();
 
             //check cols
@@ -302,9 +305,10 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
                     System.out.println("No big tie yet");
                     return;
                 }
-                if(i == 2 && j == 2){
+                if(i == 0 && j == 0){
                     System.out.println("There was a tie!");
                     TieBox alert = new TieBox("Game Over","The game was a tie!");
+                    alert.display();
                     try {
                         this.connectToHome();
                     } catch (IOException e) {e.printStackTrace(); }

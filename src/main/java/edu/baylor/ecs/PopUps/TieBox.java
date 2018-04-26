@@ -9,6 +9,5 @@ public class TieBox extends AlertBox {
         super(title, message);
 
         textbox.setFont((Font.font("System", maxWidth / 50)));
-        display();
     }
 }

@@ -87,6 +87,7 @@ class Tile extends StackPane {
                     System.out.println("WRONG MOVE!");
                     System.out.printf("My previous quad is %d and this quad is %d\n", singlePlayer.previousTile.calculateBigQuad(),this.getQuadrant());
                     WrongMoveBox wrong = new WrongMoveBox("Wrong Move","You must play in the correct quadrant from the last move!");
+                    wrong.display();
                     return;
                 }
 

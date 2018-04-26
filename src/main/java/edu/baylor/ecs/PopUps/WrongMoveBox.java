@@ -9,6 +9,5 @@ public class WrongMoveBox extends AlertBox {
         super(title,message);
 
         textbox.setFont((Font.font("System",maxWidth/120)));
-        display();
     }
 }

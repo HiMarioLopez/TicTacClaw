@@ -9,16 +9,14 @@ import javafx.geometry.*;
 public class AlertBox{
 
 
-    protected Label textbox;
-    protected Button defaultButton;
-    protected HBox hbox;
+    Label textbox;
+    private Button defaultButton;
+    HBox hbox;
 
-    protected Stage alertWindow;
-    protected Scene scene;
+    Stage alertWindow;
+    Scene scene;
 
-    public AlertBox(){}
-
-    public AlertBox(String title, String message){
+    AlertBox(String title, String message){
         alertWindow = new Stage();
 
         //block user interaction until this is taken care of
