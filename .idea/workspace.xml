@@ -1,98 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a4afe22-8fc9-49ab-8f8a-7d28a4e4b9ef" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/App/Main.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/App/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Database/ConnectToServer.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Database/ConnectToServer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/SinglePlayer.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/SinglePlayer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/Tile.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/Tile.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/WinnerTile.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/WinnerTile.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MediaPlayer/MediaBox.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MediaPlayer/MediaBox.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/AlertBox.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/AlertBox.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/HomeScreenController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/HomeScreenController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/LoginScreenController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/LoginScreenController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/MasterWindow.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/MasterWindow.java" />
-      <change beforePath="$PROJECT_DIR$/target/ServiceCreate.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/checkstyle-cachefile" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/checkstyle-checker.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/checkstyle-result.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Wolves.m4a" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/coopScreen.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Database/connectToServer.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Database/connectToServer.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/ExitBox.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Game/Tile.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Game/Tile.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Game/WinnerTile.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Game/WinnerTile.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Game/singlePlayer$tileBlock.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Game/singlePlayer$tileBlock.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Game/singlePlayer.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Game/singlePlayer.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/LoginScreenController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/MasterWindow.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/MediaPlayer/MediaBox.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/MediaPlayer/MediaBox.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/PopUps/AlertBox.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/PopUps/AlertBox.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/PopUps/ExitBox.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/PopUps/ExitBox.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/PopUps/TieBox.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/PopUps/TieBox.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/PopUps/WrongMoveBox.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/PopUps/WrongMoveBox.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/UI.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/LoginScreenController.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/LoginScreenController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/SingleplayerController.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/SingleplayerController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/homeScreenController.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/homeScreenController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/howToPlayController.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/howToPlayController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/winBoxController.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/winBoxController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/MasterWindow.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/MasterWindow.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/connectToServer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/coopScreenController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/homeScreenController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/settingScreenController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/singlePlayer$Tile.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/singlePlayer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homeScreen.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/homeScreen.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/login.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/loginScreen.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/settingScreen.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/settingScreen.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/singlePlayer.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/singlePlayer.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/jfx/app/lib/jasypt-1.9.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/jfx/app/lib/mysql-connector-java-8.0.9-rc.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/jfx/app/tictacclaw-1.0-SNAPSHOT-jfx.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/manifest.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/checkstyle.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/checkstyle.rss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/css/maven-base.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/css/maven-theme.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/css/print.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/css/site.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/dependencies.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/dependency-convergence.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/dependency-info.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/images/close.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/images/collapsed.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/images/expanded.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/images/external.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/images/icon_error_sml.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/images/icon_info_sml.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/images/icon_success_sml.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/images/icon_warning_sml.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/images/logos/build-by-maven-black.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/images/logos/build-by-maven-white.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/images/logos/maven-feather.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/images/newwindow.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/images/rss.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/plugin-management.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/plugins.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/project-info.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/project-reports.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/project-summary.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/spotbugsXml.xml" afterPath="$PROJECT_DIR$/target/spotbugsXml.xml" />
-      <change beforePath="$PROJECT_DIR$/target/tictacclaw-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/tictacclaw-1.0-SNAPSHOT.jar" />
-    </list>
+    <list default="true" id="9a4afe22-8fc9-49ab-8f8a-7d28a4e4b9ef" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -729,12 +638,12 @@
       <workItem from="1523737881877" duration="52000" />
       <workItem from="1524525246018" duration="19152000" />
       <workItem from="1524612606632" duration="27959000" />
-      <workItem from="1524703498853" duration="24890000" />
+      <workItem from="1524703498853" duration="24984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121578000" />
+    <option name="totallyTimeSpent" value="121672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -746,9 +655,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3310811" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3310811" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31399047" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31399047" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
