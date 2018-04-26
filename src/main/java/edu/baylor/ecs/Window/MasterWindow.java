@@ -1,5 +1,6 @@
 package edu.baylor.ecs.Window;
 
+import edu.baylor.ecs.MediaPlayer.MediaBox;
 import edu.baylor.ecs.PopUps.ExitBox;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
@@ -31,9 +32,10 @@ public class MasterWindow {
 
         if (result) {
             System.out.println("Saving files...");
-            //mediaBox.getMediaPlayer().stop();
+            MediaBox.getInstance().stopMediaBox();
             window.close();
         }
+
     }
 
     protected void connectToSingle() throws IOException {

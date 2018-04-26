@@ -45,12 +45,12 @@
                   <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" spacing="10.0">
                      <children>
                         <Label text="Volume" />
-                        <Slider fx:id="volumeSlider" onMouseDragReleased="#volumeSliderAction" />
+                        <Slider fx:id="volumeSlider" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" layoutX="20.0" layoutY="61.0" spacing="10.0">
                      <children>
-                        <Label text="Mute" />
+                        <Label text="Stop/Play Music" />
                         <CheckBox fx:id="muteBox" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#muteBoxAction" />
                      </children>
                   </HBox>

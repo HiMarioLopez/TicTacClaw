@@ -3,6 +3,7 @@
  */
 package edu.baylor.ecs.App;
 
+import edu.baylor.ecs.MediaPlayer.MediaBox;
 import edu.baylor.ecs.Window.MasterWindow;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -21,13 +22,16 @@ public class Main extends Application {
     @Override
     public void start(Stage window) throws Exception {
 
-        Media sound = new Media(this.getClass().getResource("/Wolves.m4a").toString());
-        MediaPlayer mediaPlayers = new MediaPlayer(sound);
+//        Media sound = new Media(this.getClass().getResource("/Wolves.m4a").toString());
+//        MediaPlayer mediaPlayers = new MediaPlayer(sound);
         //mediaPlayers.play();
         //AudioClip note = new AudioClip(this.getClass().getResource("/Wolves.mp3").toString());
         //note.play(100);
         //System.out.println(note.isPlaying());
         //MasterWindow master = new MasterWindow(root, window,  loginScene);
+
+        MediaBox mediaBox = MediaBox.getInstance();
+        mediaBox.playMediaBox();
 
 
         master = new MasterWindow(window);
