@@ -67,7 +67,8 @@ class Tile extends StackPane {
             boolean playAnywhere;
 
             //it is X's turn
-            if (e.getButton() == MouseButton.PRIMARY && SinglePlayer.turnX) {
+            if (e.getButton() == MouseButton.PRIMARY && SinglePlayer
+                    .isTurnX()) {
 
                 playAnywhere = calcPlayAnywhere();
 
@@ -82,6 +83,7 @@ class Tile extends StackPane {
                     WrongMoveBox wrong = new WrongMoveBox("Wrong Move",
                             "You must play in the correct quadrant "
                                     + "from the last move!");
+                    wrong.display();
                     return;
                 } else {
                     //take note of the first move
@@ -105,16 +107,16 @@ class Tile extends StackPane {
                 }
 
                 //change turn to O's
-                SinglePlayer.turnX = false;
-                singlePlayer.player1Turn.setVisible(false);
-                singlePlayer.player2Turn.setVisible(true);
-                singlePlayer.quadID.setText("Quadrant number to play: "
+                SinglePlayer.setTurnX(false);
+                singlePlayer.getPlayer1Turn().setVisible(false);
+                singlePlayer.getPlayer2Turn().setVisible(true);
+                singlePlayer.getQuadID().setText("Quadrant number to play: "
                         + (singlePlayer.getPreviousTile()
                         .calculateBigQuad() + 1));
 
                 //it is O's turn
             } else if (e.getButton() == MouseButton.PRIMARY
-                    && !SinglePlayer.turnX) {
+                    && !SinglePlayer.isTurnX()) {
 
                 playAnywhere = calcPlayAnywhere();
 
@@ -148,10 +150,10 @@ class Tile extends StackPane {
                 }
 
                 //change to X's turn
-                SinglePlayer.turnX = true;
-                singlePlayer.player2Turn.setVisible(false);
-                singlePlayer.player1Turn.setVisible(true);
-                singlePlayer.quadID.setText("Quadrant number to play: "
+                SinglePlayer.setTurnX(true);
+                singlePlayer.getPlayer2Turn().setVisible(false);
+                singlePlayer.getPlayer1Turn().setVisible(true);
+                singlePlayer.getQuadID().setText("Quadrant number to play: "
                         + (singlePlayer.getPreviousTile().calculateBigQuad()
                         + 1));
             }
