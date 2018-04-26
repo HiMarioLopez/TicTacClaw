@@ -1,10 +1,11 @@
 /*
-    Name: Brandon Mork & Mario Lopez
+    Authors: Brandon Mork & Mario Lopez
+    Game: Tic-Tac-Claw
+    Date: 4/26/18
  */
 
 package edu.baylor.ecs.App;
 
-import edu.baylor.ecs.MediaPlayer.MediaBox;
 import edu.baylor.ecs.Window.MasterWindow;
 import javafx.application.Application;
 import javafx.stage.Stage;

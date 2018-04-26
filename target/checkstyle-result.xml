@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="6.18">
 <file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\App\Main.java">
-<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
+</file>
+<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\App\package-info.java">
 </file>
 <file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Database\ConnectToServer.java">
-<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 </file>
-<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Game\SinglePlayer.java">
-<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
-</file>
-<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\MediaPlayer\MediaBox.java">
-<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
-</file>
-<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\PopUps\AlertBox.java">
-<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
-</file>
-<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\HomeScreenController.java">
-<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
-</file>
-<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Window\MasterWindow.java">
-<error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
+<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Database\package-info.java">
 </file>
 </checkstyle>

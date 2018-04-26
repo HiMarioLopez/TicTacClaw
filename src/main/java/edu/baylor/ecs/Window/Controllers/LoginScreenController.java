@@ -98,7 +98,6 @@ public class LoginScreenController extends MasterWindow
             setWindow((Stage) ((Node) event.getSource())
                     .getScene().getWindow());
             getWindow().setScene(getCurrentScene());
-            //mediaBox.playMediaBox();
             getWindow().show();
         } else {
             System.out.println("ERROR! Registration unsuccessful."

@@ -5,8 +5,6 @@ import java.util.Iterator;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
-import static edu.baylor.ecs.Game.SinglePlayer.SIZE_OF_BOARD;
-
 /** Author: Brandon Mork. */
 public class WinBoardIterator implements Iterable {
 

@@ -25,8 +25,8 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2018</copyright>
     <item>
-      <title>File: 7,
-             Errors: 7,
+      <title>File: 4,
+             Errors: 0,
              Warnings: 0,
              Infos: 0
       </title>
@@ -46,7 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#edu.baylor.ecs.Game.SinglePlayer.java">edu/baylor/ecs/Game/SinglePlayer.java</a>
+                  <a href="${project.url}/checkstyle.html#edu.baylor.ecs.Database.package-info.java">edu/baylor/ecs/Database/package-info.java</a>
                 </td>
                 <td>
                   0
@@ -55,21 +55,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.baylor.ecs.MediaPlayer.MediaBox.java">edu/baylor/ecs/MediaPlayer/MediaBox.java</a>
-                </td>
-                <td>
                   0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
                 </td>
               </tr>
                           <tr>
@@ -83,7 +69,21 @@ under the License.
                   0
                 </td>
                 <td>
-                  1
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.baylor.ecs.App.package-info.java">edu/baylor/ecs/App/package-info.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
                 </td>
               </tr>
                           <tr>
@@ -97,49 +97,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.baylor.ecs.PopUps.AlertBox.java">edu/baylor/ecs/PopUps/AlertBox.java</a>
-                </td>
-                <td>
                   0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.baylor.ecs.Window.Controllers.HomeScreenController.java">edu/baylor/ecs/Window/Controllers/HomeScreenController.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.baylor.ecs.Window.MasterWindow.java">edu/baylor/ecs/Window/MasterWindow.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
                 </td>
               </tr>
                       </tbody>
