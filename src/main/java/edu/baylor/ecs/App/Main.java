@@ -13,7 +13,7 @@ public class Main extends Application {
 
 
     /** Author: Brandon Mork.
-     * @param  */
+     * @param args the command line arguements */
     public static void main(final String[] args) {
         launch(args);
     }

@@ -8,9 +8,20 @@ import java.util.List;
 /** Author: Brandon Mork. */
 public final class MediaBox {
 
+    /** the single instance of the class MediaBox.
+     */
     private static volatile MediaBox singleInstance = null;
+
+    /** the MediaPlayer that will play Media.
+     */
     private MediaPlayer mediaPlayer;
+
+    /** the list of songs.
+     */
     private final List<String> songList;
+
+    /** if the MediaPlayer is playing.
+     */
     private Boolean playing;
 
 
@@ -22,7 +33,8 @@ public final class MediaBox {
         playing = false;
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * play the MediaBox */
     public void playMediaBox() {
         System.out.println("The media has started");
         Media media = new Media(this.getClass()
@@ -33,7 +45,8 @@ public final class MediaBox {
         playing = true;
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * stop the MediaBox */
     public void stopMediaBox() {
         System.out.println("The media has stopped");
         if (playing) {
@@ -43,22 +56,27 @@ public final class MediaBox {
 
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * change the volume of the MediaBox
+     * @param volume the volume that we will change to */
     public void changeVolume(final double volume) {
         mediaPlayer.setVolume(volume);
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * @return the current volume of the MediaBox */
     public double getVolume() {
         return mediaPlayer.getVolume();
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * @return the condition if the MediaBox is playing */
     public boolean isPlaying() {
         return playing;
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * @return the MediaBox object */
     public static MediaBox getInstance() {
         if (singleInstance == null) {
             synchronized (MediaBox.class) {
@@ -67,7 +85,6 @@ public final class MediaBox {
                 }
             }
         }
-
         return singleInstance;
     }
 }

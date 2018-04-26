@@ -11,16 +11,39 @@ import javafx.scene.text.Text;
 
 /** Author: Brandon Mork. */
 class Tile extends StackPane {
+
+    /** an instance of SinglePlayer.
+     */
     private final SinglePlayer singlePlayer;
+
+    /** the text on the Tile.
+     */
     private final Text text = new Text();
+
+    /** the x coordinate of the Tile.
+     */
     private int x;
+
+    /** the y coordinate of the Tile.
+     */
     private int y;
+
+    /** if the Tile has been marked yet.
+     */
     private boolean marked = false;
+
+    /** the quadrant the Tile is in.
+     */
     private int quadrant;
 
-    /** Author: Brandon Mork. */
-    Tile(final SinglePlayer singlePlayer) {
-        this.singlePlayer = singlePlayer;
+    /** conversation factor to calculate large quadrant.
+     */
+    private static final int CONVERSION = 3;
+
+    /** Author: Brandon Mork.
+     * @param singleP the SinglePlayer object */
+    Tile(final SinglePlayer singleP) {
+        this.singlePlayer = singleP;
         //Create the tile appearance and add it to the pane
         Rectangle border = new Rectangle(SinglePlayer.TILE_SIZE,
                                          SinglePlayer.TILE_SIZE);
@@ -149,58 +172,69 @@ class Tile extends StackPane {
         marked = true;
     }
 
-    /** Author: Brandon Mork. */
-    void setQuadrant(int quadrant) {
-        this.quadrant = quadrant;
+    /** Author: Brandon Mork.
+     * @param quad the quadrant that the Tile has been placed*/
+    void setQuadrant(final int quad) {
+        this.quadrant = quad;
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * @return the quadrant the Tile was placed in */
     int getQuadrant() {
         return quadrant;
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * @return the String value of the text */
     String getValue() {
         return text.getText();
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * @return the value of the x coordinate */
     int getX() {
         return x;
     }
 
-    /** Author: Brandon Mork. */
-    void setX(int x) {
-        this.x = x;
+    /** Author: Brandon Mork.
+     * @param xVal set the x to the new xVal*/
+    void setX(final int xVal) {
+        this.x = xVal;
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * @return the value of the y coordinate */
     int getY() {
         return y;
     }
 
-    /** Author: Brandon Mork. */
-    void setY(int y) {
-        this.y = y;
+    /** Author: Brandon Mork.
+     * @param yVal set the y to the new yVal*/
+    void setY(final int yVal) {
+        this.y = yVal;
     }
 
     /** Author: Brandon Mork.
-     * calculate the quadrant based on the X,Y values */
+     * calculate the quadrant based on the X,Y values
+     * @return the large quadrant of the Tile */
     private int calculateBigQuad() {
-        return this.x + (this.y * 3);
+        return this.x + (this.y * CONVERSION);
     }
 
     /** Author: Brandon Mork.
-     * determine if the quadrant has already been won, return answer */
+     * determine if the quadrant has already been won, return answer
+     * @return the answer*/
     private boolean calcPlayAnywhere() {
         boolean answer = false;
 
         outer:
         if (!singlePlayer.firstTurn) {
-            WinBoardIterator iterator = new WinBoardIterator(singlePlayer.winBoard);
+            WinBoardIterator iterator
+                    = new WinBoardIterator(singlePlayer.winBoard);
             while (iterator.hasNext()) {
                 WinnerTile temp = iterator.next();
-                if (temp.getQuadrant() == singlePlayer.previousTile.calculateBigQuad()) {
+                if (temp.getQuadrant()
+                        == singlePlayer.previousTile.calculateBigQuad()) {
                     if (temp.isHasWon()) {
                         System.out.println("He can play anywhere!");
                         answer = true;
