@@ -1,27 +1,20 @@
 package edu.baylor.ecs.Game;
 
 import edu.baylor.ecs.PopUps.TieBox;
-import edu.baylor.ecs.PopUps.WrongMoveBox;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseButton;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -34,13 +27,13 @@ import static edu.baylor.ecs.Window.MasterWindow.*;
 @SuppressWarnings("unused")
 public class SinglePlayer implements Initializable {
     private final tileBlock[][] board = new tileBlock[3][3];
-    private final WinnerTile[][] winBoard = new WinnerTile[3][3];
-    private Tile previousTile = new Tile();
-    private boolean firstTurn = true;
-    private static boolean turnX = true;
+    final WinnerTile[][] winBoard = new WinnerTile[3][3];
+    Tile previousTile = new Tile(this);
+    boolean firstTurn = true;
+    static boolean turnX = true;
     private final static int spacing = maxWidth/120;
-    private final static int tileSize = maxWidth/25;
-    private final static int tileFont = maxWidth/30;
+    final static int tileSize = maxWidth/25;
+    final static int tileFont = maxWidth/30;
 
     @FXML
     private BorderPane borderpane;
@@ -49,7 +42,17 @@ public class SinglePlayer implements Initializable {
     private Pane pane;
 
     @FXML
-    private Label player1Turn, player2Turn, player1Label, player2Label, titleLabel, quadID;
+    Label player1Turn;
+    @FXML
+    Label player2Turn;
+    @FXML
+    private Label player1Label;
+    @FXML
+    private Label player2Label;
+    @FXML
+    private Label titleLabel;
+    @FXML
+    Label quadID;
 
     @FXML
     private VBox player1VBOX,player2VBOX;
@@ -103,175 +106,6 @@ public class SinglePlayer implements Initializable {
         getWindow().show();
     }
 
-    private class Tile extends StackPane {
-        private final Text text = new Text();
-        private int x;
-        private int y;
-        private boolean marked = false;
-        private int quadrant;
-
-        Tile() {
-            //Create the tile appearance and add it to the pane
-            Rectangle border = new Rectangle(tileSize, tileSize);
-            border.setFill(null);
-            border.setStroke(Color.BLACK);
-
-            text.setFont(Font.font(tileFont));
-            setAlignment(Pos.CENTER);
-
-            getChildren().addAll(border, text);
-
-            //user has clicked on a tile
-            setOnMouseClicked(e -> {
-
-                //cant play on already played tile
-                if (marked)
-                    return;
-
-                //has the quadrant already been won?
-                boolean playAnywhere;
-
-                //it is X's turn
-                if (e.getButton() == MouseButton.PRIMARY && turnX) {
-
-                    playAnywhere = calcPlayAnywhere();
-
-                    //make sure turn is valid and if the previous quad has been won, go anywhere
-                    if(!firstTurn && (previousTile.calculateBigQuad() != this.getQuadrant()) && !playAnywhere){
-                        System.out.printf("My previous quad is %d and this quad is %d\n",previousTile.calculateBigQuad(),this.getQuadrant());
-                        WrongMoveBox wrong = new WrongMoveBox("Wrong Move","You must play in the correct quadrant from the last move!");
-                        return;
-                    }
-
-                    //take note if the first move
-                    else
-                        if(firstTurn){
-                        System.out.println("This is my first move!");
-                        previousTile = this;
-                        firstTurn = false;
-                    }
-
-                    //draw the X
-                    drawX();
-
-                    //make not of the current turn
-                    previousTile = this;
-
-                    //check if X has won the tileBlock
-                    if (checkSmallWin(this)) {
-                        System.out.println("I must check big box!");
-                        checkBigWin(this);
-                    }
-
-                    //change turn to O's
-                    turnX = false;
-                    player1Turn.setVisible(false);
-                    player2Turn.setVisible(true);
-                    quadID.setText("Quadrant number to play: " + (previousTile.calculateBigQuad()+1));
-
-                    //it is O's turn
-                } else if (e.getButton() == MouseButton.PRIMARY && !turnX) {
-
-                    playAnywhere = calcPlayAnywhere();
-
-                    //make sure turn is valid and if the previous quad has been won, go anywhere
-                    if(!firstTurn && (previousTile.calculateBigQuad() != this.getQuadrant()) && !playAnywhere){
-                        System.out.println("WRONG MOVE FOOL!");
-                        System.out.printf("My previous quad is %d and this quad is %d",previousTile.calculateBigQuad(),this.getQuadrant());
-                        WrongMoveBox wrong = new WrongMoveBox("Wrong Move","You must play in the correct quadrant from the last move!");
-                        return;
-                    }
-
-                    //draw the O
-                    drawO();
-
-                    //make not of the current turn
-                    previousTile = this;
-
-                    //check if O has won the tileBlock
-                    if (checkSmallWin(this)) {
-                        System.out.println("I must check big box!");
-                        checkBigWin(this);
-                    }
-
-                    //change to X's turn
-                    turnX = true;
-                    player2Turn.setVisible(false);
-                    player1Turn.setVisible(true);
-                    quadID.setText("Quadrant number to play: " + (previousTile.calculateBigQuad()+1));
-                }
-            });
-        }
-
-        //set the text of the tile to "X"
-        private void drawX() {
-            System.out.println("You touched x:" + x + " y:" + y);
-            text.setText("X");
-            marked = true;
-        }
-
-        //set the text of the tile to "O"
-        private void drawO() {
-            System.out.println("You touched x:" + x + " y:" + y);
-            text.setText("O");
-            marked = true;
-        }
-
-        private void setQuadrant(int quadrant) {
-            this.quadrant = quadrant;
-        }
-
-        private int getQuadrant() {
-            return quadrant;
-        }
-
-        private String getValue() {
-            return text.getText();
-        }
-
-        private int getX() {
-            return x;
-        }
-
-        private void setX(int x) {
-            this.x = x;
-        }
-
-        private int getY() {
-            return y;
-        }
-
-        private void setY(int y) {
-            this.y = y;
-        }
-
-        //calculate the quadrant based on the X,Y values
-        private int calculateBigQuad(){
-            return this.x+ (this.y * 3);
-        }
-
-        //determine if the quadrant has already been won, return answer
-        private boolean calcPlayAnywhere() {
-            boolean answer = false;
-
-            outer:
-            if (!firstTurn) {
-                for (WinnerTile row[] : winBoard) {
-                    for (WinnerTile col : row) {
-                        //find the WinnerTile with the same quadrants
-                        if (col.getQuadrant() == previousTile.calculateBigQuad()) {
-                            //check if the tile has already been won
-                            if (col.isHasWon())
-                                answer = true;
-                            break outer;
-                        }
-                    }
-                }
-            }
-            return answer;
-        }
-    }
-
     private class tileBlock {
         private final Tile[][] block = new Tile[3][3];
         private final int quadrant;
@@ -284,7 +118,7 @@ public class SinglePlayer implements Initializable {
 
             for (int y = 0; y < block.length; y++) {
                 for (int x = 0; x < block.length; x++) {
-                    Tile tile = new Tile();
+                    Tile tile = new Tile(SinglePlayer.this);
 
                     //Calculate x shift
                     transX = x * tileSize + spacing;
@@ -369,7 +203,7 @@ public class SinglePlayer implements Initializable {
                 }
             }
 
-            return winner;
+            return false;
         }
 
         private int getFilledCount() {
@@ -381,51 +215,8 @@ public class SinglePlayer implements Initializable {
         }
     }
 
-    private class WinnerTile extends StackPane {
-        private final Text text = new Text();
-        private int quadrant;
-        private boolean hasWon = false;
-
-        private WinnerTile() {
-            Rectangle border = new Rectangle(tileSize * 3, tileSize * 3);
-            border.setFill(null);
-            border.setStroke(Color.BLACK);
-
-            text.setFont(Font.font(100));
-            text.setText(" ");
-            setAlignment(Pos.CENTER);
-
-            getChildren().addAll(border, text);
-
-        }
-
-        private void setQuadrant(int quadrant) {
-            this.quadrant = quadrant;
-        }
-
-        private Text getText() {
-            return text;
-        }
-
-        private String getValue() {
-            return text.getText();
-        }
-
-        private boolean isHasWon() {
-            return hasWon;
-        }
-
-        private void setHasWon(boolean hasWon) {
-            this.hasWon = hasWon;
-        }
-
-        private int getQuadrant() {
-            return quadrant;
-        }
-    }
-
     //check if the player has won the large, outer tic tac toe board, play win animation if true
-    private void checkBigWin(Tile tile) {
+    void checkBigWin(Tile tile) {
         int x, y=0;
         int quad = tile.getQuadrant();
 
@@ -482,9 +273,11 @@ public class SinglePlayer implements Initializable {
                 if (i == winBoard.length - 1) {
 
                     startX = (tileSize * 1.5) + spacing;
+                    //noinspection SuspiciousNameCombination
                     startY = startX;
 
                     endX = startX + (tileSize*6) + (spacing*2);
+                    //noinspection SuspiciousNameCombination
                     endY = endX;
 
                     System.out.println("WE HAVE AN ACTUAL WINNER!");
@@ -533,7 +326,7 @@ public class SinglePlayer implements Initializable {
 
 
     //check if the player was won the inner tic tac toe board, return true if they have
-    private boolean checkSmallWin(Tile tile){
+    boolean checkSmallWin(Tile tile){
         int quad = tile.getQuadrant();
         boolean answer = false;
         int i,j=0;
@@ -642,14 +435,14 @@ public class SinglePlayer implements Initializable {
     }
 
     private void changeScreen(String fxml){
-        Parent rootParent = null;
+        Parent rootParent;
         try {
             rootParent = FXMLLoader.load(getClass().getResource(fxml));
-        } catch (IOException e1) {e1.printStackTrace(); }
-        Scene temp = new Scene(rootParent);
-        temp.getStylesheets().add("/css/default.css");
+            Scene temp = new Scene(rootParent);
+            temp.getStylesheets().add("/css/default.css");
 
-        //getMaster().connectToWin();
-        getWindow().setScene(temp);
+            //getMaster().connectToWin();
+            getWindow().setScene(temp);
+        } catch (IOException e1) {e1.printStackTrace(); }
     }
 }
