@@ -2,6 +2,7 @@ edu\baylor\ecs\Game\Tile.class
 edu\baylor\ecs\Game\SinglePlayer.class
 edu\baylor\ecs\PopUps\TieBox.class
 edu\baylor\ecs\Window\Controllers\HomeScreenController.class
+edu\baylor\ecs\Game\SinglePlayer$TileBlock.class
 edu\baylor\ecs\Window\Controllers\SingleplayerController.class
 edu\baylor\ecs\PopUps\ExitBox.class
 edu\baylor\ecs\PopUps\WrongMoveBox.class
@@ -11,7 +12,6 @@ edu\baylor\ecs\Window\Controllers\HowToPlayController.class
 edu\baylor\ecs\App\Main.class
 edu\baylor\ecs\Window\Controllers\WinBoxController.class
 edu\baylor\ecs\Window\MasterWindow.class
-edu\baylor\ecs\Game\SinglePlayer$tileBlock.class
 edu\baylor\ecs\MediaPlayer\MediaBox.class
 edu\baylor\ecs\Database\ConnectToServer.class
 edu\baylor\ecs\Window\Controllers\SettingScreenController.class
