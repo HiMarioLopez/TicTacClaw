@@ -18,29 +18,49 @@ import java.sql.SQLException;
 
 
 /** Author: Mario Lopez. */
-public class ConnectToServer {
+public final class ConnectToServer {
+
+    /** Driver to be used for our database type. */
     private static final String DB_DRIVER = "com.mysql.cj.jdbc.Driver";
+
+    /** Endpoint link to be able to connect to our database
+     * (this will not change). */
     private static final String DB_CONNECTION = "jdbc:mysql://"
             + "gryzl.ckgzixjdcowi.us-east-2.rds.amazonaws.com:"
             + "3306/gryzl?autoReconnect=true";
+
+    /** Authorized user to access our server. */
     private static final String DB_USER = "user";
+
+    /** Password credentials for database login to execute queries. */
     private static final String DB_PASSWORD = "password";
 
     /** Author: Mario Lopez. */
-    public static void main(final String args[]) throws SQLException {
+    private ConnectToServer() { }
+
+    /** Author: Mario Lopez.
+     * @param args arguments passed by user into main.
+     * @throws SQLException incase method calls result in query issue.
+     */
+    public static void main(final String[] args) throws SQLException {
         createTable();
     }
 
-    /** Author: Mario Lopez. */
+    /** Author: Mario Lopez.
+     * Creates table entitled Users inside the database.
+     * @throws SQLException incase issues with queries.
+     */
     private static void createTable() throws SQLException {
         PreparedStatement statement = null;
         Connection dbConnection = null;
         try {
             Class.forName(DB_DRIVER);
-            dbConnection = DriverManager.getConnection(DB_CONNECTION, DB_USER, DB_PASSWORD);
+            dbConnection = DriverManager.
+                    getConnection(DB_CONNECTION, DB_USER, DB_PASSWORD);
 
             // Drop table if it existed previously in our database;
-            statement = dbConnection.prepareStatement("DROP TABLE IF EXISTS Users");
+            statement = dbConnection.
+                    prepareStatement("DROP TABLE IF EXISTS Users");
             statement.executeUpdate();
 
             // Create table in our database
@@ -65,9 +85,17 @@ public class ConnectToServer {
         }
     }
 
-    /** Author: Mario Lopez. */
-    public static boolean register(final String usr_Name,
-                                   final String usr_Password)
+    /** Author: Mario Lopez.
+     * Creates table entitled Users inside the database.
+     * @return boolean that notified whether registration was successful.
+     * @param usrName user's unique identifier that will be stored
+     *                lowercase into the login server.
+     * @param usrPassword user's password that will be encrypted
+     *                    before storing onto the server.
+     * @throws SQLException in case there is an issue running the queries.
+     */
+    public static boolean register(final String usrName,
+                                   final String usrPassword)
             throws SQLException {
         boolean registrationStatus = true;
         Connection dbConnection = null;
@@ -80,7 +108,7 @@ public class ConnectToServer {
 
             statement = dbConnection
                     .prepareStatement("SELECT * FROM Users WHERE usr_Name=?");
-            statement.setString(1, usr_Name);
+            statement.setString(1, usrName);
             rs = statement.executeQuery();
 
             if (rs.next()) {
@@ -94,8 +122,8 @@ public class ConnectToServer {
                         .prepareStatement("INSERT INTO Users "
                                 + "(usr_Name, usr_Password) "
                                 + "VALUES (?, ?)");
-                statement.setString(1, usr_Name);
-                statement.setString(2, usr_Password);
+                statement.setString(1, usrName);
+                statement.setString(2, usrPassword);
 
                 statement.executeUpdate();
 
@@ -117,9 +145,16 @@ public class ConnectToServer {
         return registrationStatus;
     }
 
-    /** Author: Mario Lopez. */
-    public static boolean login(final String usr_Name,
-                                final String usr_Password)
+    /** Author: Mario Lopez.
+     * Creates table entitled Users inside the database.
+     * @return boolean that notified whether login was successful.
+     * @param usrName the user's unique user name to be queried.
+     * @param  usrPassword the user's password to be compared
+     *                     to password stored on server.
+     * @throws SQLException in case there are issues running queries.
+     */
+    public static boolean login(final String usrName,
+                                final String usrPassword)
             throws SQLException {
         boolean loginStatus = false;
         PreparedStatement statement = null;
@@ -132,7 +167,7 @@ public class ConnectToServer {
             statement = dbConnection
                     .prepareStatement("SELECT usr_Password FROM Users "
                             + "WHERE usr_Name=?");
-            statement.setString(1, usr_Name);
+            statement.setString(1, usrName);
             ResultSet rs = statement.executeQuery();
 
             rs.next();
@@ -141,7 +176,7 @@ public class ConnectToServer {
                     new StrongPasswordEncryptor();
             String encryptedPassword = rs.getString("usr_Password");
 
-            if (passwordEncryptor.checkPassword(usr_Password,
+            if (passwordEncryptor.checkPassword(usrPassword,
                     encryptedPassword)) {
                 loginStatus = true;
             }
