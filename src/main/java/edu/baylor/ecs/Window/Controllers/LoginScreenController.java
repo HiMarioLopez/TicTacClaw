@@ -13,10 +13,11 @@ import org.jasypt.util.password.StrongPasswordEncryptor;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-import static edu.baylor.ecs.Database.connectToServer.login;
-import static edu.baylor.ecs.Database.connectToServer.register;
+import static edu.baylor.ecs.Database.ConnectToServer.login;
+import static edu.baylor.ecs.Database.ConnectToServer.register;
 
 public class LoginScreenController extends MasterWindow implements Initializable{
 
@@ -29,9 +30,6 @@ public class LoginScreenController extends MasterWindow implements Initializable
     @FXML
     private PasswordField password;
 
-
-
-
     public LoginScreenController(){
         System.out.println("Login was created");
     }
@@ -42,7 +40,7 @@ public class LoginScreenController extends MasterWindow implements Initializable
     }
 
     //loginButton
-    public void loginAction(ActionEvent event) throws IOException {
+    public void loginAction(ActionEvent event) throws IOException, SQLException {
         System.out.println("User press Login button");
 
         String str_username = username.getText();
@@ -50,7 +48,7 @@ public class LoginScreenController extends MasterWindow implements Initializable
 
         str_username = str_username.toLowerCase();
 
-        if (login("mario", "123")) {
+        if (login(str_username, str_password)) {
             System.out.println("Login successful!");
             this.connectToHome();
             setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
@@ -63,18 +61,13 @@ public class LoginScreenController extends MasterWindow implements Initializable
     }
 
     //registerButton
-    public void registerAction(ActionEvent event) throws IOException {
+    public void registerAction(ActionEvent event) throws IOException, SQLException {
         System.out.println("User press Register button");
 
-        String str_username = username.getText();
-        String str_password = password.getText();
-
-        str_username = str_username.toLowerCase();
-
         StrongPasswordEncryptor passwordEncryptor = new StrongPasswordEncryptor();
-        String encryptedPassword = passwordEncryptor.encryptPassword(str_password);
+        String encryptedPassword = passwordEncryptor.encryptPassword(password.getText());
 
-        if (register(str_username, encryptedPassword)) {
+        if (register(username.getText().toLowerCase(), encryptedPassword)) {
             System.out.println("Registration successful!");
             this.connectToHome();
             setWindow((Stage)((Node)event.getSource()).getScene().getWindow());

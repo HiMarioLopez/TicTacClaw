@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.baylor.ecs.Window.Controllers.howToPlayController">
+<BorderPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.baylor.ecs.Window.Controllers.HowToPlayController">
    <center>
       <VBox alignment="CENTER" BorderPane.alignment="CENTER">
          <children>
