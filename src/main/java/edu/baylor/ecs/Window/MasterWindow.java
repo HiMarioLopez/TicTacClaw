@@ -12,8 +12,8 @@ import java.io.IOException;
 public class MasterWindow {
     private static Stage window;
     private static Scene currentScene;
-    public final static int maxWidth = (int) Screen.getPrimary().getVisualBounds().getWidth();
-    protected final static int maxHeight = (int) Screen.getPrimary().getVisualBounds().getHeight();
+    public final static double maxWidth = (int) Screen.getPrimary().getVisualBounds().getWidth();
+    protected final static double maxHeight = (int) Screen.getPrimary().getVisualBounds().getHeight();
 
     protected MasterWindow(){
         System.out.println("Ceated MasterWindow");
@@ -29,7 +29,6 @@ public class MasterWindow {
     }
 
     public void closeProgram(Stage window) {
-        //boolean result = ExitBox.display("Alert Window", "Do you really want to leave?");
         ExitBox exitBox= new ExitBox("Alert Window", "Do you really want to leave?");
         boolean result = exitBox.exitDisplay();
 

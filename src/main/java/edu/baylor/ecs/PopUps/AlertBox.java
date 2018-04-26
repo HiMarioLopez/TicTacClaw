@@ -9,12 +9,11 @@ import javafx.geometry.*;
 public class AlertBox{
 
 
-    Label textbox;
-    private Button defaultButton;
-    HBox hbox;
+    final Label textbox;
+    final HBox hbox;
 
-    Stage alertWindow;
-    Scene scene;
+    final Stage alertWindow;
+    final Scene scene;
 
     AlertBox(String title, String message){
         alertWindow = new Stage();
@@ -28,7 +27,7 @@ public class AlertBox{
         alertWindow.setTitle(title);
         textbox = new Label(message);
 
-        defaultButton = new Button("Ok");
+        Button defaultButton = new Button("Ok");
 
         defaultButton.setOnAction(e -> alertWindow.close());
 

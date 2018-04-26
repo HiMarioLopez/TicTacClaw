@@ -8,15 +8,18 @@ import edu.baylor.ecs.Window.MasterWindow;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
+/** Author: Brandon Mork. */
 public class Main extends Application {
 
 
-    public static void main(String[] args) {
+    /** Author: Brandon Mork.
+     * @param  */
+    public static void main(final String[] args) {
         launch(args);
     }
 
     @Override
-    public void start(Stage window) throws Exception {
+    public final void start(final Stage window) throws Exception {
         //Create MediaBox
         MediaBox mediaBox = MediaBox.getInstance();
         mediaBox.playMediaBox();

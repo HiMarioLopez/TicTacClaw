@@ -17,10 +17,11 @@ class Tile extends StackPane {
     private boolean marked = false;
     private int quadrant;
 
-    public Tile(SinglePlayer singlePlayer) {
+    Tile(final SinglePlayer singlePlayer) {
         this.singlePlayer = singlePlayer;
         //Create the tile appearance and add it to the pane
-        Rectangle border = new Rectangle(SinglePlayer.tileSize, SinglePlayer.tileSize);
+        Rectangle border = new Rectangle(SinglePlayer.tileSize,
+                                         SinglePlayer.tileSize);
         border.setFill(null);
         border.setStroke(Color.BLACK);
 
@@ -33,8 +34,9 @@ class Tile extends StackPane {
         setOnMouseClicked(e -> {
 
             //cant play on already played tile
-            if (marked)
+            if (marked) {
                 return;
+            }
 
             //has the quadrant already been won?
             boolean playAnywhere;
@@ -44,16 +46,21 @@ class Tile extends StackPane {
 
                 playAnywhere = calcPlayAnywhere();
 
-                //make sure turn is valid and if the previous quad has been won, go anywhere
-                if(!singlePlayer.firstTurn && (singlePlayer.previousTile.calculateBigQuad() != this.getQuadrant()) && !playAnywhere){
-                    System.out.printf("My previous quad is %d and this quad is %d%n", singlePlayer.previousTile.calculateBigQuad(),this.getQuadrant());
-                    WrongMoveBox wrong = new WrongMoveBox("Wrong Move","You must play in the correct quadrant from the last move!");
+                //make sure turn is valid and if previous quad won,go anywhere
+                if (!singlePlayer.firstTurn
+                        && (singlePlayer.previousTile.calculateBigQuad()
+                        != this.getQuadrant()) && !playAnywhere) {
+                    System.out.printf("My previous quad is %d and this quad "
+                                    + "is %d%n",
+                            singlePlayer.previousTile.calculateBigQuad(),
+                            this.getQuadrant());
+                    WrongMoveBox wrong = new WrongMoveBox("Wrong Move",
+                            "You must play in the correct quadrant "
+                                    + "from the last move!");
                     return;
-                }
-
-                //take note if the first move
-                else
-                    if(singlePlayer.firstTurn){
+                }else
+                    //take note of the first move
+                    if (singlePlayer.firstTurn) {
                     System.out.println("This is my first move!");
                     singlePlayer.previousTile = this;
                     singlePlayer.firstTurn = false;
@@ -75,18 +82,28 @@ class Tile extends StackPane {
                 SinglePlayer.turnX = false;
                 singlePlayer.player1Turn.setVisible(false);
                 singlePlayer.player2Turn.setVisible(true);
-                singlePlayer.quadID.setText("Quadrant number to play: " + (singlePlayer.previousTile.calculateBigQuad()+1));
+                singlePlayer.quadID.setText("Quadrant number to play: "
+                        + (singlePlayer.previousTile.calculateBigQuad() + 1));
 
                 //it is O's turn
-            } else if (e.getButton() == MouseButton.PRIMARY && !SinglePlayer.turnX) {
+            } else if (e.getButton() == MouseButton.PRIMARY
+                    && !SinglePlayer.turnX) {
 
                 playAnywhere = calcPlayAnywhere();
 
-                //make sure turn is valid and if the previous quad has been won, go anywhere
-                if(!singlePlayer.firstTurn && (singlePlayer.previousTile.calculateBigQuad() != this.getQuadrant()) && !playAnywhere){
+                //make sure turn is valid and if previous quad won,go anywhere
+                if (!singlePlayer.firstTurn
+                        && (singlePlayer.previousTile.calculateBigQuad()
+                        != this.getQuadrant())
+                        && !playAnywhere) {
                     System.out.println("WRONG MOVE!");
-                    System.out.printf("My previous quad is %d and this quad is %d\n", singlePlayer.previousTile.calculateBigQuad(),this.getQuadrant());
-                    WrongMoveBox wrong = new WrongMoveBox("Wrong Move","You must play in the correct quadrant from the last move!");
+                    System.out.printf("My previous quad is %d and this quad"
+                            + " is %d%n",
+                            singlePlayer.previousTile.calculateBigQuad(),
+                            this.getQuadrant());
+                    WrongMoveBox wrong = new WrongMoveBox("Wrong Move",
+                            "You must play in the correct quadrant"
+                                    + " from the last move!");
                     wrong.display();
                     return;
                 }
@@ -107,7 +124,8 @@ class Tile extends StackPane {
                 SinglePlayer.turnX = true;
                 singlePlayer.player2Turn.setVisible(false);
                 singlePlayer.player1Turn.setVisible(true);
-                singlePlayer.quadID.setText("Quadrant number to play: " + (singlePlayer.previousTile.calculateBigQuad()+1));
+                singlePlayer.quadID.setText("Quadrant number to play: "
+                        + (singlePlayer.previousTile.calculateBigQuad() + 1));
             }
         });
     }
@@ -155,8 +173,8 @@ class Tile extends StackPane {
     }
 
     //calculate the quadrant based on the X,Y values
-    private int calculateBigQuad(){
-        return this.x+ (this.y * 3);
+    private int calculateBigQuad() {
+        return this.x + (this.y * 3);
     }
 
     //determine if the quadrant has already been won, return answer
@@ -165,13 +183,15 @@ class Tile extends StackPane {
 
         outer:
         if (!singlePlayer.firstTurn) {
-            for (WinnerTile row[] : singlePlayer.winBoard) {
+            for (WinnerTile row [] : singlePlayer.winBoard) {
                 for (WinnerTile col : row) {
                     //find the WinnerTile with the same quadrants
-                    if (col.getQuadrant() == singlePlayer.previousTile.calculateBigQuad()) {
+                    if (col.getQuadrant()
+                            == singlePlayer.previousTile.calculateBigQuad()) {
                         //check if the tile has already been won
-                        if (col.isHasWon())
+                        if (col.isHasWon()){
                             answer = true;
+                        }
                         break outer;
                     }
                 }

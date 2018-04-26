@@ -2,14 +2,96 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a4afe22-8fc9-49ab-8f8a-7d28a4e4b9ef" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/App/Main.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/App/Main.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Database/ConnectToServer.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Database/ConnectToServer.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/SinglePlayer.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/SinglePlayer.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/Tile.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/Tile.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/WinnerTile.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/WinnerTile.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MediaPlayer/MediaBox.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MediaPlayer/MediaBox.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/AlertBox.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/AlertBox.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/TieBox.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/TieBox.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/WrongMoveBox.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/WrongMoveBox.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/SingleplayerController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/SingleplayerController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/HomeScreenController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/HomeScreenController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/LoginScreenController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/LoginScreenController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/MasterWindow.java" afterPath="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/MasterWindow.java" />
+      <change beforePath="$PROJECT_DIR$/target/ServiceCreate.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/checkstyle-cachefile" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/checkstyle-checker.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/checkstyle-result.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Wolves.m4a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/coopScreen.fxml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Database/connectToServer.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Database/connectToServer.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/ExitBox.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Game/Tile.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Game/Tile.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Game/WinnerTile.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Game/WinnerTile.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Game/singlePlayer$tileBlock.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Game/singlePlayer$tileBlock.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Game/singlePlayer.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Game/singlePlayer.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/LoginScreenController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/MasterWindow.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/MediaPlayer/MediaBox.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/MediaPlayer/MediaBox.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/PopUps/AlertBox.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/PopUps/AlertBox.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/PopUps/ExitBox.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/PopUps/ExitBox.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/PopUps/TieBox.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/PopUps/TieBox.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/PopUps/WrongMoveBox.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/PopUps/WrongMoveBox.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/UI.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/LoginScreenController.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/LoginScreenController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/SingleplayerController.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/SingleplayerController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/homeScreenController.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/homeScreenController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/howToPlayController.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/howToPlayController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/winBoxController.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/Controllers/winBoxController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/MasterWindow.class" afterPath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/Window/MasterWindow.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/connectToServer.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/coopScreenController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/homeScreenController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/settingScreenController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/singlePlayer$Tile.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/baylor/ecs/singlePlayer.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeScreen.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/homeScreen.fxml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/login.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/loginScreen.fxml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/settingScreen.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/settingScreen.fxml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/singlePlayer.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/singlePlayer.fxml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/jfx/app/lib/jasypt-1.9.2.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/jfx/app/lib/mysql-connector-java-8.0.9-rc.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/jfx/app/tictacclaw-1.0-SNAPSHOT-jfx.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/manifest.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/checkstyle.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/checkstyle.rss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/css/maven-base.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/css/maven-theme.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/css/print.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/css/site.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/dependencies.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/dependency-convergence.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/dependency-info.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/close.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/collapsed.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/expanded.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/external.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/icon_error_sml.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/icon_info_sml.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/icon_success_sml.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/icon_warning_sml.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/logos/build-by-maven-black.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/logos/build-by-maven-white.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/logos/maven-feather.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/newwindow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/rss.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/plugin-management.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/plugins.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/project-info.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/project-reports.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/site/project-summary.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/spotbugsXml.xml" afterPath="$PROJECT_DIR$/target/spotbugsXml.xml" />
+      <change beforePath="$PROJECT_DIR$/target/tictacclaw-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/tictacclaw-1.0-SNAPSHOT.jar" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,23 +103,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MasterWindow.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MasterWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/MasterWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-              <folding>
-                <element signature="e#2459#2460#0" expanded="true" />
-                <element signature="e#2494#2495#0" expanded="true" />
-                <element signature="e#2536#2537#0" expanded="true" />
-                <element signature="e#2565#2566#0" expanded="true" />
-                <element signature="e#2598#2599#0" expanded="true" />
-                <element signature="e#2643#2644#0" expanded="true" />
-                <element signature="e#2671#2672#0" expanded="true" />
-                <element signature="e#2700#2701#0" expanded="true" />
-                <element signature="e#2745#2746#0" expanded="true" />
-                <element signature="e#2775#2776#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="280">
+              <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -45,54 +116,80 @@
       <file leaf-file-name="WinBoxController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/WinBoxController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
+            <state relative-caret-position="435">
               <caret line="37" column="64" lean-forward="false" selection-start-line="37" selection-start-column="64" selection-end-line="37" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WrongMoveBox.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/WrongMoveBox.java">
+      <file leaf-file-name="MediaBox.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MediaPlayer/MediaBox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="60" lean-forward="false" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExitBox.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/ExitBox.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="35" column="31" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SinglePlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/SinglePlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+            <state relative-caret-position="960">
+              <caret line="54" column="37" lean-forward="false" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1462#1463#0" expanded="true" />
-                <element signature="e#1485#1486#0" expanded="true" />
-                <element signature="e#4588#4589#0" expanded="true" />
-                <element signature="e#4627#4628#0" expanded="true" />
-                <element signature="e#6150#6151#0" expanded="true" />
-                <element signature="e#6192#6193#0" expanded="true" />
-                <element signature="e#6239#6240#0" expanded="true" />
-                <element signature="e#6281#6282#0" expanded="true" />
-                <element signature="e#13767#13768#0" expanded="true" />
-                <element signature="e#13795#13796#0" expanded="true" />
-                <element signature="e#13828#13829#0" expanded="true" />
-                <element signature="e#13880#13881#0" expanded="true" />
-                <element signature="e#13920#13921#0" expanded="true" />
-                <element signature="e#13961#13962#0" expanded="true" />
+                <element signature="e#1128#1129#0" expanded="true" />
+                <element signature="e#1173#1174#0" expanded="true" />
+                <element signature="e#1206#1207#0" expanded="true" />
+                <element signature="e#1252#1253#0" expanded="true" />
+                <element signature="e#1286#1287#0" expanded="true" />
+                <element signature="e#1316#1317#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/App/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#381#382#0" expanded="true" />
+                <element signature="e#409#410#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WinnerTile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/WinnerTile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+              <folding>
+                <element signature="e#982#983#0" expanded="true" />
+                <element signature="e#1016#1017#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/Tile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1720">
+              <caret line="93" column="70" lean-forward="false" selection-start-line="93" selection-start-column="70" selection-end-line="93" selection-end-column="70" />
+              <folding>
+                <element signature="e#5488#5489#0" expanded="true" />
+                <element signature="e#5528#5529#0" expanded="true" />
+                <element signature="e#5553#5554#0" expanded="true" />
+                <element signature="e#5584#5585#0" expanded="true" />
+                <element signature="e#5609#5610#0" expanded="true" />
+                <element signature="e#5646#5647#0" expanded="true" />
+                <element signature="e#5664#5665#0" expanded="true" />
+                <element signature="e#5688#5689#0" expanded="true" />
+                <element signature="e#5712#5713#0" expanded="true" />
+                <element signature="e#5738#5739#0" expanded="true" />
+                <element signature="e#5756#5757#0" expanded="true" />
+                <element signature="e#5780#5781#0" expanded="true" />
+                <element signature="e#5804#5805#0" expanded="true" />
+                <element signature="e#5830#5831#0" expanded="true" />
+                <element signature="e#5921#5922#0" expanded="true" />
+                <element signature="e#5965#5966#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,56 +198,61 @@
       <file leaf-file-name="AlertBox.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/AlertBox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="220">
+              <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectToServer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Database/ConnectToServer.java">
+      <file leaf-file-name="SinglePlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/SinglePlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+            <state relative-caret-position="2379">
+              <caret line="125" column="68" lean-forward="false" selection-start-line="125" selection-start-column="68" selection-end-line="125" selection-end-column="68" />
               <folding>
-                <marker date="1524723793434" expanded="true" signature="1154:1180" ph="DROP TABLE I... " />
-                <marker date="1524723793434" expanded="true" signature="1323:1472" ph="CREATE TABLE... Users" />
-                <marker date="1524723793434" expanded="true" signature="2363:2399" ph="SELECT * FRO... Users" />
-                <marker date="1524723793434" expanded="true" signature="2781:2895" ph="INSERT INTO Users... " />
-                <marker date="1524723793434" expanded="true" signature="3878:3950" ph="SELECT usr_P... Users" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1477#1478#0" expanded="true" />
+                <element signature="e#1500#1501#0" expanded="true" />
+                <element signature="e#4721#4722#0" expanded="true" />
+                <element signature="e#4760#4761#0" expanded="true" />
+                <element signature="e#6451#6452#0" expanded="true" />
+                <element signature="e#6493#6494#0" expanded="true" />
+                <element signature="e#6540#6541#0" expanded="true" />
+                <element signature="e#6582#6583#0" expanded="true" />
+                <element signature="e#14098#14099#0" expanded="true" />
+                <element signature="e#14126#14127#0" expanded="true" />
+                <element signature="e#14159#14160#0" expanded="true" />
+                <element signature="e#14219#14220#0" expanded="true" />
+                <element signature="e#14259#14260#0" expanded="true" />
+                <element signature="e#14300#14301#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TieBox.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/TieBox.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="340">
+              <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/Tile.java">
+      <file leaf-file-name="ConnectToServer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Database/ConnectToServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="89" column="36" lean-forward="true" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SingleplayerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/SingleplayerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+            <state relative-caret-position="455">
+              <caret line="34" column="70" lean-forward="false" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1524730121619" expanded="true" signature="1247:1273" ph="DROP TABLE I... " />
+                <marker date="1524730121619" expanded="true" signature="1416:1565" ph="CREATE TABLE... Users" />
+                <marker date="1524730121619" expanded="true" signature="2612:2648" ph="SELECT * FRO... Users" />
+                <marker date="1524730121619" expanded="true" signature="3081:3211" ph="INSERT INTO Users... " />
+                <marker date="1524730121619" expanded="true" signature="4362:4442" ph="SELECT usr_P... Users" />
               </folding>
             </state>
           </provider>
@@ -189,6 +291,13 @@
       <find>fool</find>
       <find>myp</find>
       <find>wrongmove</find>
+      <find>if</find>
+      <find>if(</find>
+      <find>max</find>
+      <find>i == 0</find>
+      <find>wrongmo</find>
+      <find>tileSize</find>
+      <find>calculate y</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -236,23 +345,23 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/singlePlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MediaPlayer/Media.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/settingScreenController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/HomeScreenController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/singlePlayer.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MediaPlayer/MediaBox.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/App/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/SettingScreenController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/WinnerTile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/LoginScreenController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/winBox.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/WinBoxController.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/TieBox.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/Tile.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/WrongMoveBox.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/SinglePlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/SingleplayerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/HomeScreenController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/LoginScreenController.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/AlertBox.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Database/ConnectToServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/WinnerTile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/Tile.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/MasterWindow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MediaPlayer/MediaBox.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/SinglePlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/App/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Database/ConnectToServer.java" />
       </list>
     </option>
   </component>
@@ -303,8 +412,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="819" />
-    <option name="y" value="-17" />
+    <option name="x" value="-8" />
     <option name="width" value="1638" />
     <option name="height" value="1040" />
   </component>
@@ -621,16 +729,15 @@
       <workItem from="1523737881877" duration="52000" />
       <workItem from="1524525246018" duration="19152000" />
       <workItem from="1524612606632" duration="27959000" />
-      <workItem from="1524703498853" duration="18614000" />
+      <workItem from="1524703498853" duration="24890000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115302000" />
+    <option name="totallyTimeSpent" value="121578000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -639,9 +746,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298887" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3310811" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31399047" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31399047" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -679,6 +786,10 @@
       </configuration>
     </watches-manager>
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/App/Main.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -700,20 +811,20 @@
           <caret line="77" column="26" lean-forward="false" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1462#1463#0" expanded="true" />
-            <element signature="e#1485#1486#0" expanded="true" />
-            <element signature="e#4588#4589#0" expanded="true" />
-            <element signature="e#4627#4628#0" expanded="true" />
-            <element signature="e#6150#6151#0" expanded="true" />
-            <element signature="e#6192#6193#0" expanded="true" />
-            <element signature="e#6239#6240#0" expanded="true" />
-            <element signature="e#6281#6282#0" expanded="true" />
-            <element signature="e#13767#13768#0" expanded="true" />
-            <element signature="e#13795#13796#0" expanded="true" />
-            <element signature="e#13828#13829#0" expanded="true" />
-            <element signature="e#13880#13881#0" expanded="true" />
-            <element signature="e#13920#13921#0" expanded="true" />
-            <element signature="e#13961#13962#0" expanded="true" />
+            <element signature="e#1477#1478#0" expanded="true" />
+            <element signature="e#1500#1501#0" expanded="true" />
+            <element signature="e#4721#4722#0" expanded="true" />
+            <element signature="e#4760#4761#0" expanded="true" />
+            <element signature="e#6451#6452#0" expanded="true" />
+            <element signature="e#6493#6494#0" expanded="true" />
+            <element signature="e#6540#6541#0" expanded="true" />
+            <element signature="e#6582#6583#0" expanded="true" />
+            <element signature="e#14098#14099#0" expanded="true" />
+            <element signature="e#14126#14127#0" expanded="true" />
+            <element signature="e#14159#14160#0" expanded="true" />
+            <element signature="e#14219#14220#0" expanded="true" />
+            <element signature="e#14259#14260#0" expanded="true" />
+            <element signature="e#14300#14301#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -735,14 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -839,14 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/HowToPlayController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/homeScreen.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -854,14 +949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/HomeScreenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -885,66 +972,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MediaPlayer/MediaBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1114#1115#0" expanded="true" />
-            <element signature="e#1159#1160#0" expanded="true" />
-            <element signature="e#1191#1192#0" expanded="true" />
-            <element signature="e#1237#1238#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/SettingScreenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="39" column="85" lean-forward="false" selection-start-line="39" selection-start-column="85" selection-end-line="39" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/WinnerTile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="43" column="27" lean-forward="false" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
-          <folding>
-            <element signature="e#978#979#0" expanded="true" />
-            <element signature="e#1013#1014#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/App/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#326#327#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/LoginScreenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#1081#1082#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/winBox.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -952,14 +979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/WinBoxController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="37" column="64" lean-forward="false" selection-start-line="37" selection-start-column="64" selection-end-line="37" selection-end-column="64" />
           <folding />
         </state>
       </provider>
@@ -988,35 +1007,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/Tile.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/HomeScreenController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="89" column="36" lean-forward="true" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
+        <state relative-caret-position="380">
+          <caret line="28" column="66" lean-forward="true" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="66" />
+          <folding>
+            <element signature="e#637#638#0" expanded="false" />
+            <element signature="e#666#667#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/HowToPlayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/SinglePlayer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/LoginScreenController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+        <state relative-caret-position="800">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1462#1463#0" expanded="true" />
-            <element signature="e#1485#1486#0" expanded="true" />
-            <element signature="e#4588#4589#0" expanded="true" />
-            <element signature="e#4627#4628#0" expanded="true" />
-            <element signature="e#6150#6151#0" expanded="true" />
-            <element signature="e#6192#6193#0" expanded="true" />
-            <element signature="e#6239#6240#0" expanded="true" />
-            <element signature="e#6281#6282#0" expanded="true" />
-            <element signature="e#13767#13768#0" expanded="true" />
-            <element signature="e#13795#13796#0" expanded="true" />
-            <element signature="e#13828#13829#0" expanded="true" />
-            <element signature="e#13880#13881#0" expanded="true" />
-            <element signature="e#13920#13921#0" expanded="true" />
-            <element signature="e#13961#13962#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#913#914#0" expanded="false" />
+            <element signature="e#968#969#0" expanded="false" />
+            <element signature="e#1052#1053#0" expanded="false" />
+            <element signature="e#1081#1082#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/SettingScreenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="39" column="85" lean-forward="false" selection-start-line="39" selection-start-column="85" selection-end-line="39" selection-end-column="85" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1030,43 +1058,137 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/AlertBox.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/Controllers/WinBoxController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="435">
+          <caret line="37" column="64" lean-forward="false" selection-start-line="37" selection-start-column="64" selection-end-line="37" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Database/ConnectToServer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/PopUps/AlertBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        <state relative-caret-position="220">
+          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/WinnerTile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
           <folding>
-            <marker date="1524723793434" expanded="true" signature="1154:1180" ph="DROP TABLE I... " />
-            <marker date="1524723793434" expanded="true" signature="1323:1472" ph="CREATE TABLE... Users" />
-            <marker date="1524723793434" expanded="true" signature="2363:2399" ph="SELECT * FRO... Users" />
-            <marker date="1524723793434" expanded="true" signature="2781:2895" ph="INSERT INTO Users... " />
-            <marker date="1524723793434" expanded="true" signature="3878:3950" ph="SELECT usr_P... Users" />
+            <element signature="e#982#983#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1720">
+          <caret line="93" column="70" lean-forward="false" selection-start-line="93" selection-start-column="70" selection-end-line="93" selection-end-column="70" />
+          <folding>
+            <element signature="e#5488#5489#0" expanded="true" />
+            <element signature="e#5528#5529#0" expanded="true" />
+            <element signature="e#5553#5554#0" expanded="true" />
+            <element signature="e#5584#5585#0" expanded="true" />
+            <element signature="e#5609#5610#0" expanded="true" />
+            <element signature="e#5646#5647#0" expanded="true" />
+            <element signature="e#5664#5665#0" expanded="true" />
+            <element signature="e#5688#5689#0" expanded="true" />
+            <element signature="e#5712#5713#0" expanded="true" />
+            <element signature="e#5738#5739#0" expanded="true" />
+            <element signature="e#5756#5757#0" expanded="true" />
+            <element signature="e#5780#5781#0" expanded="true" />
+            <element signature="e#5804#5805#0" expanded="true" />
+            <element signature="e#5830#5831#0" expanded="true" />
+            <element signature="e#5921#5922#0" expanded="true" />
+            <element signature="e#5965#5966#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/MediaPlayer/MediaBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="54" column="37" lean-forward="false" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1173#1174#0" expanded="true" />
+            <element signature="e#1206#1207#0" expanded="true" />
+            <element signature="e#1252#1253#0" expanded="true" />
+            <element signature="e#1286#1287#0" expanded="true" />
+            <element signature="e#1316#1317#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Window/MasterWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+        <state relative-caret-position="280">
+          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Game/SinglePlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2379">
+          <caret line="125" column="68" lean-forward="false" selection-start-line="125" selection-start-column="68" selection-end-line="125" selection-end-column="68" />
           <folding>
-            <element signature="e#2459#2460#0" expanded="true" />
-            <element signature="e#2494#2495#0" expanded="true" />
-            <element signature="e#2536#2537#0" expanded="true" />
-            <element signature="e#2565#2566#0" expanded="true" />
-            <element signature="e#2598#2599#0" expanded="true" />
-            <element signature="e#2643#2644#0" expanded="true" />
-            <element signature="e#2671#2672#0" expanded="true" />
-            <element signature="e#2700#2701#0" expanded="true" />
-            <element signature="e#2745#2746#0" expanded="true" />
-            <element signature="e#2775#2776#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1477#1478#0" expanded="true" />
+            <element signature="e#1500#1501#0" expanded="true" />
+            <element signature="e#4721#4722#0" expanded="true" />
+            <element signature="e#4760#4761#0" expanded="true" />
+            <element signature="e#6451#6452#0" expanded="true" />
+            <element signature="e#6493#6494#0" expanded="true" />
+            <element signature="e#6540#6541#0" expanded="true" />
+            <element signature="e#6582#6583#0" expanded="true" />
+            <element signature="e#14098#14099#0" expanded="true" />
+            <element signature="e#14126#14127#0" expanded="true" />
+            <element signature="e#14159#14160#0" expanded="true" />
+            <element signature="e#14219#14220#0" expanded="true" />
+            <element signature="e#14259#14260#0" expanded="true" />
+            <element signature="e#14300#14301#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/App/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/baylor/ecs/Database/ConnectToServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="34" column="70" lean-forward="false" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1524730121619" expanded="true" signature="1247:1273" ph="DROP TABLE I... " />
+            <marker date="1524730121619" expanded="true" signature="1416:1565" ph="CREATE TABLE... Users" />
+            <marker date="1524730121619" expanded="true" signature="2612:2648" ph="SELECT * FRO... Users" />
+            <marker date="1524730121619" expanded="true" signature="3081:3211" ph="INSERT INTO Users... " />
+            <marker date="1524730121619" expanded="true" signature="4362:4442" ph="SELECT usr_P... Users" />
           </folding>
         </state>
       </provider>

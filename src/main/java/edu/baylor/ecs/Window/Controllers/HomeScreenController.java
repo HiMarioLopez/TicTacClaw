@@ -19,15 +19,11 @@ public class HomeScreenController extends MasterWindow implements Initializable{
 
 
 
-    public HomeScreenController(){
-        System.out.println("Created home");
-        defaultInit();
-
-    }
+    public HomeScreenController(){}
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-//        defaultInit();
+        defaultInit();
     }
 
     public void coopAction(ActionEvent event) throws IOException {

@@ -53,7 +53,6 @@ public class LoginScreenController extends MasterWindow implements Initializable
             this.connectToHome();
             setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
             getWindow().setScene(getCurrentScene());
-            //mediaBox.playMediaBox();
             getWindow().show();
         } else {
             System.out.println("ERROR! Invalid credentials. Please try again.");

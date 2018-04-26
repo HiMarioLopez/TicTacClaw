@@ -13,7 +13,8 @@ class WinnerTile extends StackPane {
     boolean hasWon = false;
 
     WinnerTile() {
-        Rectangle border = new Rectangle(SinglePlayer.tileSize * 3, SinglePlayer.tileSize * 3);
+        Rectangle border = new Rectangle(SinglePlayer.tileSize * 3
+                , SinglePlayer.tileSize * 3);
         border.setFill(null);
         border.setStroke(Color.BLACK);
 
@@ -41,8 +42,8 @@ class WinnerTile extends StackPane {
         return hasWon;
     }
 
-    void setHasWon(boolean other) {
-        this.hasWon = other;
+    void setHasWon() {
+        this.hasWon = true;
     }
 
     int getQuadrant() {

@@ -26,9 +26,9 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
     Tile previousTile = new Tile(this);
     boolean firstTurn = true;
     static boolean turnX = true;
-    private final static int spacing = maxWidth/120;
-    final static int tileSize = maxWidth/25;
-    final static int tileFont = maxWidth/30;
+    private final static double spacing = maxWidth/120.0;
+    final static double tileSize = maxWidth/25.0;
+    final static double tileFont = maxWidth/30.0;
 
     @FXML
     private BorderPane borderpane;
@@ -66,18 +66,18 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
         int paneSize = calcPaneSize();
         pane.setPrefSize(paneSize, paneSize);
 
-        player1VBOX.setSpacing(maxHeight/4);
-        player2VBOX.setSpacing(maxHeight/4);
+        player1VBOX.setSpacing(maxHeight/4.0);
+        player2VBOX.setSpacing(maxHeight/4.0);
 
-        player1Turn.setFont(Font.font("System",maxWidth/50));
-        player2Turn.setFont(Font.font("System",maxWidth/50));
+        player1Turn.setFont(Font.font("System",maxWidth/50.0));
+        player2Turn.setFont(Font.font("System",maxWidth/50.0));
 
-        quadID.setFont(Font.font("System",maxWidth/50));
+        quadID.setFont(Font.font("System",maxWidth/50.0));
 
-        player1Label.setFont(Font.font("System",maxWidth/35));
-        player2Label.setFont(Font.font("System",maxWidth/35));
+        player1Label.setFont(Font.font("System",maxWidth/35.0));
+        player2Label.setFont(Font.font("System",maxWidth/35.0));
 
-        titleLabel.setFont(Font.font("System",maxWidth/25));
+        titleLabel.setFont(Font.font("System",maxWidth/25.0));
 
         //create the gameboard
         int quad = 0;
@@ -105,7 +105,7 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
 
 
         tileBlock(int quad) {
-            int transX, transY;
+            double transX, transY;
             quadrant = quad;
 
             for (int y = 0; y < block.length; y++) {
@@ -113,18 +113,23 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
                     Tile tile = new Tile(SinglePlayer.this);
 
                     //Calculate x shift
-                    transX = x * tileSize + spacing;
-                    if (quadrant % 3 == 1)
+                    transX = (x * tileSize + spacing);
+                    if (quadrant % 3 == 1){
                         transX += (3 * tileSize + spacing);
-                    else if (quadrant % 3 == 2)
+
+                    }
+                    else if (quadrant % 3 == 2){
                         transX += (6 * tileSize + spacing * 2);
+                    }
 
                     //Calculate y shift
-                    transY = (y * tileSize) + (quadrant / 3) * (3 * tileSize) + spacing;
-                    if (quadrant >= 3 && quadrant <= 5)
+                    transY = ((y * tileSize) + (quadrant / 3) * (3.0 * tileSize) + spacing);
+                    if (quadrant >= 3 && quadrant <= 5){
                         transY += spacing;
-                    else if (quadrant >= 6 && quadrant <= 8)
+                    }
+                    else if (quadrant >= 6 && quadrant <= 8){
                         transY += spacing * 2;
+                    }
 
                     //Translate the tile and set their coordinate
                     tile.setTranslateX(transX);
@@ -160,37 +165,45 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
 
             //check cols
             for (int i = 0; i < block.length; i++) {
-                if (!Objects.equals(block[checkMe.getX()][i].getValue(), mark))
+                if (!Objects.equals(block[checkMe.getX()][i].getValue(), mark)){
                     break;
-                if (i == block.length - 1)
+                }
+                if (i == block.length - 1){
                     return true;
+                }
             }
 
             //check rows
             for (int i = 0; i < block.length; i++) {
-                if (!Objects.equals(block[i][checkMe.getY()].getValue(), mark))
+                if (!Objects.equals(block[i][checkMe.getY()].getValue(), mark)){
                     break;
-                if (i == block.length - 1)
+                }
+                if (i == block.length - 1){
                     return true;
+                }
             }
 
             //check diag
             if (checkMe.getX() == checkMe.getY()) {
                 for (int i = 0; i < block.length; i++) {
-                    if (!Objects.equals(block[i][i].getValue(), mark))
+                    if (!Objects.equals(block[i][i].getValue(), mark)){
                         break;
-                    if (i == block.length - 1)
+                    }
+                    if (i == block.length - 1){
                         return true;
+                    }
                 }
             }
 
             //check anti-diag
             if (checkMe.getX() + checkMe.getY() == block.length - 1) {
                 for (int i = 0; i < block.length; i++) {
-                    if (!Objects.equals(block[i][block.length - 1 - i].getValue(), mark))
+                    if (!Objects.equals(block[i][block.length - 1 - i].getValue(), mark)){
                         break;
-                    if (i == block.length - 1)
+                    }
+                    if (i == block.length - 1){
                         return true;
+                    }
                 }
             }
 
@@ -299,13 +312,13 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
         }
 
         //check for a tie
-        for(int i = 0; i < winBoard.length; i++){
-            for(int j = 0;j < winBoard.length; j++){
-                if(!winBoard[i][j].hasWon){
+        for (int i = 0; i < winBoard.length; i++){
+            for (int j = 0;j < winBoard.length; j++){
+                if (!winBoard[i][j].hasWon){
                     System.out.println("No big tie yet");
                     return;
                 }
-                if(i == 0 && j == 0){
+                if (i == 2 && j == 2){
                     System.out.println("There was a tie!");
                     TieBox alert = new TieBox("Game Over","The game was a tie!");
                     alert.display();
@@ -328,9 +341,9 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
         int i,j=0;
 
         outerLoop:
-        for(i=0;i<board.length;i++){
-            for(j=0;j<board.length;j++){
-                if(board[i][j].getQuadrant() == quad) {
+        for (i=0;i<board.length;i++){
+            for (j=0;j<board.length;j++){
+                if (board[i][j].getQuadrant() == quad) {
                     answer = board[i][j].checkGridWin(tile);
                     break outerLoop;
                 }
@@ -339,9 +352,9 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
 
         System.out.println("The incrementing fill is: " + board[i][j].getFilledCount());
         //Add the winner tile to the winBoard
-        if(answer || board[i][j].getFilledCount() == 8){
+        if (answer || board[i][j].getFilledCount() == 8){
             WinnerTile temp = new WinnerTile();
-            int transX=spacing,transY=spacing;
+            int transX= (int) spacing,transY= (int) spacing;
             int x=0;int y=0;                            //the (x,y) of the quads
 
             System.out.println("There is a small winner or it was a Cat!!");
@@ -350,21 +363,21 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
             board[i][j].removeBlock();
 
             //Calculate x shift
-            if(quad%3==1) {
+            if (quad%3==1) {
                 transX += (3 * tileSize + spacing);
                 x=1;
             }
-            else if(quad%3==2) {
+            else if (quad%3==2) {
                 transX += (6 * tileSize + spacing * 2);
                 x=2;
             }
 
             //Calculate y shift
-            if(quad >= 3 && quad <= 5) {
+            if (quad >= 3 && quad <= 5) {
                 transY += (3 * tileSize + spacing);
                 y=1;
             }
-            else if(quad >= 6 && quad <= 8) {
+            else if (quad >= 6 && quad <= 8) {
                 transY += (6 * tileSize + spacing * 2);
                 y=2;
             }
@@ -374,17 +387,17 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
             temp.setTranslateY(transY);
             temp.setQuadrant(quad);
 
-            if(answer){
+            if (answer){
                 temp.getText().setText(tile.getValue());
             }
             else{
                 temp.getText().setText("Tie");
-                temp.getText().setFont(Font.font("System",maxWidth/75));
+                temp.getText().setFont(Font.font("System", (maxWidth / 75.0)));
             }
 
             //add the WinnerTile to the board
             winBoard[x][y] = temp;
-            temp.setHasWon(true);
+            temp.setHasWon();
 
             System.out.println("The small winner won on quad:" + quad + "\t which is also x:"+x+" y:"+y);
 
@@ -433,7 +446,7 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
     }
 
     private int calcPaneSize(){
-        return (9 * tileSize) + (2* spacing);
+        return (int) ((9 * tileSize) + (2* spacing));
     }
 
     @FXML
