@@ -72,12 +72,12 @@ class Tile extends StackPane {
                 playAnywhere = calcPlayAnywhere();
 
                 //make sure turn is valid and if previous quad won,go anywhere
-                if (!singlePlayer.firstTurn
-                        && (singlePlayer.previousTile.calculateBigQuad()
+                if (!singlePlayer.isFirstTurn()
+                        && (singlePlayer.getPreviousTile().calculateBigQuad()
                         != this.getQuadrant()) && !playAnywhere) {
                     System.out.printf("My previous quad is %d and this quad "
                                     + "is %d%n",
-                            singlePlayer.previousTile.calculateBigQuad(),
+                            singlePlayer.getPreviousTile().calculateBigQuad(),
                             this.getQuadrant());
                     WrongMoveBox wrong = new WrongMoveBox("Wrong Move",
                             "You must play in the correct quadrant "
@@ -85,18 +85,18 @@ class Tile extends StackPane {
                     return;
                 } else {
                     //take note of the first move
-                    if (singlePlayer.firstTurn) {
+                    if (singlePlayer.isFirstTurn()) {
                         System.out.println("This is my first move!");
-                        singlePlayer.previousTile = this;
-                        singlePlayer.firstTurn = false;
+                        singlePlayer.setPreviousTile(this);
+                        singlePlayer.firstTurnDone();
                     }
                 }
 
                 //draw the X
                 drawX();
 
-                //make not of the current turn
-                singlePlayer.previousTile = this;
+                //make note of the current turn
+                singlePlayer.setPreviousTile(this);
 
                 //check if X has won the TileBlock
                 if (singlePlayer.checkSmallWin(this)) {
@@ -109,7 +109,8 @@ class Tile extends StackPane {
                 singlePlayer.player1Turn.setVisible(false);
                 singlePlayer.player2Turn.setVisible(true);
                 singlePlayer.quadID.setText("Quadrant number to play: "
-                        + (singlePlayer.previousTile.calculateBigQuad() + 1));
+                        + (singlePlayer.getPreviousTile()
+                        .calculateBigQuad() + 1));
 
                 //it is O's turn
             } else if (e.getButton() == MouseButton.PRIMARY
@@ -118,14 +119,14 @@ class Tile extends StackPane {
                 playAnywhere = calcPlayAnywhere();
 
                 //make sure turn is valid and if previous quad won,go anywhere
-                if (!singlePlayer.firstTurn
-                        && (singlePlayer.previousTile.calculateBigQuad()
+                if (!singlePlayer.isFirstTurn()
+                        && (singlePlayer.getPreviousTile().calculateBigQuad()
                         != this.getQuadrant())
                         && !playAnywhere) {
                     System.out.println("WRONG MOVE!");
                     System.out.printf("My previous quad is %d and this quad"
                             + " is %d%n",
-                            singlePlayer.previousTile.calculateBigQuad(),
+                            singlePlayer.getPreviousTile().calculateBigQuad(),
                             this.getQuadrant());
                     WrongMoveBox wrong = new WrongMoveBox("Wrong Move",
                             "You must play in the correct quadrant"
@@ -137,8 +138,8 @@ class Tile extends StackPane {
                 //draw the O
                 drawO();
 
-                //make not of the current turn
-                singlePlayer.previousTile = this;
+                //make note of the current turn
+                singlePlayer.setPreviousTile(this);
 
                 //check if O has won the TileBlock
                 if (singlePlayer.checkSmallWin(this)) {
@@ -151,7 +152,8 @@ class Tile extends StackPane {
                 singlePlayer.player2Turn.setVisible(false);
                 singlePlayer.player1Turn.setVisible(true);
                 singlePlayer.quadID.setText("Quadrant number to play: "
-                        + (singlePlayer.previousTile.calculateBigQuad() + 1));
+                        + (singlePlayer.getPreviousTile().calculateBigQuad()
+                        + 1));
             }
         });
     }
@@ -228,13 +230,13 @@ class Tile extends StackPane {
         boolean answer = false;
 
         outer:
-        if (!singlePlayer.firstTurn) {
+        if (!singlePlayer.isFirstTurn()) {
             WinBoardIterator iterator
-                    = new WinBoardIterator(singlePlayer.winBoard);
+                    = new WinBoardIterator(singlePlayer.getWinBoard());
             while (iterator.hasNext()) {
                 WinnerTile temp = iterator.next();
                 if (temp.getQuadrant()
-                        == singlePlayer.previousTile.calculateBigQuad()) {
+                        == singlePlayer.getPreviousTile().calculateBigQuad()) {
                     if (temp.isHasWon()) {
                         System.out.println("He can play anywhere!");
                         answer = true;
