@@ -20,12 +20,12 @@ class Tile extends StackPane {
     Tile(final SinglePlayer singlePlayer) {
         this.singlePlayer = singlePlayer;
         //Create the tile appearance and add it to the pane
-        Rectangle border = new Rectangle(SinglePlayer.tileSize,
-                                         SinglePlayer.tileSize);
+        Rectangle border = new Rectangle(SinglePlayer.TILE_SIZE,
+                                         SinglePlayer.TILE_SIZE);
         border.setFill(null);
         border.setStroke(Color.BLACK);
 
-        text.setFont(Font.font(SinglePlayer.tileFont));
+        text.setFont(Font.font(SinglePlayer.TILE_FONT));
         setAlignment(Pos.CENTER);
 
         getChildren().addAll(border, text);
@@ -72,7 +72,7 @@ class Tile extends StackPane {
                 //make not of the current turn
                 singlePlayer.previousTile = this;
 
-                //check if X has won the tileBlock
+                //check if X has won the TileBlock
                 if (singlePlayer.checkSmallWin(this)) {
                     System.out.println("I must check big box!");
                     singlePlayer.checkBigWin(this);
@@ -114,7 +114,7 @@ class Tile extends StackPane {
                 //make not of the current turn
                 singlePlayer.previousTile = this;
 
-                //check if O has won the tileBlock
+                //check if O has won the TileBlock
                 if (singlePlayer.checkSmallWin(this)) {
                     System.out.println("I must check big box!");
                     singlePlayer.checkBigWin(this);

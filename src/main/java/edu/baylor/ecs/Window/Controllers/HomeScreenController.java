@@ -11,49 +11,57 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-
-public class HomeScreenController extends MasterWindow implements Initializable{
+/** Author: Brandon Mork. */
+public class HomeScreenController extends MasterWindow
+        implements Initializable {
 
     @FXML
-    private Button coopButton,howToPlayButton,settingButton,exitButton;
+    private Button coopButton, howToPlayButton, settingButton, exitButton;
 
 
-
-    public HomeScreenController(){}
+    /** Author: Brandon Mork. */
+    public HomeScreenController() { }
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public final void initialize(final URL location,
+                                 final ResourceBundle resources) {
         defaultInit();
     }
 
-    public void coopAction(ActionEvent event) throws IOException {
+    /** Author: Brandon Mork. */
+    public final void coopAction(final ActionEvent event) throws IOException {
         System.out.println("User press Co-op");
 
         this.connectToSingle();
-        setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
+        setWindow((Stage) ((Node) event.getSource()).getScene().getWindow());
         getWindow().setScene(getCurrentScene());
         getWindow().show();
     }
 
-    public void howToPlayAction(ActionEvent event) throws IOException {
+    /** Author: Brandon Mork. */
+    public final void howToPlayAction(final ActionEvent event)
+            throws IOException {
         System.out.println("User press Multiplayer");
 
         this.connectHowToPlay();
-        setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
+        setWindow((Stage) ((Node) event.getSource()).getScene().getWindow());
         getWindow().setScene(getCurrentScene());
         getWindow().show();
     }
 
-    public void settingAction(ActionEvent event) throws IOException {
+    /** Author: Brandon Mork. */
+    public final void settingAction(final ActionEvent event)
+            throws IOException {
         System.out.println("User press Settings");
 
         this.connectToSetting();
-        setWindow((Stage)((Node)event.getSource()).getScene().getWindow());
+        setWindow((Stage) ((Node) event.getSource()).getScene().getWindow());
         getWindow().setScene(getCurrentScene());
         getWindow().show();
     }
 
-    public void closeProgram(){
+    /** Author: Brandon Mork. */
+    public final void closeProgram() {
         super.closeProgram(getWindow());
     }
 

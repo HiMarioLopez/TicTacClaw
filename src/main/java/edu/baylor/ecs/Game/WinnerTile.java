@@ -7,14 +7,17 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
+import static edu.baylor.ecs.Game.SinglePlayer.SIZE_OF_BOARD;
+
 class WinnerTile extends StackPane {
     private final Text text = new Text();
     private int quadrant;
     boolean hasWon = false;
 
     WinnerTile() {
-        Rectangle border = new Rectangle(SinglePlayer.tileSize * 3
-                , SinglePlayer.tileSize * 3);
+        Rectangle border =
+                new Rectangle(SinglePlayer.TILE_SIZE * SIZE_OF_BOARD,
+                        SinglePlayer.TILE_SIZE * SIZE_OF_BOARD);
         border.setFill(null);
         border.setStroke(Color.BLACK);
 

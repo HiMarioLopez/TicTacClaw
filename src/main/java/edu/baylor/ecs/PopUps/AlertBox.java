@@ -1,21 +1,25 @@
 package edu.baylor.ecs.PopUps;
 
-import javafx.stage.*;
-import javafx.scene.*;
-import javafx.scene.layout.*;
-import javafx.scene.control.*;
-import javafx.geometry.*;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
-public class AlertBox{
-
-
+/** Author: Brandon Mork. */
+public class AlertBox {
     final Label textbox;
     final HBox hbox;
 
     final Stage alertWindow;
     final Scene scene;
 
-    AlertBox(String title, String message){
+    /** Author: Brandon Mork. */
+    AlertBox(final String title, final String message) {
         alertWindow = new Stage();
 
         //block user interaction until this is taken care of
@@ -34,19 +38,20 @@ public class AlertBox{
 
         VBox vbox = new VBox(40);
         vbox.setAlignment(Pos.CENTER);
-        vbox.setPadding(new Insets(25,25,25,25));
+        vbox.setPadding(new Insets(25, 25, 25, 25));
 
         hbox = new HBox(25);
         hbox.getChildren().addAll(defaultButton);
         hbox.setAlignment(Pos.CENTER);
 
-        vbox.getChildren().addAll(textbox,hbox);
+        vbox.getChildren().addAll(textbox, hbox);
 
         scene = new Scene(vbox);
         scene.getStylesheets().add("/css/default.css");
     }
 
-    public void display(){
+    /** Author: Brandon Mork. */
+    public final void display() {
         alertWindow.setScene(scene);
         alertWindow.showAndWait();
     }
