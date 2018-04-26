@@ -13,17 +13,35 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 /** Author: Brandon Mork. */
-public class SettingScreenController extends MasterWindow implements Initializable {
+public class SettingScreenController extends MasterWindow
+        implements Initializable {
 
+    /** the volume slider.
+     */
     @FXML
     private Slider volumeSlider;
 
-
+    /** the checkbox that will play and pause music.
+     */
     @FXML
     private CheckBox muteBox;
 
+    /** the Button to go back to Home.
+     */
     @FXML
     private Button backButton;
+
+    /** the default height of the setting screen.
+     */
+    private static final int DEFAULT_HEIGHT = 700;
+
+    /** the default width of the setting screen.
+     */
+    private static final int DEFAULT_WIDTH = 700;
+
+    /** the multiplier to affect the mediaplayer.
+     */
+    private static final int MEDIA_MULTIPLIER = 100;
 
 
     /** Author: Brandon Mork. */
@@ -32,19 +50,22 @@ public class SettingScreenController extends MasterWindow implements Initializab
     }
 
     @Override
-    public final void initialize(final URL location, final ResourceBundle resources) {
-        getWindow().setMinWidth(650);
-        getWindow().setMinHeight(650);
+    public final void initialize(final URL location,
+                                 final ResourceBundle resources) {
+        getWindow().setMinHeight(DEFAULT_HEIGHT);
+        getWindow().setMaxHeight(DEFAULT_HEIGHT);
 
-        getWindow().setMaxHeight(750);
-        getWindow().setMaxWidth(750);
+        getWindow().setMinWidth(DEFAULT_WIDTH);
+        getWindow().setMaxWidth(DEFAULT_WIDTH);
 
-        volumeSlider.setValue(MediaBox.getInstance().getVolume() * 100);
+        volumeSlider.setValue(MediaBox.getInstance().getVolume()
+                * MEDIA_MULTIPLIER);
 
         volumeSlider.valueProperty()
                 .addListener((observable, oldValue, newValue)
                         -> MediaBox.getInstance()
-                        .changeVolume(newValue.doubleValue() / 100));
+                        .changeVolume(newValue.doubleValue()
+                                / MEDIA_MULTIPLIER));
     }
 
     /** Author: Brandon Mork. */
@@ -56,7 +77,8 @@ public class SettingScreenController extends MasterWindow implements Initializab
         }
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * @throws IOException if there is an error going back to home */
     public final void backAction() throws IOException {
         backToHome();
     }

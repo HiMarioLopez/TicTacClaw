@@ -7,8 +7,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 /** Author: Brandon Mork. */
-public class SingleplayerController extends MasterWindow implements Initializable {
+public class SingleplayerController extends MasterWindow
+        implements Initializable {
 
+    /** Author: Brandon Mork. */
     protected SingleplayerController() {
         getWindow().setMaximized(true);
         getWindow().setMaxWidth(MAX_WIDTH);
@@ -18,6 +20,7 @@ public class SingleplayerController extends MasterWindow implements Initializabl
     }
 
     @Override
-    public final void initialize(final URL location, final ResourceBundle resources) { }
+    public void initialize(final URL location,
+                           final ResourceBundle resources) { }
 
 }

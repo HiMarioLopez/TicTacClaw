@@ -20,14 +20,21 @@ import static edu.baylor.ecs.Database.ConnectToServer.login;
 import static edu.baylor.ecs.Database.ConnectToServer.register;
 
 /** Author: Brandon Mork. */
-public class LoginScreenController extends MasterWindow implements Initializable{
+public class LoginScreenController extends MasterWindow
+        implements Initializable {
 
+    /** the Button to login and register.
+     */
     @FXML
     private Button loginButton, registerButton;
 
+    /** the TextField for the username.
+     */
     @FXML
     private TextField username;
 
+    /** the PasswordField for the password.
+     */
     @FXML
     private PasswordField password;
 
@@ -37,23 +44,29 @@ public class LoginScreenController extends MasterWindow implements Initializable
     }
 
     @Override
-    public final void initialize (final URL location, final ResourceBundle resources) {
+    public final void initialize(final URL location,
+                                 final ResourceBundle resources) {
         defaultInit();
     }
 
-    /** Author: Brandon Mork. */
-    public final void loginAction(final ActionEvent event) throws IOException, SQLException {
+    /** Author: Brandon Mork.
+     * @param event the user clicking the button
+     * @throws IOException if there is a problem going to the next screen
+     * @throws SQLException if there is a problem connecting to database */
+    public final void loginAction(final ActionEvent event)
+            throws IOException, SQLException {
         System.out.println("User press Login button");
 
-        String str_username = username.getText();
-        String str_password = password.getText();
+        String strUsername = username.getText();
+        String strPassword = password.getText();
 
-        str_username = str_username.toLowerCase();
+        strUsername = strUsername.toLowerCase();
 
-        if (login(str_username, str_password)) {
+        if (login(strUsername, strPassword)) {
             System.out.println("Login successful!");
             this.connectToHome();
-            setWindow((Stage) ((Node) event.getSource()).getScene().getWindow());
+            setWindow((Stage) ((Node) event.getSource())
+                    .getScene().getWindow());
             getWindow().setScene(getCurrentScene());
             getWindow().show();
         } else {
@@ -61,22 +74,30 @@ public class LoginScreenController extends MasterWindow implements Initializable
         }
     }
 
-    /** Author: Brandon Mork. */
-    public final void registerAction(final ActionEvent event) throws IOException, SQLException {
+    /** Author: Brandon Mork.
+     * @param event the user clicking the button
+     * @throws IOException if there is a problem going to the next screen
+     * @throws SQLException if there is a problem connecting to database */
+    public final void registerAction(final ActionEvent event)
+            throws IOException, SQLException {
         System.out.println("User press Register button");
 
-        StrongPasswordEncryptor passwordEncryptor = new StrongPasswordEncryptor();
-        String encryptedPassword = passwordEncryptor.encryptPassword(password.getText());
+        StrongPasswordEncryptor passwordEncryptor
+                = new StrongPasswordEncryptor();
+        String encryptedPassword
+                = passwordEncryptor.encryptPassword(password.getText());
 
         if (register(username.getText().toLowerCase(), encryptedPassword)) {
             System.out.println("Registration successful!");
             this.connectToHome();
-            setWindow((Stage) ((Node) event.getSource()).getScene().getWindow());
+            setWindow((Stage) ((Node) event.getSource())
+                    .getScene().getWindow());
             getWindow().setScene(getCurrentScene());
             //mediaBox.playMediaBox();
             getWindow().show();
         } else {
-            System.out.println("ERROR! Registration unsuccessful. Is this username already in use?");
+            System.out.println("ERROR! Registration unsuccessful."
+                    + " Is this username already in use?");
         }
 
     }
