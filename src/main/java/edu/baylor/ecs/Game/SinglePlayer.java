@@ -6,26 +6,19 @@ import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Font;
-import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
-
-import static edu.baylor.ecs.Window.MasterWindow.*;
 
 @SuppressWarnings("unused")
 public class SinglePlayer extends SingleplayerController implements Initializable {
@@ -63,7 +56,7 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-//        //dynamically resize the board to your screen
+        //dynamically resize the board to your screen
         borderpane.setPrefHeight(maxHeight);
         borderpane.setPrefWidth(maxWidth);
 
@@ -82,13 +75,6 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
         player2Label.setFont(Font.font("System",maxWidth/35));
 
         titleLabel.setFont(Font.font("System",maxWidth/25));
-//
-//
-//        getWindow().setMaximized(true);
-//        getWindow().setMaxWidth(maxWidth);
-//        getWindow().setMaxHeight(maxHeight);
-//        getWindow().setHeight(maxHeight);
-//        getWindow().setWidth(maxWidth);
 
         //create the gameboard
         int quad = 0;

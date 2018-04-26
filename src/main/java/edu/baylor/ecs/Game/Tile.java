@@ -17,7 +17,7 @@ class Tile extends StackPane {
     private boolean marked = false;
     private int quadrant;
 
-    Tile(SinglePlayer singlePlayer) {
+    public Tile(SinglePlayer singlePlayer) {
         this.singlePlayer = singlePlayer;
         //Create the tile appearance and add it to the pane
         Rectangle border = new Rectangle(SinglePlayer.tileSize, SinglePlayer.tileSize);
