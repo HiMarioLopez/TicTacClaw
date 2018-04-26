@@ -318,7 +318,7 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
         //check for a tie
         for (int i = 0; i < winBoard.length; i++) {
             for (int j = 0; j < winBoard.length; j++) {
-                if (!winBoard[i][j].hasWon) {
+                if (!winBoard[i][j].isHasWon()) {
                     System.out.println("No big tie yet");
                     return;
                 }

@@ -11,9 +11,22 @@ import static edu.baylor.ecs.Game.SinglePlayer.SIZE_OF_BOARD;
 
 /** Author: Brandon Mork. */
 class WinnerTile extends StackPane {
+
+    /** The letter of the WinnerTile.
+     */
     private final Text text = new Text();
+
+    /** The font size of the tile.
+     */
+    private static final int FONT_SIZE = 100;
+
+    /** The quadrant the tile is in.
+     */
     private int quadrant;
-    boolean hasWon = false;
+
+    /** If the tile has been won yet.
+     */
+    private boolean hasWon = false;
 
     /** Author: Brandon Mork. */
     WinnerTile() {
@@ -23,7 +36,7 @@ class WinnerTile extends StackPane {
         border.setFill(null);
         border.setStroke(Color.BLACK);
 
-        text.setFont(Font.font(100));
+        text.setFont(Font.font(FONT_SIZE));
         text.setText(" ");
         setAlignment(Pos.CENTER);
 
@@ -31,22 +44,26 @@ class WinnerTile extends StackPane {
 
     }
 
-    /** Author: Brandon Mork. */
-    void setQuadrant(int quadrant) {
-        this.quadrant = quadrant;
+    /** Author: Brandon Mork.
+     * @param quad set the quadrant to this */
+    void setQuadrant(final int quad) {
+        this.quadrant = quad;
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * @return the current text Object of the tile */
     Text getText() {
         return text;
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * @return the String of the text*/
     String getValue() {
         return text.getText();
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * @return if the tile has been won yet*/
     boolean isHasWon() {
         return hasWon;
     }
@@ -56,7 +73,8 @@ class WinnerTile extends StackPane {
         this.hasWon = true;
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * @return the quadrant the tile is in */
     int getQuadrant() {
         return quadrant;
     }

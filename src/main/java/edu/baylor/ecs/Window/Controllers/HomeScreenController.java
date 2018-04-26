@@ -15,6 +15,8 @@ import java.util.ResourceBundle;
 public class HomeScreenController extends MasterWindow
         implements Initializable {
 
+    /** the Buttons for the HomeScreen.
+     */
     @FXML
     private Button coopButton, howToPlayButton, settingButton, exitButton;
 
@@ -28,7 +30,10 @@ public class HomeScreenController extends MasterWindow
         defaultInit();
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * Change window to the Game
+     * @param event the user clicks the button
+     * @throws IOException if there is a problem changing to next scene */
     public final void coopAction(final ActionEvent event) throws IOException {
         System.out.println("User press Co-op");
 
@@ -38,7 +43,10 @@ public class HomeScreenController extends MasterWindow
         getWindow().show();
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * Change window to the instructions
+     * @param event the user clicks the button
+     * @throws IOException if there is a problem changing to next scene */
     public final void howToPlayAction(final ActionEvent event)
             throws IOException {
         System.out.println("User press Multiplayer");
@@ -49,7 +57,10 @@ public class HomeScreenController extends MasterWindow
         getWindow().show();
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * Change window to the settings screen
+     * @param event the user clicks the button
+     * @throws IOException if there is a problem changing to next scene */
     public final void settingAction(final ActionEvent event)
             throws IOException {
         System.out.println("User press Settings");
@@ -60,7 +71,8 @@ public class HomeScreenController extends MasterWindow
         getWindow().show();
     }
 
-    /** Author: Brandon Mork. */
+    /** Author: Brandon Mork.
+     * close the program */
     public final void closeProgram() {
         super.closeProgram(getWindow());
     }

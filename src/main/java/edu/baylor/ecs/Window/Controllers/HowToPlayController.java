@@ -14,16 +14,26 @@ import java.util.ResourceBundle;
 /** Author: Brandon Mork. */
 public class HowToPlayController extends MasterWindow implements Initializable {
 
-    /** Author: Brandon Mork. */
+    /** the Label of the title.
+     */
     @FXML
     private Label titleBox;
 
-    /** Author: Brandon Mork. */
+    /** the TextArea for the instructions.
+     */
     @FXML
     private TextArea instructions;
 
     /** Author: Brandon Mork. */
     public HowToPlayController() { }
+
+    /** determines the size of the Label font.
+     */
+    private static final int TITLE_FONT_SIZE = 50;
+
+    /** determines the size of the TextArea font.
+     */
+    private static final int INSTRUCT_FONT_SIZE = 100;
 
     @Override
     public final void initialize(final URL location,
@@ -46,15 +56,16 @@ public class HowToPlayController extends MasterWindow implements Initializable {
                 + " you win the game when you win three boards "
                 + "together (across rows, columns or diagnols). ";
 
-        titleBox.setFont((Font.font("System", MAX_WIDTH / 50.0)));
+        titleBox.setFont((Font.font("System", MAX_WIDTH / TITLE_FONT_SIZE)));
 
-        instructions.setFont((Font.font("System", MAX_WIDTH / 100.0)));
+        instructions.setFont((Font.font("System",
+                MAX_WIDTH / INSTRUCT_FONT_SIZE)));
         instructions.setText(instruct);
         instructions.setWrapText(true);
     }
 
     /** Author: Brandon Mork.
-     * @throws IOException*/
+     * @throws IOException if there is a problem changing windows to home*/
     public final void goBackAction() throws IOException {
         backToHome();
     }

@@ -7,29 +7,54 @@ import java.util.function.Consumer;
 
 import static edu.baylor.ecs.Game.SinglePlayer.SIZE_OF_BOARD;
 
-public class WinBoardIterator implements Iterable{
+/** Author: Brandon Mork. */
+public class WinBoardIterator implements Iterable {
+
+    /** A temporary 2D array of WinnerTiles.
+     */
     private WinnerTile[][] temp = new WinnerTile[SIZE_OF_BOARD][SIZE_OF_BOARD];
+
+    /** the maximum number of elements to iterate over.
+     */
     private int numElements;
+
+    /** the current element.
+     */
     private int index;
+
+    /** An ArrayList of WinnerTiles.
+     */
     private ArrayList<WinnerTile> arrayList = new ArrayList<>();
 
-    public WinBoardIterator(WinnerTile[][] board) {
+    /** Author: Brandon Mork.
+     * @param board This is the board we will iterate over */
+    public WinBoardIterator(final WinnerTile[][] board) {
         this.temp = board;
         this.index = 0;
         for (int i = 0; i < temp.length; i++) {
             for (int j = 0; j < temp[i].length; j++) {
                 arrayList.add(temp[i][j]);
-                numElements ++;
+                numElements++;
             }
         }
     }
 
-    public boolean hasNext() {
+    /**
+     * Returns an iterator over elements of type {@code T}.
+     *
+     * @return if there is another WinnerTile.
+     */
+    public final boolean hasNext() {
         return index < numElements;
     }
 
-    public WinnerTile next(){
-        return arrayList.get(index ++);
+    /**
+     * Returns an iterator over elements of type {@code T}.
+     *
+     * @return the WinnerTile that we are iterating over.
+     */
+    public final WinnerTile next() {
+        return arrayList.get(index++);
     }
 
     /**
@@ -38,7 +63,7 @@ public class WinBoardIterator implements Iterable{
      * @return an Iterator.
      */
     @Override
-    public Iterator iterator() {
+    public final Iterator iterator() {
         return null;
     }
 
@@ -60,7 +85,7 @@ public class WinBoardIterator implements Iterable{
      * @since 1.8
      */
     @Override
-    public void forEach(Consumer action) {
+    public final void forEach(final Consumer action) {
     }
 
     /**
@@ -81,7 +106,7 @@ public class WinBoardIterator implements Iterable{
      * @since 1.8
      */
     @Override
-    public Spliterator spliterator() {
+    public final Spliterator spliterator() {
         return null;
     }
 
