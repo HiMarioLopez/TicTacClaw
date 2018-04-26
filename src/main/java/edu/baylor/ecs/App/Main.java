@@ -1,6 +1,7 @@
 /*
-    Name: Brandon Mork
+    Name: Brandon Mork & Mario Lopez
  */
+
 package edu.baylor.ecs.App;
 
 import edu.baylor.ecs.MediaPlayer.MediaBox;
@@ -20,9 +21,6 @@ public class Main extends Application {
 
     @Override
     public final void start(final Stage window) throws Exception {
-        //Create MediaBox
-        MediaBox mediaBox = MediaBox.getInstance();
-        mediaBox.playMediaBox();
 
         //Create MasterWindow and connect to Login Page
         MasterWindow master = new MasterWindow(window);

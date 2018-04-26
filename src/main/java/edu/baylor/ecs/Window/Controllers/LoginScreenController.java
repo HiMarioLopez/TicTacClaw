@@ -1,5 +1,6 @@
 package edu.baylor.ecs.Window.Controllers;
 
+import edu.baylor.ecs.MediaPlayer.MediaBox;
 import edu.baylor.ecs.Window.MasterWindow;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -50,6 +51,7 @@ public class LoginScreenController extends MasterWindow
     }
 
     /** Author: Brandon Mork.
+     * the user will go to Home Screen and music will start if successful.
      * @param event the user clicking the button
      * @throws IOException if there is a problem going to the next screen
      * @throws SQLException if there is a problem connecting to database */
@@ -68,6 +70,9 @@ public class LoginScreenController extends MasterWindow
             setWindow((Stage) ((Node) event.getSource())
                     .getScene().getWindow());
             getWindow().setScene(getCurrentScene());
+
+            MediaBox.getInstance().playMediaBox();
+
             getWindow().show();
         } else {
             System.out.println("ERROR! Invalid credentials. Please try again.");

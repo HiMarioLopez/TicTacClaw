@@ -12,7 +12,7 @@ public class WinBoardIterator implements Iterable {
 
     /** A temporary 2D array of WinnerTiles.
      */
-    private WinnerTile[][] temp = new WinnerTile[SIZE_OF_BOARD][SIZE_OF_BOARD];
+    private WinnerTile[][] temp;
 
     /** the maximum number of elements to iterate over.
      */

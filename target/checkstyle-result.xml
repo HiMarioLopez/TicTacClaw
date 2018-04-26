@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="6.18">
-<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\App\Main.java">
+<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\App\Main.java">
 <error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 </file>
-<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Database\ConnectToServer.java">
+<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Database\ConnectToServer.java">
 <error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 </file>
-<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Game\SinglePlayer.java">
+<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Game\SinglePlayer.java">
 <error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 </file>
-<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\MediaPlayer\MediaBox.java">
+<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\MediaPlayer\MediaBox.java">
 <error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 </file>
-<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\PopUps\AlertBox.java">
+<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\PopUps\AlertBox.java">
 <error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 </file>
-<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\HomeScreenController.java">
+<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\HomeScreenController.java">
 <error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 </file>
-<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\MasterWindow.java">
+<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Window\MasterWindow.java">
 <error line="0" severity="error" message="Missing package-info.java file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 </file>
 </checkstyle>

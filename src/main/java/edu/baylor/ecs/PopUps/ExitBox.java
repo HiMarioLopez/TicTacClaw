@@ -1,4 +1,4 @@
-/** Author: Brandon Mork.
+/* Author: Brandon Mork.
  * This package will contain all of the popup windows.
  */
 package edu.baylor.ecs.PopUps;
