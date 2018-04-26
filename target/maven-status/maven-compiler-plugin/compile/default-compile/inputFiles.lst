@@ -1,17 +1,17 @@
-C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\WinBoxController.java
-C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\PopUps\AlertBox.java
-C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Game\WinnerTile.java
-C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\HomeScreenController.java
-C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\HowToPlayController.java
-C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\App\Main.java
-C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Game\SinglePlayer.java
-C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Game\Tile.java
-C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\PopUps\ExitBox.java
-C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\MasterWindow.java
-C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\MediaPlayer\MediaBox.java
-C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\PopUps\WrongMoveBox.java
-C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\SingleplayerController.java
-C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\LoginScreenController.java
-C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Database\ConnectToServer.java
-C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\PopUps\TieBox.java
-C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\SettingScreenController.java
+K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\App\Main.java
+K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\LoginScreenController.java
+K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Window\MasterWindow.java
+K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\PopUps\ExitBox.java
+K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Database\ConnectToServer.java
+K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Game\SinglePlayer.java
+K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\MediaPlayer\MediaBox.java
+K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\HomeScreenController.java
+K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\PopUps\TieBox.java
+K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\PopUps\WrongMoveBox.java
+K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\SettingScreenController.java
+K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Game\WinnerTile.java
+K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Game\Tile.java
+K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\WinBoxController.java
+K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\HowToPlayController.java
+K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\PopUps\AlertBox.java
+K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\SingleplayerController.java
