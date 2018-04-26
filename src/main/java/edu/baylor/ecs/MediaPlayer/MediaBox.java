@@ -7,7 +7,7 @@ import java.util.List;
 
 public class MediaBox {
 
-    private static MediaBox single_instance = null;
+    private static volatile MediaBox single_instance = null;
     private Media media;
     private MediaPlayer mediaPlayer;
     private List<String> songList;
@@ -55,7 +55,13 @@ public class MediaBox {
 
     public static MediaBox getInstance(){
         if(single_instance == null)
-            single_instance = new MediaBox();
+        {
+            synchronized (MediaBox.class){
+                if(single_instance == null)
+                    single_instance = new MediaBox();
+            }
+        }
+
         return single_instance;
     }
 }
