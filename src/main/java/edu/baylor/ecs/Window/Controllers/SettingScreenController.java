@@ -5,7 +5,6 @@ import edu.baylor.ecs.Window.MasterWindow;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.event.ActionEvent;
 
 import java.io.IOException;
 import java.net.URL;
@@ -38,13 +37,11 @@ public class SettingScreenController extends MasterWindow implements Initializab
 
         volumeSlider.setValue(MediaBox.getInstance().getVolume()*100);
 
-        volumeSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
-            MediaBox.getInstance().changeVolume(newValue.doubleValue()/100);
-        });
+        volumeSlider.valueProperty().addListener((observable, oldValue, newValue) -> MediaBox.getInstance().changeVolume(newValue.doubleValue()/100));
 
     }
 
-    public void muteBoxAction(ActionEvent event){
+    public void muteBoxAction(){
         if(MediaBox.getInstance().isPlaying())
             MediaBox.getInstance().stopMediaBox();
         else
@@ -52,7 +49,7 @@ public class SettingScreenController extends MasterWindow implements Initializab
     }
 
     
-    public void backAction(ActionEvent event) throws IOException {
+    public void backAction() throws IOException {
         backToHome();
     }
 

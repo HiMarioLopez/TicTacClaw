@@ -107,7 +107,7 @@ public class MasterWindow {
     }
 
     private void connect(String fxml,String css) throws IOException {
-        Parent rootParent = FXMLLoader.load(getClass().getResource(fxml));
+        Parent rootParent = FXMLLoader.load(MasterWindow.class.getResource(fxml));
         currentScene = new Scene(rootParent);
         currentScene.getStylesheets().add(css);
     }

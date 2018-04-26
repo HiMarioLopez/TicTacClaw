@@ -42,7 +42,7 @@ public class WinBoxController extends MasterWindow implements Initializable{
         image.setImage(confetti);
     }
 
-    public void ToHome() throws IOException{
+    public void toHome() throws IOException{
         backToHome();
     }
 

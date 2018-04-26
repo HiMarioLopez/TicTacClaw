@@ -8,10 +8,8 @@ import java.util.List;
 public class MediaBox {
 
     private static volatile MediaBox single_instance = null;
-    private Media media;
     private MediaPlayer mediaPlayer;
-    private List<String> songList;
-    private Integer song = 0;
+    private final List<String> songList;
     private Boolean playing;
 
 
@@ -24,7 +22,7 @@ public class MediaBox {
 
     public void playMediaBox(){
         System.out.println("The media has started");
-        media = new javafx.scene.media.Media(this.getClass().getResource(songList.get(song)).toString());
+        Media media = new Media(this.getClass().getResource(songList.get(0)).toString());
         mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
         mediaPlayer.play();

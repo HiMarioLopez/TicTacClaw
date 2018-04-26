@@ -10,7 +10,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 class Tile extends StackPane {
-    private SinglePlayer singlePlayer;
+    private final SinglePlayer singlePlayer;
     private final Text text = new Text();
     private int x;
     private int y;
@@ -46,7 +46,7 @@ class Tile extends StackPane {
 
                 //make sure turn is valid and if the previous quad has been won, go anywhere
                 if(!singlePlayer.firstTurn && (singlePlayer.previousTile.calculateBigQuad() != this.getQuadrant()) && !playAnywhere){
-                    System.out.printf("My previous quad is %d and this quad is %d\n", singlePlayer.previousTile.calculateBigQuad(),this.getQuadrant());
+                    System.out.printf("My previous quad is %d and this quad is %d%n", singlePlayer.previousTile.calculateBigQuad(),this.getQuadrant());
                     WrongMoveBox wrong = new WrongMoveBox("Wrong Move","You must play in the correct quadrant from the last move!");
                     return;
                 }
@@ -84,8 +84,8 @@ class Tile extends StackPane {
 
                 //make sure turn is valid and if the previous quad has been won, go anywhere
                 if(!singlePlayer.firstTurn && (singlePlayer.previousTile.calculateBigQuad() != this.getQuadrant()) && !playAnywhere){
-                    System.out.println("WRONG MOVE FOOL!");
-                    System.out.printf("My previous quad is %d and this quad is %d", singlePlayer.previousTile.calculateBigQuad(),this.getQuadrant());
+                    System.out.println("WRONG MOVE!");
+                    System.out.printf("My previous quad is %d and this quad is %d\n", singlePlayer.previousTile.calculateBigQuad(),this.getQuadrant());
                     WrongMoveBox wrong = new WrongMoveBox("Wrong Move","You must play in the correct quadrant from the last move!");
                     return;
                 }

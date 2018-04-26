@@ -41,8 +41,8 @@ class WinnerTile extends StackPane {
         return hasWon;
     }
 
-    void setHasWon(boolean hasWon) {
-        this.hasWon = hasWon;
+    void setHasWon(boolean other) {
+        this.hasWon = other;
     }
 
     int getQuadrant() {

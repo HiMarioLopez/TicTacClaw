@@ -20,7 +20,6 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-@SuppressWarnings("unused")
 public class SinglePlayer extends SingleplayerController implements Initializable {
     private final tileBlock[][] board = new tileBlock[3][3];
     final WinnerTile[][] winBoard = new WinnerTile[3][3];
@@ -431,5 +430,15 @@ public class SinglePlayer extends SingleplayerController implements Initializabl
 
     private int calcPaneSize(){
         return (9 * tileSize) + (2* spacing);
+    }
+
+    @FXML
+    private void exitGame(){
+        closeProgram(getWindow());
+    }
+
+    @FXML
+    private void goHome() throws IOException {
+        backToHome();
     }
 }
