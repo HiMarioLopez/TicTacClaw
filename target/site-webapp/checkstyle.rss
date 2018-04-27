@@ -25,8 +25,8 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2018</copyright>
     <item>
-      <title>File: 3,
-             Errors: 5,
+      <title>File: 2,
+             Errors: 4,
              Warnings: 0,
              Infos: 0
       </title>
@@ -60,20 +60,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#test.package-info.java">test/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#test.ConnectToServerTest.java">test/ConnectToServerTest.java</a>
                 </td>
                 <td>
@@ -83,7 +69,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  5
+                  4
                 </td>
               </tr>
                       </tbody>

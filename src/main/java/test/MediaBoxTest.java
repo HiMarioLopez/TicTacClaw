@@ -5,9 +5,9 @@ import edu.baylor.ecs.MediaPlayer.MediaBox;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-/** The MediaBox testing */
+/** The MediaBox testing. */
 class MediaBoxTest {
 
     /** Two MediaBoxes used for testing. */
@@ -28,6 +28,6 @@ class MediaBoxTest {
         String[] command = new String[1];
         Main.main(command);
         MediaBox.getInstance().playMediaBox();
-        assert(MediaBox.getInstance().isPlaying());
+        assertTrue(MediaBox.getInstance().isPlaying());
     }
 }
