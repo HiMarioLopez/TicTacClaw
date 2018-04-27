@@ -1,11 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="6.18">
-<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\App\Main.java">
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\App\Main.java">
 </file>
-<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\App\package-info.java">
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\App\package-info.java">
 </file>
-<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Database\ConnectToServer.java">
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Database\ConnectToServer.java">
 </file>
-<file name="K:\IntelliJ\Projects\TicTacClaw\src\main\java\edu\baylor\ecs\Database\package-info.java">
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Database\package-info.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Game\package-info.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Game\SinglePlayer.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Game\Tile.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Game\WinBoardIterator.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Game\WinnerTile.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\MediaPlayer\MediaBox.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\MediaPlayer\package-info.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\PopUps\AlertBox.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\PopUps\ExitBox.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\PopUps\package-info.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\PopUps\TieBox.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\PopUps\WrongMoveBox.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\HomeScreenController.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\HowToPlayController.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\LoginScreenController.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\package-info.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\SettingScreenController.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\SingleplayerController.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\Controllers\WinBoxController.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\MasterWindow.java">
+</file>
+<file name="C:\Users\Mario\Desktop\Projects\Java Projects\TicTacClaw\TicTacClaw\src\main\java\edu\baylor\ecs\Window\package-info.java">
 </file>
 </checkstyle>
