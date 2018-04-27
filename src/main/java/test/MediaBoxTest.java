@@ -1,12 +1,13 @@
 package test;
 
+import edu.baylor.ecs.App.Main;
 import edu.baylor.ecs.MediaPlayer.MediaBox;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
-/** The only function we can test is the getInstance because.
- *  we cant test JavaFX functions unless we run main */
+/** The MediaBox testing */
 class MediaBoxTest {
 
     /** Two MediaBoxes used for testing. */
@@ -19,5 +20,14 @@ class MediaBoxTest {
         temp2 = MediaBox.getInstance();
 
         assertEquals(temp, temp2);
+    }
+
+    /** Verify the MediaBox is playing. */
+    @Test
+    void playMediaBox() {
+        String[] command = new String[1];
+        Main.main(command);
+        MediaBox.getInstance().playMediaBox();
+        assert(MediaBox.getInstance().isPlaying());
     }
 }
