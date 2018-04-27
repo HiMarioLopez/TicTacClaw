@@ -64,7 +64,7 @@ public class LoginScreenController extends MasterWindow
 
         strUsername = strUsername.toLowerCase();
 
-        if (login(strUsername, strPassword)) {
+        if (login(strUsername, strPassword, "Users")) {
             System.out.println("Login successful!");
             this.connectToHome();
             setWindow((Stage) ((Node) event.getSource())
@@ -92,7 +92,10 @@ public class LoginScreenController extends MasterWindow
         String encryptedPassword
                 = passwordEncryptor.encryptPassword(password.getText());
 
-        if (register(username.getText().toLowerCase(), encryptedPassword)) {
+        if (register(
+                username.getText().toLowerCase(),
+                encryptedPassword,
+                "Users")) {
             System.out.println("Registration successful!");
             this.connectToHome();
             setWindow((Stage) ((Node) event.getSource())

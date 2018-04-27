@@ -92,10 +92,12 @@ public final class ConnectToServer {
      *                lowercase into the login server.
      * @param usrPassword user's password that will be encrypted
      *                    before storing onto the server.
+     * @param tableName name of table you will be inserting into
      * @throws SQLException in case there is an issue running the queries.
      */
     public static boolean register(final String usrName,
-                                   final String usrPassword)
+                                   final String usrPassword,
+                                   final String tableName)
             throws SQLException {
         boolean registrationStatus = true;
         Connection dbConnection = null;
@@ -107,7 +109,8 @@ public final class ConnectToServer {
                     .getConnection(DB_CONNECTION, DB_USER, DB_PASSWORD);
 
             statement = dbConnection
-                    .prepareStatement("SELECT * FROM Users WHERE usr_Name=?");
+                    .prepareStatement("SELECT * FROM " + tableName
+                            + " WHERE usr_Name=?");
             statement.setString(1, usrName);
             rs = statement.executeQuery();
 
@@ -119,8 +122,8 @@ public final class ConnectToServer {
                 dbConnection = DriverManager
                         .getConnection(DB_CONNECTION, DB_USER, DB_PASSWORD);
                 statement = dbConnection
-                        .prepareStatement("INSERT INTO Users "
-                                + "(usr_Name, usr_Password) "
+                        .prepareStatement("INSERT INTO " + tableName
+                                + " (usr_Name, usr_Password) "
                                 + "VALUES (?, ?)");
                 statement.setString(1, usrName);
                 statement.setString(2, usrPassword);
@@ -149,12 +152,14 @@ public final class ConnectToServer {
      * Creates table entitled Users inside the database.
      * @return boolean that notified whether login was successful.
      * @param usrName the user's unique user name to be queried.
-     * @param  usrPassword the user's password to be compared
+     * @param usrPassword the user's password to be compared
      *                     to password stored on server.
+     * @param tableName name of table you will be inserting into
      * @throws SQLException in case there are issues running queries.
      */
     public static boolean login(final String usrName,
-                                final String usrPassword)
+                                final String usrPassword,
+                                final String tableName)
             throws SQLException {
         boolean loginStatus = false;
         PreparedStatement statement = null;
@@ -165,8 +170,8 @@ public final class ConnectToServer {
                     .getConnection(DB_CONNECTION, DB_USER, DB_PASSWORD);
 
             statement = dbConnection
-                    .prepareStatement("SELECT usr_Password FROM Users "
-                            + "WHERE usr_Name=?");
+                    .prepareStatement("SELECT usr_Password FROM " + tableName
+                            + " WHERE usr_Name=?");
             statement.setString(1, usrName);
             ResultSet rs = statement.executeQuery();
 
