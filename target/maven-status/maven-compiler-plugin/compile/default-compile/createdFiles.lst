@@ -2,6 +2,7 @@ edu\baylor\ecs\Game\Tile.class
 edu\baylor\ecs\Game\SinglePlayer.class
 edu\baylor\ecs\PopUps\TieBox.class
 edu\baylor\ecs\Window\Controllers\HomeScreenController.class
+Test\ConnectToServerTest.class
 edu\baylor\ecs\Game\SinglePlayer$TileBlock.class
 edu\baylor\ecs\Window\Controllers\SingleplayerController.class
 edu\baylor\ecs\PopUps\ExitBox.class

@@ -25,8 +25,8 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2018</copyright>
     <item>
-      <title>File: 4,
-             Errors: 0,
+      <title>File: 2,
+             Errors: 8,
              Warnings: 0,
              Infos: 0
       </title>
@@ -46,7 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#edu.baylor.ecs.Database.package-info.java">edu/baylor/ecs/Database/package-info.java</a>
+                  <a href="${project.url}/checkstyle.html#test.MediaBoxTest.java">test/MediaBoxTest.java</a>
                 </td>
                 <td>
                   0
@@ -55,12 +55,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  0
+                  1
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#edu.baylor.ecs.App.Main.java">edu/baylor/ecs/App/Main.java</a>
+                  <a href="${project.url}/checkstyle.html#test.ConnectToServerTest.java">test/ConnectToServerTest.java</a>
                 </td>
                 <td>
                   0
@@ -69,35 +69,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.baylor.ecs.App.package-info.java">edu/baylor/ecs/App/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.baylor.ecs.Database.ConnectToServer.java">edu/baylor/ecs/Database/ConnectToServer.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
+                  7
                 </td>
               </tr>
                       </tbody>
