@@ -16,10 +16,7 @@ class MediaBoxTest {
     /** Verify the MediaBox is a singleton. */
     @Test
     void getInstance() {
-        temp = MediaBox.getInstance();
-        temp2 = MediaBox.getInstance();
-
-        assertEquals(temp, temp2);
+        assertEquals(MediaBox.getInstance(), MediaBox.getInstance());
     }
 
     /** Verify the MediaBox is playing. */
